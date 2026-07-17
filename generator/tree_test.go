@@ -599,6 +599,34 @@ func TestGenerateConfigModule(t *testing.T) {
 				},
 			},
 		},
+		// Type override should apply to the walked node even if labels are duplicated.
+		{
+			node: &Node{
+				Oid: "1", Type: "OTHER", Label: "root",
+				Children: []*Node{
+					{Oid: "1.1", Module: "MODULE-A", Access: "ACCESS_READONLY", Type: "INTEGER", Label: "in1", EnumValues: map[int]string{0: "off", 1: "on"}},
+					{Oid: "1.2", Module: "MODULE-B", Access: "ACCESS_READONLY", Type: "INTEGER", Label: "in1", EnumValues: map[int]string{0: "down", 1: "up"}},
+				},
+			},
+			cfg: &ModuleConfig{
+				Walk: []string{"1.1"},
+				Overrides: map[string]MetricOverrides{
+					"in1": {Type: "EnumAsStateSet"},
+				},
+			},
+			out: &config.Module{
+				Get: []string{"1.1.0"},
+				Metrics: []*config.Metric{
+					{
+						Name:       "in1",
+						Oid:        "1.1",
+						Type:       "EnumAsStateSet",
+						Help:       " - 1.1",
+						EnumValues: map[int]string{0: "off", 1: "on"},
+					},
+				},
+			},
+		},
 		// Enums
 		{
 			node: &Node{
@@ -2377,6 +2405,65 @@ func TestGenerateConfigModule(t *testing.T) {
 							{
 								Labelname: "tableAddr",
 								Type:      "LldpPortId",
+							},
+						},
+					},
+				},
+			},
+		},
+		// Lookup where source_indexes and lookup refer to the same index name.
+		// The lookup adds a display_hint to the existing index (e.g. position with "1d.1d.1d.1d").
+		// The generator must NOT create a duplicate index entry.
+		{
+			node: &Node{
+				Oid: "1", Label: "root",
+				Children: []*Node{
+					{
+						Oid: "1.1", Label: "table",
+						Children: []*Node{
+							{
+								Oid: "1.1.1", Label: "tableEntry", Indexes: []string{"position"},
+								Children: []*Node{
+									{Oid: "1.1.1.1", Access: "ACCESS_READONLY", Label: "position", Type: "OCTETSTR"},
+									{Oid: "1.1.1.2", Access: "ACCESS_READONLY", Label: "tableFoo", Type: "INTEGER"},
+								},
+							},
+						},
+					},
+				},
+			},
+			cfg: &ModuleConfig{
+				Walk: []string{"tableFoo"},
+				Lookups: []*Lookup{
+					{
+						SourceIndexes: []string{"position"},
+						Lookup:        "position",
+						DisplayHint:   "1d.1d.1d.1d",
+					},
+				},
+			},
+			out: &config.Module{
+				Walk: []string{"1.1.1.1", "1.1.1.2"},
+				Metrics: []*config.Metric{
+					{
+						Name: "tableFoo",
+						Oid:  "1.1.1.2",
+						Help: " - 1.1.1.2",
+						Type: "gauge",
+						Indexes: []*config.Index{
+							// Only one "position" index must appear, not two.
+							{
+								Labelname: "position",
+								Type:      "OctetString",
+							},
+						},
+						Lookups: []*config.Lookup{
+							{
+								Labels:      []string{"position"},
+								Labelname:   "position",
+								Type:        "OctetString",
+								Oid:         "1.1.1.1",
+								DisplayHint: "1d.1d.1d.1d",
 							},
 						},
 					},

@@ -1,0 +1,6177 @@
+# WARNING: This file was auto-generated using snmp_exporter generator, manual changes will be lost.
+auths:
+  public_v1:
+    community: public
+    security_level: noAuthNoPriv
+    auth_protocol: MD5
+    priv_protocol: DES
+    version: 1
+  public_v2:
+    community: public
+    security_level: noAuthNoPriv
+    auth_protocol: MD5
+    priv_protocol: DES
+    version: 2
+modules:
+  lynx_dvd_5820:
+    walk:
+    - 1.3.6.1.4.1.14755.2.2247.704.1.1.1
+    - 1.3.6.1.4.1.14755.2.2247.704.1.1.14
+    - 1.3.6.1.4.1.14755.2.2247.704.1.1.15
+    - 1.3.6.1.4.1.14755.2.2247.704.1.1.16
+    - 1.3.6.1.4.1.14755.2.2247.704.1.1.17
+    - 1.3.6.1.4.1.14755.2.2247.704.1.1.2
+    - 1.3.6.1.4.1.14755.2.2247.704.1.1.23
+    - 1.3.6.1.4.1.14755.2.2247.704.1.1.24
+    - 1.3.6.1.4.1.14755.2.2247.704.1.1.25
+    - 1.3.6.1.4.1.14755.2.2247.704.1.1.26
+    - 1.3.6.1.4.1.14755.2.2247.704.1.1.3
+    - 1.3.6.1.4.1.14755.2.2247.704.1.1.4
+    - 1.3.6.1.4.1.14755.2.2247.704.1.1.5
+    - 1.3.6.1.4.1.14755.2.2247.704.1.1.6
+    - 1.3.6.1.4.1.14755.2.2247.704.1.1.7
+    - 1.3.6.1.4.1.14755.2.2247.704.1.1.9
+    metrics:
+    - name: eventSDIInput1NoInput
+      oid: 1.3.6.1.4.1.14755.2.2247.704.1.1.14
+      type: gauge
+      help: 'Info Event: SDI Input 1 No Input - 1.3.6.1.4.1.14755.2.2247.704.1.1.14'
+      indexes:
+      - labelname: position
+        type: OctetString
+        implied: true
+      lookups:
+      - labels:
+        - position
+        labelname: typeName
+        oid: 1.3.6.1.4.1.14755.2.2247.704.1.1.1
+        type: DisplayString
+      - labels:
+        - position
+        labelname: displayName
+        oid: 1.3.6.1.4.1.14755.2.2247.704.1.1.2
+        type: DisplayString
+      - labels:
+        - position
+        labelname: type
+        oid: 1.3.6.1.4.1.14755.2.2247.704.1.1.5
+        type: DisplayString
+      - labels:
+        - position
+        labelname: version
+        oid: 1.3.6.1.4.1.14755.2.2247.704.1.1.6
+        type: DisplayString
+      - labels:
+        - position
+        labelname: position
+        oid: 1.3.6.1.4.1.14755.2.2247.704.1.1.3
+        type: OctetString
+        display_hint: 1d.1d.1d.1d
+      enum_values:
+        0: "off"
+        1: "on"
+    - name: eventSDIInput2NoInput
+      oid: 1.3.6.1.4.1.14755.2.2247.704.1.1.15
+      type: gauge
+      help: 'Info Event: SDI Input 2 No Input - 1.3.6.1.4.1.14755.2.2247.704.1.1.15'
+      indexes:
+      - labelname: position
+        type: OctetString
+        implied: true
+      lookups:
+      - labels:
+        - position
+        labelname: typeName
+        oid: 1.3.6.1.4.1.14755.2.2247.704.1.1.1
+        type: DisplayString
+      - labels:
+        - position
+        labelname: displayName
+        oid: 1.3.6.1.4.1.14755.2.2247.704.1.1.2
+        type: DisplayString
+      - labels:
+        - position
+        labelname: type
+        oid: 1.3.6.1.4.1.14755.2.2247.704.1.1.5
+        type: DisplayString
+      - labels:
+        - position
+        labelname: version
+        oid: 1.3.6.1.4.1.14755.2.2247.704.1.1.6
+        type: DisplayString
+      - labels:
+        - position
+        labelname: position
+        oid: 1.3.6.1.4.1.14755.2.2247.704.1.1.3
+        type: OctetString
+        display_hint: 1d.1d.1d.1d
+      enum_values:
+        0: "off"
+        1: "on"
+    - name: in1
+      oid: 1.3.6.1.4.1.14755.2.2247.704.1.1.16
+      type: EnumAsStateSet
+      help: Input status channel 1 - 1.3.6.1.4.1.14755.2.2247.704.1.1.16
+      indexes:
+      - labelname: position
+        type: OctetString
+        implied: true
+      lookups:
+      - labels:
+        - position
+        labelname: typeName
+        oid: 1.3.6.1.4.1.14755.2.2247.704.1.1.1
+        type: DisplayString
+      - labels:
+        - position
+        labelname: displayName
+        oid: 1.3.6.1.4.1.14755.2.2247.704.1.1.2
+        type: DisplayString
+      - labels:
+        - position
+        labelname: type
+        oid: 1.3.6.1.4.1.14755.2.2247.704.1.1.5
+        type: DisplayString
+      - labels:
+        - position
+        labelname: version
+        oid: 1.3.6.1.4.1.14755.2.2247.704.1.1.6
+        type: DisplayString
+      - labels:
+        - position
+        labelname: position
+        oid: 1.3.6.1.4.1.14755.2.2247.704.1.1.3
+        type: OctetString
+        display_hint: 1d.1d.1d.1d
+      enum_values:
+        0: missing
+        1: sDSDI
+        2: hDSDI
+        3: n3GSDI
+        4: hD3G
+        5: present
+    - name: in2
+      oid: 1.3.6.1.4.1.14755.2.2247.704.1.1.17
+      type: EnumAsStateSet
+      help: Input status channel 2 - 1.3.6.1.4.1.14755.2.2247.704.1.1.17
+      indexes:
+      - labelname: position
+        type: OctetString
+        implied: true
+      lookups:
+      - labels:
+        - position
+        labelname: typeName
+        oid: 1.3.6.1.4.1.14755.2.2247.704.1.1.1
+        type: DisplayString
+      - labels:
+        - position
+        labelname: displayName
+        oid: 1.3.6.1.4.1.14755.2.2247.704.1.1.2
+        type: DisplayString
+      - labels:
+        - position
+        labelname: type
+        oid: 1.3.6.1.4.1.14755.2.2247.704.1.1.5
+        type: DisplayString
+      - labels:
+        - position
+        labelname: version
+        oid: 1.3.6.1.4.1.14755.2.2247.704.1.1.6
+        type: DisplayString
+      - labels:
+        - position
+        labelname: position
+        oid: 1.3.6.1.4.1.14755.2.2247.704.1.1.3
+        type: OctetString
+        display_hint: 1d.1d.1d.1d
+      enum_values:
+        0: missing
+        1: sDSDI
+        2: hDSDI
+        3: n3GSDI
+        4: hD3G
+        5: present
+    - name: eventPrimaryPowermissing
+      oid: 1.3.6.1.4.1.14755.2.2247.704.1.1.23
+      type: gauge
+      help: 'Info Event: Primary Power missing - 1.3.6.1.4.1.14755.2.2247.704.1.1.23'
+      indexes:
+      - labelname: position
+        type: OctetString
+        implied: true
+      lookups:
+      - labels:
+        - position
+        labelname: typeName
+        oid: 1.3.6.1.4.1.14755.2.2247.704.1.1.1
+        type: DisplayString
+      - labels:
+        - position
+        labelname: displayName
+        oid: 1.3.6.1.4.1.14755.2.2247.704.1.1.2
+        type: DisplayString
+      - labels:
+        - position
+        labelname: type
+        oid: 1.3.6.1.4.1.14755.2.2247.704.1.1.5
+        type: DisplayString
+      - labels:
+        - position
+        labelname: version
+        oid: 1.3.6.1.4.1.14755.2.2247.704.1.1.6
+        type: DisplayString
+      - labels:
+        - position
+        labelname: position
+        oid: 1.3.6.1.4.1.14755.2.2247.704.1.1.3
+        type: OctetString
+        display_hint: 1d.1d.1d.1d
+      enum_values:
+        0: "off"
+        1: "on"
+    - name: eventRedundantPowermissing
+      oid: 1.3.6.1.4.1.14755.2.2247.704.1.1.24
+      type: gauge
+      help: 'Info Event: Redundant Power missing - 1.3.6.1.4.1.14755.2.2247.704.1.1.24'
+      indexes:
+      - labelname: position
+        type: OctetString
+        implied: true
+      lookups:
+      - labels:
+        - position
+        labelname: typeName
+        oid: 1.3.6.1.4.1.14755.2.2247.704.1.1.1
+        type: DisplayString
+      - labels:
+        - position
+        labelname: displayName
+        oid: 1.3.6.1.4.1.14755.2.2247.704.1.1.2
+        type: DisplayString
+      - labels:
+        - position
+        labelname: type
+        oid: 1.3.6.1.4.1.14755.2.2247.704.1.1.5
+        type: DisplayString
+      - labels:
+        - position
+        labelname: version
+        oid: 1.3.6.1.4.1.14755.2.2247.704.1.1.6
+        type: DisplayString
+      - labels:
+        - position
+        labelname: position
+        oid: 1.3.6.1.4.1.14755.2.2247.704.1.1.3
+        type: OctetString
+        display_hint: 1d.1d.1d.1d
+      enum_values:
+        0: "off"
+        1: "on"
+    - name: out1
+      oid: 1.3.6.1.4.1.14755.2.2247.704.1.1.25
+      type: EnumAsStateSet
+      help: Output status channel 1 - 1.3.6.1.4.1.14755.2.2247.704.1.1.25
+      indexes:
+      - labelname: position
+        type: OctetString
+        implied: true
+      lookups:
+      - labels:
+        - position
+        labelname: typeName
+        oid: 1.3.6.1.4.1.14755.2.2247.704.1.1.1
+        type: DisplayString
+      - labels:
+        - position
+        labelname: displayName
+        oid: 1.3.6.1.4.1.14755.2.2247.704.1.1.2
+        type: DisplayString
+      - labels:
+        - position
+        labelname: type
+        oid: 1.3.6.1.4.1.14755.2.2247.704.1.1.5
+        type: DisplayString
+      - labels:
+        - position
+        labelname: version
+        oid: 1.3.6.1.4.1.14755.2.2247.704.1.1.6
+        type: DisplayString
+      - labels:
+        - position
+        labelname: position
+        oid: 1.3.6.1.4.1.14755.2.2247.704.1.1.3
+        type: OctetString
+        display_hint: 1d.1d.1d.1d
+      enum_values:
+        0: missing
+        1: sDSDI
+        2: hDSDI
+        3: n3GSDI
+        4: hD3G
+        5: present
+    - name: out2
+      oid: 1.3.6.1.4.1.14755.2.2247.704.1.1.26
+      type: EnumAsStateSet
+      help: Output status channel 2 - 1.3.6.1.4.1.14755.2.2247.704.1.1.26
+      indexes:
+      - labelname: position
+        type: OctetString
+        implied: true
+      lookups:
+      - labels:
+        - position
+        labelname: typeName
+        oid: 1.3.6.1.4.1.14755.2.2247.704.1.1.1
+        type: DisplayString
+      - labels:
+        - position
+        labelname: displayName
+        oid: 1.3.6.1.4.1.14755.2.2247.704.1.1.2
+        type: DisplayString
+      - labels:
+        - position
+        labelname: type
+        oid: 1.3.6.1.4.1.14755.2.2247.704.1.1.5
+        type: DisplayString
+      - labels:
+        - position
+        labelname: version
+        oid: 1.3.6.1.4.1.14755.2.2247.704.1.1.6
+        type: DisplayString
+      - labels:
+        - position
+        labelname: position
+        oid: 1.3.6.1.4.1.14755.2.2247.704.1.1.3
+        type: OctetString
+        display_hint: 1d.1d.1d.1d
+      enum_values:
+        0: missing
+        1: sDSDI
+        2: hDSDI
+        3: n3GSDI
+        4: hD3G
+        5: present
+    - name: uptime
+      oid: 1.3.6.1.4.1.14755.2.2247.704.1.1.4
+      type: counter
+      help: Connection time of the device to this UI (in seconds) - 1.3.6.1.4.1.14755.2.2247.704.1.1.4
+      indexes:
+      - labelname: position
+        type: OctetString
+        implied: true
+      lookups:
+      - labels:
+        - position
+        labelname: typeName
+        oid: 1.3.6.1.4.1.14755.2.2247.704.1.1.1
+        type: DisplayString
+      - labels:
+        - position
+        labelname: displayName
+        oid: 1.3.6.1.4.1.14755.2.2247.704.1.1.2
+        type: DisplayString
+      - labels:
+        - position
+        labelname: type
+        oid: 1.3.6.1.4.1.14755.2.2247.704.1.1.5
+        type: DisplayString
+      - labels:
+        - position
+        labelname: version
+        oid: 1.3.6.1.4.1.14755.2.2247.704.1.1.6
+        type: DisplayString
+      - labels:
+        - position
+        labelname: position
+        oid: 1.3.6.1.4.1.14755.2.2247.704.1.1.3
+        type: OctetString
+        display_hint: 1d.1d.1d.1d
+      scale: 0.01
+    - name: statusColor
+      oid: 1.3.6.1.4.1.14755.2.2247.704.1.1.7
+      type: EnumAsStateSet
+      help: The current color of the Devices Master LED (red/green/yellow) - 1.3.6.1.4.1.14755.2.2247.704.1.1.7
+      indexes:
+      - labelname: position
+        type: OctetString
+        implied: true
+      lookups:
+      - labels:
+        - position
+        labelname: typeName
+        oid: 1.3.6.1.4.1.14755.2.2247.704.1.1.1
+        type: DisplayString
+      - labels:
+        - position
+        labelname: displayName
+        oid: 1.3.6.1.4.1.14755.2.2247.704.1.1.2
+        type: DisplayString
+      - labels:
+        - position
+        labelname: type
+        oid: 1.3.6.1.4.1.14755.2.2247.704.1.1.5
+        type: DisplayString
+      - labels:
+        - position
+        labelname: version
+        oid: 1.3.6.1.4.1.14755.2.2247.704.1.1.6
+        type: DisplayString
+      - labels:
+        - position
+        labelname: position
+        oid: 1.3.6.1.4.1.14755.2.2247.704.1.1.3
+        type: OctetString
+        display_hint: 1d.1d.1d.1d
+      enum_values:
+        0: unknown
+        1: black
+        2: green
+        3: yellow
+        4: red
+    - name: statusText
+      oid: 1.3.6.1.4.1.14755.2.2247.704.1.1.9
+      type: DisplayString
+      help: The current status text (OK or error-details) - 1.3.6.1.4.1.14755.2.2247.704.1.1.9
+      indexes:
+      - labelname: position
+        type: OctetString
+        implied: true
+      lookups:
+      - labels:
+        - position
+        labelname: typeName
+        oid: 1.3.6.1.4.1.14755.2.2247.704.1.1.1
+        type: DisplayString
+      - labels:
+        - position
+        labelname: displayName
+        oid: 1.3.6.1.4.1.14755.2.2247.704.1.1.2
+        type: DisplayString
+      - labels:
+        - position
+        labelname: type
+        oid: 1.3.6.1.4.1.14755.2.2247.704.1.1.5
+        type: DisplayString
+      - labels:
+        - position
+        labelname: version
+        oid: 1.3.6.1.4.1.14755.2.2247.704.1.1.6
+        type: DisplayString
+      - labels:
+        - position
+        labelname: position
+        oid: 1.3.6.1.4.1.14755.2.2247.704.1.1.3
+        type: OctetString
+        display_hint: 1d.1d.1d.1d
+      regex_extracts:
+        "":
+        - value: "0"
+          regex: ^(?:OK)$
+        - value: "1"
+          regex: ^(?:^.*)$
+    max_repetitions: 50
+    retries: 3
+    timeout: 5s
+  lynx_dvd_5830:
+    walk:
+    - 1.3.6.1.4.1.14755.2.2259.619.1.1.1
+    - 1.3.6.1.4.1.14755.2.2259.619.1.1.14
+    - 1.3.6.1.4.1.14755.2.2259.619.1.1.15
+    - 1.3.6.1.4.1.14755.2.2259.619.1.1.16
+    - 1.3.6.1.4.1.14755.2.2259.619.1.1.19
+    - 1.3.6.1.4.1.14755.2.2259.619.1.1.2
+    - 1.3.6.1.4.1.14755.2.2259.619.1.1.20
+    - 1.3.6.1.4.1.14755.2.2259.619.1.1.21
+    - 1.3.6.1.4.1.14755.2.2259.619.1.1.28
+    - 1.3.6.1.4.1.14755.2.2259.619.1.1.29
+    - 1.3.6.1.4.1.14755.2.2259.619.1.1.3
+    - 1.3.6.1.4.1.14755.2.2259.619.1.1.32
+    - 1.3.6.1.4.1.14755.2.2259.619.1.1.33
+    - 1.3.6.1.4.1.14755.2.2259.619.1.1.34
+    - 1.3.6.1.4.1.14755.2.2259.619.1.1.4
+    - 1.3.6.1.4.1.14755.2.2259.619.1.1.5
+    - 1.3.6.1.4.1.14755.2.2259.619.1.1.6
+    - 1.3.6.1.4.1.14755.2.2259.619.1.1.7
+    - 1.3.6.1.4.1.14755.2.2259.619.1.1.9
+    metrics:
+    - name: eventSDIInput1NoInput
+      oid: 1.3.6.1.4.1.14755.2.2259.619.1.1.14
+      type: gauge
+      help: 'SDI Input 1: No Input - 1.3.6.1.4.1.14755.2.2259.619.1.1.14'
+      indexes:
+      - labelname: position
+        type: OctetString
+        implied: true
+      lookups:
+      - labels:
+        - position
+        labelname: typeName
+        oid: 1.3.6.1.4.1.14755.2.2259.619.1.1.1
+        type: DisplayString
+      - labels:
+        - position
+        labelname: displayName
+        oid: 1.3.6.1.4.1.14755.2.2259.619.1.1.2
+        type: DisplayString
+      - labels:
+        - position
+        labelname: type
+        oid: 1.3.6.1.4.1.14755.2.2259.619.1.1.5
+        type: DisplayString
+      - labels:
+        - position
+        labelname: version
+        oid: 1.3.6.1.4.1.14755.2.2259.619.1.1.6
+        type: DisplayString
+      - labels:
+        - position
+        labelname: position
+        oid: 1.3.6.1.4.1.14755.2.2259.619.1.1.3
+        type: OctetString
+        display_hint: 1d.1d.1d.1d
+      enum_values:
+        0: "off"
+        1: "on"
+    - name: eventSDIInput2NoInput
+      oid: 1.3.6.1.4.1.14755.2.2259.619.1.1.15
+      type: gauge
+      help: 'SDI Input 2: No Input - 1.3.6.1.4.1.14755.2.2259.619.1.1.15'
+      indexes:
+      - labelname: position
+        type: OctetString
+        implied: true
+      lookups:
+      - labels:
+        - position
+        labelname: typeName
+        oid: 1.3.6.1.4.1.14755.2.2259.619.1.1.1
+        type: DisplayString
+      - labels:
+        - position
+        labelname: displayName
+        oid: 1.3.6.1.4.1.14755.2.2259.619.1.1.2
+        type: DisplayString
+      - labels:
+        - position
+        labelname: type
+        oid: 1.3.6.1.4.1.14755.2.2259.619.1.1.5
+        type: DisplayString
+      - labels:
+        - position
+        labelname: version
+        oid: 1.3.6.1.4.1.14755.2.2259.619.1.1.6
+        type: DisplayString
+      - labels:
+        - position
+        labelname: position
+        oid: 1.3.6.1.4.1.14755.2.2259.619.1.1.3
+        type: OctetString
+        display_hint: 1d.1d.1d.1d
+      enum_values:
+        0: "off"
+        1: "on"
+    - name: eventSDIInput3NoInput
+      oid: 1.3.6.1.4.1.14755.2.2259.619.1.1.16
+      type: gauge
+      help: 'SDI Input 3: No Input - 1.3.6.1.4.1.14755.2.2259.619.1.1.16'
+      indexes:
+      - labelname: position
+        type: OctetString
+        implied: true
+      lookups:
+      - labels:
+        - position
+        labelname: typeName
+        oid: 1.3.6.1.4.1.14755.2.2259.619.1.1.1
+        type: DisplayString
+      - labels:
+        - position
+        labelname: displayName
+        oid: 1.3.6.1.4.1.14755.2.2259.619.1.1.2
+        type: DisplayString
+      - labels:
+        - position
+        labelname: type
+        oid: 1.3.6.1.4.1.14755.2.2259.619.1.1.5
+        type: DisplayString
+      - labels:
+        - position
+        labelname: version
+        oid: 1.3.6.1.4.1.14755.2.2259.619.1.1.6
+        type: DisplayString
+      - labels:
+        - position
+        labelname: position
+        oid: 1.3.6.1.4.1.14755.2.2259.619.1.1.3
+        type: OctetString
+        display_hint: 1d.1d.1d.1d
+      enum_values:
+        0: "off"
+        1: "on"
+    - name: in1
+      oid: 1.3.6.1.4.1.14755.2.2259.619.1.1.19
+      type: EnumAsStateSet
+      help: Input status channel 1 - 1.3.6.1.4.1.14755.2.2259.619.1.1.19
+      indexes:
+      - labelname: position
+        type: OctetString
+        implied: true
+      lookups:
+      - labels:
+        - position
+        labelname: typeName
+        oid: 1.3.6.1.4.1.14755.2.2259.619.1.1.1
+        type: DisplayString
+      - labels:
+        - position
+        labelname: displayName
+        oid: 1.3.6.1.4.1.14755.2.2259.619.1.1.2
+        type: DisplayString
+      - labels:
+        - position
+        labelname: type
+        oid: 1.3.6.1.4.1.14755.2.2259.619.1.1.5
+        type: DisplayString
+      - labels:
+        - position
+        labelname: version
+        oid: 1.3.6.1.4.1.14755.2.2259.619.1.1.6
+        type: DisplayString
+      - labels:
+        - position
+        labelname: position
+        oid: 1.3.6.1.4.1.14755.2.2259.619.1.1.3
+        type: OctetString
+        display_hint: 1d.1d.1d.1d
+      enum_values:
+        0: missing
+        1: sDSDI
+        2: hDSDI
+        3: n3GSDI
+        4: hD3G
+        5: present
+    - name: in2
+      oid: 1.3.6.1.4.1.14755.2.2259.619.1.1.20
+      type: EnumAsStateSet
+      help: Input status channel 2 - 1.3.6.1.4.1.14755.2.2259.619.1.1.20
+      indexes:
+      - labelname: position
+        type: OctetString
+        implied: true
+      lookups:
+      - labels:
+        - position
+        labelname: typeName
+        oid: 1.3.6.1.4.1.14755.2.2259.619.1.1.1
+        type: DisplayString
+      - labels:
+        - position
+        labelname: displayName
+        oid: 1.3.6.1.4.1.14755.2.2259.619.1.1.2
+        type: DisplayString
+      - labels:
+        - position
+        labelname: type
+        oid: 1.3.6.1.4.1.14755.2.2259.619.1.1.5
+        type: DisplayString
+      - labels:
+        - position
+        labelname: version
+        oid: 1.3.6.1.4.1.14755.2.2259.619.1.1.6
+        type: DisplayString
+      - labels:
+        - position
+        labelname: position
+        oid: 1.3.6.1.4.1.14755.2.2259.619.1.1.3
+        type: OctetString
+        display_hint: 1d.1d.1d.1d
+      enum_values:
+        0: missing
+        1: sDSDI
+        2: hDSDI
+        3: n3GSDI
+        4: hD3G
+        5: present
+    - name: in3
+      oid: 1.3.6.1.4.1.14755.2.2259.619.1.1.21
+      type: EnumAsStateSet
+      help: Input status channel 3 - 1.3.6.1.4.1.14755.2.2259.619.1.1.21
+      indexes:
+      - labelname: position
+        type: OctetString
+        implied: true
+      lookups:
+      - labels:
+        - position
+        labelname: typeName
+        oid: 1.3.6.1.4.1.14755.2.2259.619.1.1.1
+        type: DisplayString
+      - labels:
+        - position
+        labelname: displayName
+        oid: 1.3.6.1.4.1.14755.2.2259.619.1.1.2
+        type: DisplayString
+      - labels:
+        - position
+        labelname: type
+        oid: 1.3.6.1.4.1.14755.2.2259.619.1.1.5
+        type: DisplayString
+      - labels:
+        - position
+        labelname: version
+        oid: 1.3.6.1.4.1.14755.2.2259.619.1.1.6
+        type: DisplayString
+      - labels:
+        - position
+        labelname: position
+        oid: 1.3.6.1.4.1.14755.2.2259.619.1.1.3
+        type: OctetString
+        display_hint: 1d.1d.1d.1d
+      enum_values:
+        0: missing
+        1: sDSDI
+        2: hDSDI
+        3: n3GSDI
+        4: hD3G
+        5: present
+    - name: eventPrimaryPowermissing
+      oid: 1.3.6.1.4.1.14755.2.2259.619.1.1.28
+      type: gauge
+      help: 'Info Event: Primary Power missing - 1.3.6.1.4.1.14755.2.2259.619.1.1.28'
+      indexes:
+      - labelname: position
+        type: OctetString
+        implied: true
+      lookups:
+      - labels:
+        - position
+        labelname: typeName
+        oid: 1.3.6.1.4.1.14755.2.2259.619.1.1.1
+        type: DisplayString
+      - labels:
+        - position
+        labelname: displayName
+        oid: 1.3.6.1.4.1.14755.2.2259.619.1.1.2
+        type: DisplayString
+      - labels:
+        - position
+        labelname: type
+        oid: 1.3.6.1.4.1.14755.2.2259.619.1.1.5
+        type: DisplayString
+      - labels:
+        - position
+        labelname: version
+        oid: 1.3.6.1.4.1.14755.2.2259.619.1.1.6
+        type: DisplayString
+      - labels:
+        - position
+        labelname: position
+        oid: 1.3.6.1.4.1.14755.2.2259.619.1.1.3
+        type: OctetString
+        display_hint: 1d.1d.1d.1d
+      enum_values:
+        0: "off"
+        1: "on"
+    - name: eventRedundantPowermissing
+      oid: 1.3.6.1.4.1.14755.2.2259.619.1.1.29
+      type: gauge
+      help: 'Info Event: Redundant Power missing - 1.3.6.1.4.1.14755.2.2259.619.1.1.29'
+      indexes:
+      - labelname: position
+        type: OctetString
+        implied: true
+      lookups:
+      - labels:
+        - position
+        labelname: typeName
+        oid: 1.3.6.1.4.1.14755.2.2259.619.1.1.1
+        type: DisplayString
+      - labels:
+        - position
+        labelname: displayName
+        oid: 1.3.6.1.4.1.14755.2.2259.619.1.1.2
+        type: DisplayString
+      - labels:
+        - position
+        labelname: type
+        oid: 1.3.6.1.4.1.14755.2.2259.619.1.1.5
+        type: DisplayString
+      - labels:
+        - position
+        labelname: version
+        oid: 1.3.6.1.4.1.14755.2.2259.619.1.1.6
+        type: DisplayString
+      - labels:
+        - position
+        labelname: position
+        oid: 1.3.6.1.4.1.14755.2.2259.619.1.1.3
+        type: OctetString
+        display_hint: 1d.1d.1d.1d
+      enum_values:
+        0: "off"
+        1: "on"
+    - name: out1
+      oid: 1.3.6.1.4.1.14755.2.2259.619.1.1.32
+      type: EnumAsStateSet
+      help: Output status channel 1 - 1.3.6.1.4.1.14755.2.2259.619.1.1.32
+      indexes:
+      - labelname: position
+        type: OctetString
+        implied: true
+      lookups:
+      - labels:
+        - position
+        labelname: typeName
+        oid: 1.3.6.1.4.1.14755.2.2259.619.1.1.1
+        type: DisplayString
+      - labels:
+        - position
+        labelname: displayName
+        oid: 1.3.6.1.4.1.14755.2.2259.619.1.1.2
+        type: DisplayString
+      - labels:
+        - position
+        labelname: type
+        oid: 1.3.6.1.4.1.14755.2.2259.619.1.1.5
+        type: DisplayString
+      - labels:
+        - position
+        labelname: version
+        oid: 1.3.6.1.4.1.14755.2.2259.619.1.1.6
+        type: DisplayString
+      - labels:
+        - position
+        labelname: position
+        oid: 1.3.6.1.4.1.14755.2.2259.619.1.1.3
+        type: OctetString
+        display_hint: 1d.1d.1d.1d
+      enum_values:
+        0: missing
+        1: sDSDI
+        2: hDSDI
+        3: n3GSDI
+        4: hD3G
+        5: present
+    - name: out2
+      oid: 1.3.6.1.4.1.14755.2.2259.619.1.1.33
+      type: EnumAsStateSet
+      help: Output status channel 2 - 1.3.6.1.4.1.14755.2.2259.619.1.1.33
+      indexes:
+      - labelname: position
+        type: OctetString
+        implied: true
+      lookups:
+      - labels:
+        - position
+        labelname: typeName
+        oid: 1.3.6.1.4.1.14755.2.2259.619.1.1.1
+        type: DisplayString
+      - labels:
+        - position
+        labelname: displayName
+        oid: 1.3.6.1.4.1.14755.2.2259.619.1.1.2
+        type: DisplayString
+      - labels:
+        - position
+        labelname: type
+        oid: 1.3.6.1.4.1.14755.2.2259.619.1.1.5
+        type: DisplayString
+      - labels:
+        - position
+        labelname: version
+        oid: 1.3.6.1.4.1.14755.2.2259.619.1.1.6
+        type: DisplayString
+      - labels:
+        - position
+        labelname: position
+        oid: 1.3.6.1.4.1.14755.2.2259.619.1.1.3
+        type: OctetString
+        display_hint: 1d.1d.1d.1d
+      enum_values:
+        0: missing
+        1: sDSDI
+        2: hDSDI
+        3: n3GSDI
+        4: hD3G
+        5: present
+    - name: out3
+      oid: 1.3.6.1.4.1.14755.2.2259.619.1.1.34
+      type: EnumAsStateSet
+      help: Output status channel 3 - 1.3.6.1.4.1.14755.2.2259.619.1.1.34
+      indexes:
+      - labelname: position
+        type: OctetString
+        implied: true
+      lookups:
+      - labels:
+        - position
+        labelname: typeName
+        oid: 1.3.6.1.4.1.14755.2.2259.619.1.1.1
+        type: DisplayString
+      - labels:
+        - position
+        labelname: displayName
+        oid: 1.3.6.1.4.1.14755.2.2259.619.1.1.2
+        type: DisplayString
+      - labels:
+        - position
+        labelname: type
+        oid: 1.3.6.1.4.1.14755.2.2259.619.1.1.5
+        type: DisplayString
+      - labels:
+        - position
+        labelname: version
+        oid: 1.3.6.1.4.1.14755.2.2259.619.1.1.6
+        type: DisplayString
+      - labels:
+        - position
+        labelname: position
+        oid: 1.3.6.1.4.1.14755.2.2259.619.1.1.3
+        type: OctetString
+        display_hint: 1d.1d.1d.1d
+      enum_values:
+        0: missing
+        1: sDSDI
+        2: hDSDI
+        3: n3GSDI
+        4: hD3G
+        5: present
+    - name: uptime
+      oid: 1.3.6.1.4.1.14755.2.2259.619.1.1.4
+      type: counter
+      help: Connection time of the device to this UI (in seconds) - 1.3.6.1.4.1.14755.2.2259.619.1.1.4
+      indexes:
+      - labelname: position
+        type: OctetString
+        implied: true
+      lookups:
+      - labels:
+        - position
+        labelname: typeName
+        oid: 1.3.6.1.4.1.14755.2.2259.619.1.1.1
+        type: DisplayString
+      - labels:
+        - position
+        labelname: displayName
+        oid: 1.3.6.1.4.1.14755.2.2259.619.1.1.2
+        type: DisplayString
+      - labels:
+        - position
+        labelname: type
+        oid: 1.3.6.1.4.1.14755.2.2259.619.1.1.5
+        type: DisplayString
+      - labels:
+        - position
+        labelname: version
+        oid: 1.3.6.1.4.1.14755.2.2259.619.1.1.6
+        type: DisplayString
+      - labels:
+        - position
+        labelname: position
+        oid: 1.3.6.1.4.1.14755.2.2259.619.1.1.3
+        type: OctetString
+        display_hint: 1d.1d.1d.1d
+      scale: 0.01
+    - name: statusColor
+      oid: 1.3.6.1.4.1.14755.2.2259.619.1.1.7
+      type: EnumAsStateSet
+      help: The current color of the Devices Master LED (red/green/yellow) - 1.3.6.1.4.1.14755.2.2259.619.1.1.7
+      indexes:
+      - labelname: position
+        type: OctetString
+        implied: true
+      lookups:
+      - labels:
+        - position
+        labelname: typeName
+        oid: 1.3.6.1.4.1.14755.2.2259.619.1.1.1
+        type: DisplayString
+      - labels:
+        - position
+        labelname: displayName
+        oid: 1.3.6.1.4.1.14755.2.2259.619.1.1.2
+        type: DisplayString
+      - labels:
+        - position
+        labelname: type
+        oid: 1.3.6.1.4.1.14755.2.2259.619.1.1.5
+        type: DisplayString
+      - labels:
+        - position
+        labelname: version
+        oid: 1.3.6.1.4.1.14755.2.2259.619.1.1.6
+        type: DisplayString
+      - labels:
+        - position
+        labelname: position
+        oid: 1.3.6.1.4.1.14755.2.2259.619.1.1.3
+        type: OctetString
+        display_hint: 1d.1d.1d.1d
+      enum_values:
+        0: unknown
+        1: black
+        2: green
+        3: yellow
+        4: red
+    - name: statusText
+      oid: 1.3.6.1.4.1.14755.2.2259.619.1.1.9
+      type: DisplayString
+      help: The current status text (OK or error-details) - 1.3.6.1.4.1.14755.2.2259.619.1.1.9
+      indexes:
+      - labelname: position
+        type: OctetString
+        implied: true
+      lookups:
+      - labels:
+        - position
+        labelname: typeName
+        oid: 1.3.6.1.4.1.14755.2.2259.619.1.1.1
+        type: DisplayString
+      - labels:
+        - position
+        labelname: displayName
+        oid: 1.3.6.1.4.1.14755.2.2259.619.1.1.2
+        type: DisplayString
+      - labels:
+        - position
+        labelname: type
+        oid: 1.3.6.1.4.1.14755.2.2259.619.1.1.5
+        type: DisplayString
+      - labels:
+        - position
+        labelname: version
+        oid: 1.3.6.1.4.1.14755.2.2259.619.1.1.6
+        type: DisplayString
+      - labels:
+        - position
+        labelname: position
+        oid: 1.3.6.1.4.1.14755.2.2259.619.1.1.3
+        type: OctetString
+        display_hint: 1d.1d.1d.1d
+      regex_extracts:
+        "":
+        - value: "0"
+          regex: ^(?:OK)$
+        - value: "1"
+          regex: ^(?:^.*)$
+    max_repetitions: 50
+    retries: 3
+    timeout: 5s
+  lynx_dvo_5820:
+    walk:
+    - 1.3.6.1.4.1.14755.2.2249.704.1
+    metrics:
+    - name: uptime
+      oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.4
+      type: counter
+      help: Connection time of the device to this UI (in seconds) - 1.3.6.1.4.1.14755.2.2249.704.1.1.4
+      indexes:
+      - labelname: position
+        type: OctetString
+        implied: true
+      lookups:
+      - labels:
+        - position
+        labelname: typeName
+        oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.1
+        type: DisplayString
+      - labels:
+        - position
+        labelname: displayName
+        oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.2
+        type: DisplayString
+      - labels:
+        - position
+        labelname: type
+        oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.5
+        type: DisplayString
+      - labels:
+        - position
+        labelname: version
+        oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.6
+        type: DisplayString
+      - labels:
+        - position
+        labelname: position
+        oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.3
+        type: OctetString
+        display_hint: 1d.1d.1d.1d
+      scale: 0.01
+    - name: statusColor
+      oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.7
+      type: EnumAsStateSet
+      help: The current color of the Devices Master LED (red/green/yellow) - 1.3.6.1.4.1.14755.2.2249.704.1.1.7
+      indexes:
+      - labelname: position
+        type: OctetString
+        implied: true
+      lookups:
+      - labels:
+        - position
+        labelname: typeName
+        oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.1
+        type: DisplayString
+      - labels:
+        - position
+        labelname: displayName
+        oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.2
+        type: DisplayString
+      - labels:
+        - position
+        labelname: type
+        oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.5
+        type: DisplayString
+      - labels:
+        - position
+        labelname: version
+        oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.6
+        type: DisplayString
+      - labels:
+        - position
+        labelname: position
+        oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.3
+        type: OctetString
+        display_hint: 1d.1d.1d.1d
+      enum_values:
+        0: unknown
+        1: black
+        2: green
+        3: yellow
+        4: red
+    - name: statusColorRGB
+      oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.8
+      type: DisplayString
+      help: 'The current color of the Devices Master LED as #RRGGBB - 1.3.6.1.4.1.14755.2.2249.704.1.1.8'
+      indexes:
+      - labelname: position
+        type: OctetString
+        implied: true
+      lookups:
+      - labels:
+        - position
+        labelname: typeName
+        oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.1
+        type: DisplayString
+      - labels:
+        - position
+        labelname: displayName
+        oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.2
+        type: DisplayString
+      - labels:
+        - position
+        labelname: type
+        oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.5
+        type: DisplayString
+      - labels:
+        - position
+        labelname: version
+        oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.6
+        type: DisplayString
+      - labels:
+        - position
+        labelname: position
+        oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.3
+        type: OctetString
+        display_hint: 1d.1d.1d.1d
+    - name: statusText
+      oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.9
+      type: DisplayString
+      help: The current status text (OK or error-details) - 1.3.6.1.4.1.14755.2.2249.704.1.1.9
+      indexes:
+      - labelname: position
+        type: OctetString
+        implied: true
+      lookups:
+      - labels:
+        - position
+        labelname: typeName
+        oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.1
+        type: DisplayString
+      - labels:
+        - position
+        labelname: displayName
+        oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.2
+        type: DisplayString
+      - labels:
+        - position
+        labelname: type
+        oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.5
+        type: DisplayString
+      - labels:
+        - position
+        labelname: version
+        oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.6
+        type: DisplayString
+      - labels:
+        - position
+        labelname: position
+        oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.3
+        type: OctetString
+        display_hint: 1d.1d.1d.1d
+      regex_extracts:
+        "":
+        - value: "0"
+          regex: ^(?:OK)$
+        - value: "1"
+          regex: ^(?:^.*)$
+    - name: factoryReset
+      oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.10
+      type: gauge
+      help: Reset device to factory default values (set value to PRESS for execution)
+        - 1.3.6.1.4.1.14755.2.2249.704.1.1.10
+      indexes:
+      - labelname: position
+        type: OctetString
+        implied: true
+      lookups:
+      - labels:
+        - position
+        labelname: typeName
+        oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.1
+        type: DisplayString
+      - labels:
+        - position
+        labelname: displayName
+        oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.2
+        type: DisplayString
+      - labels:
+        - position
+        labelname: type
+        oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.5
+        type: DisplayString
+      - labels:
+        - position
+        labelname: version
+        oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.6
+        type: DisplayString
+      - labels:
+        - position
+        labelname: position
+        oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.3
+        type: OctetString
+        display_hint: 1d.1d.1d.1d
+      enum_values:
+        0: press
+    - name: lock
+      oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.11
+      type: gauge
+      help: Lock Device - 1.3.6.1.4.1.14755.2.2249.704.1.1.11
+      indexes:
+      - labelname: position
+        type: OctetString
+        implied: true
+      lookups:
+      - labels:
+        - position
+        labelname: typeName
+        oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.1
+        type: DisplayString
+      - labels:
+        - position
+        labelname: displayName
+        oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.2
+        type: DisplayString
+      - labels:
+        - position
+        labelname: type
+        oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.5
+        type: DisplayString
+      - labels:
+        - position
+        labelname: version
+        oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.6
+        type: DisplayString
+      - labels:
+        - position
+        labelname: position
+        oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.3
+        type: OctetString
+        display_hint: 1d.1d.1d.1d
+      enum_values:
+        0: "off"
+        1: "on"
+    - name: locate
+      oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.12
+      type: gauge
+      help: toggle the locating function (yellow flashing master LED) ON/OFF - 1.3.6.1.4.1.14755.2.2249.704.1.1.12
+      indexes:
+      - labelname: position
+        type: OctetString
+        implied: true
+      lookups:
+      - labels:
+        - position
+        labelname: typeName
+        oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.1
+        type: DisplayString
+      - labels:
+        - position
+        labelname: displayName
+        oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.2
+        type: DisplayString
+      - labels:
+        - position
+        labelname: type
+        oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.5
+        type: DisplayString
+      - labels:
+        - position
+        labelname: version
+        oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.6
+        type: DisplayString
+      - labels:
+        - position
+        labelname: position
+        oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.3
+        type: OctetString
+        display_hint: 1d.1d.1d.1d
+      enum_values:
+        0: "off"
+        1: "on"
+    - name: eventSDIInput1NoInput
+      oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.14
+      type: gauge
+      help: 'Info Event: SDI Input 1 No Input - 1.3.6.1.4.1.14755.2.2249.704.1.1.14'
+      indexes:
+      - labelname: position
+        type: OctetString
+        implied: true
+      lookups:
+      - labels:
+        - position
+        labelname: typeName
+        oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.1
+        type: DisplayString
+      - labels:
+        - position
+        labelname: displayName
+        oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.2
+        type: DisplayString
+      - labels:
+        - position
+        labelname: type
+        oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.5
+        type: DisplayString
+      - labels:
+        - position
+        labelname: version
+        oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.6
+        type: DisplayString
+      - labels:
+        - position
+        labelname: position
+        oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.3
+        type: OctetString
+        display_hint: 1d.1d.1d.1d
+      enum_values:
+        0: "off"
+        1: "on"
+    - name: eventSDIInput2NoInput
+      oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.15
+      type: gauge
+      help: 'Info Event: SDI Input 2 No Input - 1.3.6.1.4.1.14755.2.2249.704.1.1.15'
+      indexes:
+      - labelname: position
+        type: OctetString
+        implied: true
+      lookups:
+      - labels:
+        - position
+        labelname: typeName
+        oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.1
+        type: DisplayString
+      - labels:
+        - position
+        labelname: displayName
+        oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.2
+        type: DisplayString
+      - labels:
+        - position
+        labelname: type
+        oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.5
+        type: DisplayString
+      - labels:
+        - position
+        labelname: version
+        oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.6
+        type: DisplayString
+      - labels:
+        - position
+        labelname: position
+        oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.3
+        type: OctetString
+        display_hint: 1d.1d.1d.1d
+      enum_values:
+        0: "off"
+        1: "on"
+    - name: inputSignalQuality1Opt
+      oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.16
+      type: gauge
+      help: Input signal quality 1 (optical) - 1.3.6.1.4.1.14755.2.2249.704.1.1.16
+      indexes:
+      - labelname: position
+        type: OctetString
+        implied: true
+      lookups:
+      - labels:
+        - position
+        labelname: typeName
+        oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.1
+        type: DisplayString
+      - labels:
+        - position
+        labelname: displayName
+        oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.2
+        type: DisplayString
+      - labels:
+        - position
+        labelname: type
+        oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.5
+        type: DisplayString
+      - labels:
+        - position
+        labelname: version
+        oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.6
+        type: DisplayString
+      - labels:
+        - position
+        labelname: position
+        oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.3
+        type: OctetString
+        display_hint: 1d.1d.1d.1d
+      scale: 0.1
+      display_hint: d-1
+    - name: sFPModuleType1
+      oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.17
+      type: DisplayString
+      help: displays the type of detected SFP-Module 1 - 1.3.6.1.4.1.14755.2.2249.704.1.1.17
+      indexes:
+      - labelname: position
+        type: OctetString
+        implied: true
+      lookups:
+      - labels:
+        - position
+        labelname: typeName
+        oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.1
+        type: DisplayString
+      - labels:
+        - position
+        labelname: displayName
+        oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.2
+        type: DisplayString
+      - labels:
+        - position
+        labelname: type
+        oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.5
+        type: DisplayString
+      - labels:
+        - position
+        labelname: version
+        oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.6
+        type: DisplayString
+      - labels:
+        - position
+        labelname: position
+        oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.3
+        type: OctetString
+        display_hint: 1d.1d.1d.1d
+    - name: sFPModulePartNumber1
+      oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.18
+      type: DisplayString
+      help: Displays the part number of used SFP Module - 1.3.6.1.4.1.14755.2.2249.704.1.1.18
+      indexes:
+      - labelname: position
+        type: OctetString
+        implied: true
+      lookups:
+      - labels:
+        - position
+        labelname: typeName
+        oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.1
+        type: DisplayString
+      - labels:
+        - position
+        labelname: displayName
+        oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.2
+        type: DisplayString
+      - labels:
+        - position
+        labelname: type
+        oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.5
+        type: DisplayString
+      - labels:
+        - position
+        labelname: version
+        oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.6
+        type: DisplayString
+      - labels:
+        - position
+        labelname: position
+        oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.3
+        type: OctetString
+        display_hint: 1d.1d.1d.1d
+    - name: sFPPinning1
+      oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.19
+      type: gauge
+      help: shows pinning of used SFP Module (gennum/msa) - 1.3.6.1.4.1.14755.2.2249.704.1.1.19
+      indexes:
+      - labelname: position
+        type: OctetString
+        implied: true
+      lookups:
+      - labels:
+        - position
+        labelname: typeName
+        oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.1
+        type: DisplayString
+      - labels:
+        - position
+        labelname: displayName
+        oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.2
+        type: DisplayString
+      - labels:
+        - position
+        labelname: type
+        oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.5
+        type: DisplayString
+      - labels:
+        - position
+        labelname: version
+        oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.6
+        type: DisplayString
+      - labels:
+        - position
+        labelname: position
+        oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.3
+        type: OctetString
+        display_hint: 1d.1d.1d.1d
+      enum_values:
+        0: none
+        1: msa
+        2: gennum
+    - name: inputSignalQuality2Opt
+      oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.20
+      type: gauge
+      help: Input signal quality 2 (optical) - 1.3.6.1.4.1.14755.2.2249.704.1.1.20
+      indexes:
+      - labelname: position
+        type: OctetString
+        implied: true
+      lookups:
+      - labels:
+        - position
+        labelname: typeName
+        oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.1
+        type: DisplayString
+      - labels:
+        - position
+        labelname: displayName
+        oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.2
+        type: DisplayString
+      - labels:
+        - position
+        labelname: type
+        oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.5
+        type: DisplayString
+      - labels:
+        - position
+        labelname: version
+        oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.6
+        type: DisplayString
+      - labels:
+        - position
+        labelname: position
+        oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.3
+        type: OctetString
+        display_hint: 1d.1d.1d.1d
+      scale: 0.1
+      display_hint: d-1
+    - name: sFPModuleType2
+      oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.21
+      type: DisplayString
+      help: displays the type of detected SFP-Module 2 - 1.3.6.1.4.1.14755.2.2249.704.1.1.21
+      indexes:
+      - labelname: position
+        type: OctetString
+        implied: true
+      lookups:
+      - labels:
+        - position
+        labelname: typeName
+        oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.1
+        type: DisplayString
+      - labels:
+        - position
+        labelname: displayName
+        oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.2
+        type: DisplayString
+      - labels:
+        - position
+        labelname: type
+        oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.5
+        type: DisplayString
+      - labels:
+        - position
+        labelname: version
+        oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.6
+        type: DisplayString
+      - labels:
+        - position
+        labelname: position
+        oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.3
+        type: OctetString
+        display_hint: 1d.1d.1d.1d
+    - name: sFPModulePartNumber2
+      oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.22
+      type: DisplayString
+      help: Displays the part number of used SFP Module - 1.3.6.1.4.1.14755.2.2249.704.1.1.22
+      indexes:
+      - labelname: position
+        type: OctetString
+        implied: true
+      lookups:
+      - labels:
+        - position
+        labelname: typeName
+        oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.1
+        type: DisplayString
+      - labels:
+        - position
+        labelname: displayName
+        oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.2
+        type: DisplayString
+      - labels:
+        - position
+        labelname: type
+        oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.5
+        type: DisplayString
+      - labels:
+        - position
+        labelname: version
+        oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.6
+        type: DisplayString
+      - labels:
+        - position
+        labelname: position
+        oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.3
+        type: OctetString
+        display_hint: 1d.1d.1d.1d
+    - name: sFPPinning2
+      oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.23
+      type: gauge
+      help: shows pinning of used SFP Module (gennum/msa) - 1.3.6.1.4.1.14755.2.2249.704.1.1.23
+      indexes:
+      - labelname: position
+        type: OctetString
+        implied: true
+      lookups:
+      - labels:
+        - position
+        labelname: typeName
+        oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.1
+        type: DisplayString
+      - labels:
+        - position
+        labelname: displayName
+        oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.2
+        type: DisplayString
+      - labels:
+        - position
+        labelname: type
+        oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.5
+        type: DisplayString
+      - labels:
+        - position
+        labelname: version
+        oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.6
+        type: DisplayString
+      - labels:
+        - position
+        labelname: position
+        oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.3
+        type: OctetString
+        display_hint: 1d.1d.1d.1d
+      enum_values:
+        0: none
+        1: msa
+        2: gennum
+    - name: in1
+      oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.24
+      type: EnumAsStateSet
+      help: Input status channel 1 - 1.3.6.1.4.1.14755.2.2249.704.1.1.24
+      indexes:
+      - labelname: position
+        type: OctetString
+        implied: true
+      lookups:
+      - labels:
+        - position
+        labelname: typeName
+        oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.1
+        type: DisplayString
+      - labels:
+        - position
+        labelname: displayName
+        oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.2
+        type: DisplayString
+      - labels:
+        - position
+        labelname: type
+        oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.5
+        type: DisplayString
+      - labels:
+        - position
+        labelname: version
+        oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.6
+        type: DisplayString
+      - labels:
+        - position
+        labelname: position
+        oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.3
+        type: OctetString
+        display_hint: 1d.1d.1d.1d
+      enum_values:
+        0: missing
+        1: sDSDI
+        2: hDSDI
+        3: n3GSDI
+        4: hD3G
+        5: present
+    - name: in2
+      oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.25
+      type: EnumAsStateSet
+      help: Input status channel 2 - 1.3.6.1.4.1.14755.2.2249.704.1.1.25
+      indexes:
+      - labelname: position
+        type: OctetString
+        implied: true
+      lookups:
+      - labels:
+        - position
+        labelname: typeName
+        oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.1
+        type: DisplayString
+      - labels:
+        - position
+        labelname: displayName
+        oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.2
+        type: DisplayString
+      - labels:
+        - position
+        labelname: type
+        oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.5
+        type: DisplayString
+      - labels:
+        - position
+        labelname: version
+        oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.6
+        type: DisplayString
+      - labels:
+        - position
+        labelname: position
+        oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.3
+        type: OctetString
+        display_hint: 1d.1d.1d.1d
+      enum_values:
+        0: missing
+        1: sDSDI
+        2: hDSDI
+        3: n3GSDI
+        4: hD3G
+        5: present
+    - name: reclock1
+      oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.26
+      type: gauge
+      help: select SDI reclocking on output 1 - 1.3.6.1.4.1.14755.2.2249.704.1.1.26
+      indexes:
+      - labelname: position
+        type: OctetString
+        implied: true
+      lookups:
+      - labels:
+        - position
+        labelname: typeName
+        oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.1
+        type: DisplayString
+      - labels:
+        - position
+        labelname: displayName
+        oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.2
+        type: DisplayString
+      - labels:
+        - position
+        labelname: type
+        oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.5
+        type: DisplayString
+      - labels:
+        - position
+        labelname: version
+        oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.6
+        type: DisplayString
+      - labels:
+        - position
+        labelname: position
+        oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.3
+        type: OctetString
+        display_hint: 1d.1d.1d.1d
+      enum_values:
+        0: "off"
+        1: "on"
+    - name: reclock2
+      oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.27
+      type: gauge
+      help: select SDI reclocking on output 2 - 1.3.6.1.4.1.14755.2.2249.704.1.1.27
+      indexes:
+      - labelname: position
+        type: OctetString
+        implied: true
+      lookups:
+      - labels:
+        - position
+        labelname: typeName
+        oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.1
+        type: DisplayString
+      - labels:
+        - position
+        labelname: displayName
+        oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.2
+        type: DisplayString
+      - labels:
+        - position
+        labelname: type
+        oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.5
+        type: DisplayString
+      - labels:
+        - position
+        labelname: version
+        oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.6
+        type: DisplayString
+      - labels:
+        - position
+        labelname: position
+        oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.3
+        type: OctetString
+        display_hint: 1d.1d.1d.1d
+      enum_values:
+        0: "off"
+        1: "on"
+    - name: sourceInput2
+      oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.28
+      type: EnumAsStateSet
+      help: Select Source for Input 2 from electrical or optical connector - 1.3.6.1.4.1.14755.2.2249.704.1.1.28
+      indexes:
+      - labelname: position
+        type: OctetString
+        implied: true
+      lookups:
+      - labels:
+        - position
+        labelname: typeName
+        oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.1
+        type: DisplayString
+      - labels:
+        - position
+        labelname: displayName
+        oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.2
+        type: DisplayString
+      - labels:
+        - position
+        labelname: type
+        oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.5
+        type: DisplayString
+      - labels:
+        - position
+        labelname: version
+        oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.6
+        type: DisplayString
+      - labels:
+        - position
+        labelname: position
+        oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.3
+        type: OctetString
+        display_hint: 1d.1d.1d.1d
+      enum_values:
+        0: electrical
+        1: optical
+    - name: autoDisableOpticalOutput
+      oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.29
+      type: gauge
+      help: automatically disable (power down) the laser transmitter of the optical
+        output if no valid input signal is connected. - 1.3.6.1.4.1.14755.2.2249.704.1.1.29
+      indexes:
+      - labelname: position
+        type: OctetString
+        implied: true
+      lookups:
+      - labels:
+        - position
+        labelname: typeName
+        oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.1
+        type: DisplayString
+      - labels:
+        - position
+        labelname: displayName
+        oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.2
+        type: DisplayString
+      - labels:
+        - position
+        labelname: type
+        oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.5
+        type: DisplayString
+      - labels:
+        - position
+        labelname: version
+        oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.6
+        type: DisplayString
+      - labels:
+        - position
+        labelname: position
+        oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.3
+        type: OctetString
+        display_hint: 1d.1d.1d.1d
+      enum_values:
+        0: "off"
+        1: "on"
+    - name: boardID
+      oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.30
+      type: gauge
+      help: BoardID - 1.3.6.1.4.1.14755.2.2249.704.1.1.30
+      indexes:
+      - labelname: position
+        type: OctetString
+        implied: true
+      lookups:
+      - labels:
+        - position
+        labelname: typeName
+        oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.1
+        type: DisplayString
+      - labels:
+        - position
+        labelname: displayName
+        oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.2
+        type: DisplayString
+      - labels:
+        - position
+        labelname: type
+        oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.5
+        type: DisplayString
+      - labels:
+        - position
+        labelname: version
+        oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.6
+        type: DisplayString
+      - labels:
+        - position
+        labelname: position
+        oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.3
+        type: OctetString
+        display_hint: 1d.1d.1d.1d
+    - name: eventPrimaryPowermissing
+      oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.31
+      type: gauge
+      help: 'Info Event: Primary Power missing - 1.3.6.1.4.1.14755.2.2249.704.1.1.31'
+      indexes:
+      - labelname: position
+        type: OctetString
+        implied: true
+      lookups:
+      - labels:
+        - position
+        labelname: typeName
+        oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.1
+        type: DisplayString
+      - labels:
+        - position
+        labelname: displayName
+        oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.2
+        type: DisplayString
+      - labels:
+        - position
+        labelname: type
+        oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.5
+        type: DisplayString
+      - labels:
+        - position
+        labelname: version
+        oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.6
+        type: DisplayString
+      - labels:
+        - position
+        labelname: position
+        oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.3
+        type: OctetString
+        display_hint: 1d.1d.1d.1d
+      enum_values:
+        0: "off"
+        1: "on"
+    - name: eventRedundantPowermissing
+      oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.32
+      type: gauge
+      help: 'Info Event: Redundant Power missing - 1.3.6.1.4.1.14755.2.2249.704.1.1.32'
+      indexes:
+      - labelname: position
+        type: OctetString
+        implied: true
+      lookups:
+      - labels:
+        - position
+        labelname: typeName
+        oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.1
+        type: DisplayString
+      - labels:
+        - position
+        labelname: displayName
+        oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.2
+        type: DisplayString
+      - labels:
+        - position
+        labelname: type
+        oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.5
+        type: DisplayString
+      - labels:
+        - position
+        labelname: version
+        oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.6
+        type: DisplayString
+      - labels:
+        - position
+        labelname: position
+        oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.3
+        type: OctetString
+        display_hint: 1d.1d.1d.1d
+      enum_values:
+        0: "off"
+        1: "on"
+    - name: out1
+      oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.33
+      type: EnumAsStateSet
+      help: Output status channel 1 - 1.3.6.1.4.1.14755.2.2249.704.1.1.33
+      indexes:
+      - labelname: position
+        type: OctetString
+        implied: true
+      lookups:
+      - labels:
+        - position
+        labelname: typeName
+        oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.1
+        type: DisplayString
+      - labels:
+        - position
+        labelname: displayName
+        oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.2
+        type: DisplayString
+      - labels:
+        - position
+        labelname: type
+        oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.5
+        type: DisplayString
+      - labels:
+        - position
+        labelname: version
+        oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.6
+        type: DisplayString
+      - labels:
+        - position
+        labelname: position
+        oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.3
+        type: OctetString
+        display_hint: 1d.1d.1d.1d
+      enum_values:
+        0: missing
+        1: sDSDI
+        2: hDSDI
+        3: n3GSDI
+        4: hD3G
+        5: present
+    - name: out2
+      oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.34
+      type: EnumAsStateSet
+      help: Output status channel 2 - 1.3.6.1.4.1.14755.2.2249.704.1.1.34
+      indexes:
+      - labelname: position
+        type: OctetString
+        implied: true
+      lookups:
+      - labels:
+        - position
+        labelname: typeName
+        oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.1
+        type: DisplayString
+      - labels:
+        - position
+        labelname: displayName
+        oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.2
+        type: DisplayString
+      - labels:
+        - position
+        labelname: type
+        oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.5
+        type: DisplayString
+      - labels:
+        - position
+        labelname: version
+        oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.6
+        type: DisplayString
+      - labels:
+        - position
+        labelname: position
+        oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.3
+        type: OctetString
+        display_hint: 1d.1d.1d.1d
+      enum_values:
+        0: missing
+        1: sDSDI
+        2: hDSDI
+        3: n3GSDI
+        4: hD3G
+        5: present
+    - name: eventSDIInput1NoInputSNMP
+      oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.35
+      type: gauge
+      help: 'SNMP Trap for Event: SDI Input 1 No Input - 1.3.6.1.4.1.14755.2.2249.704.1.1.35'
+      indexes:
+      - labelname: position
+        type: OctetString
+        implied: true
+      lookups:
+      - labels:
+        - position
+        labelname: typeName
+        oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.1
+        type: DisplayString
+      - labels:
+        - position
+        labelname: displayName
+        oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.2
+        type: DisplayString
+      - labels:
+        - position
+        labelname: type
+        oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.5
+        type: DisplayString
+      - labels:
+        - position
+        labelname: version
+        oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.6
+        type: DisplayString
+      - labels:
+        - position
+        labelname: position
+        oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.3
+        type: OctetString
+        display_hint: 1d.1d.1d.1d
+      enum_values:
+        0: none
+        1: onOnly
+        2: offOnly
+        3: onOff
+    - name: eventSDIInput2NoInputSNMP
+      oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.36
+      type: gauge
+      help: 'SNMP Trap for Event: SDI Input 2 No Input - 1.3.6.1.4.1.14755.2.2249.704.1.1.36'
+      indexes:
+      - labelname: position
+        type: OctetString
+        implied: true
+      lookups:
+      - labels:
+        - position
+        labelname: typeName
+        oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.1
+        type: DisplayString
+      - labels:
+        - position
+        labelname: displayName
+        oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.2
+        type: DisplayString
+      - labels:
+        - position
+        labelname: type
+        oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.5
+        type: DisplayString
+      - labels:
+        - position
+        labelname: version
+        oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.6
+        type: DisplayString
+      - labels:
+        - position
+        labelname: position
+        oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.3
+        type: OctetString
+        display_hint: 1d.1d.1d.1d
+      enum_values:
+        0: none
+        1: onOnly
+        2: offOnly
+        3: onOff
+    - name: eventPrimaryPowermissingSNMP
+      oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.37
+      type: gauge
+      help: 'SNMP Trap for Event: Primary Power missing - 1.3.6.1.4.1.14755.2.2249.704.1.1.37'
+      indexes:
+      - labelname: position
+        type: OctetString
+        implied: true
+      lookups:
+      - labels:
+        - position
+        labelname: typeName
+        oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.1
+        type: DisplayString
+      - labels:
+        - position
+        labelname: displayName
+        oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.2
+        type: DisplayString
+      - labels:
+        - position
+        labelname: type
+        oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.5
+        type: DisplayString
+      - labels:
+        - position
+        labelname: version
+        oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.6
+        type: DisplayString
+      - labels:
+        - position
+        labelname: position
+        oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.3
+        type: OctetString
+        display_hint: 1d.1d.1d.1d
+      enum_values:
+        0: none
+        1: onOnly
+        2: offOnly
+        3: onOff
+    - name: eventRedundantPowermissingSNMP
+      oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.38
+      type: gauge
+      help: 'SNMP Trap for Event: Redundant Power missing - 1.3.6.1.4.1.14755.2.2249.704.1.1.38'
+      indexes:
+      - labelname: position
+        type: OctetString
+        implied: true
+      lookups:
+      - labels:
+        - position
+        labelname: typeName
+        oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.1
+        type: DisplayString
+      - labels:
+        - position
+        labelname: displayName
+        oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.2
+        type: DisplayString
+      - labels:
+        - position
+        labelname: type
+        oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.5
+        type: DisplayString
+      - labels:
+        - position
+        labelname: version
+        oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.6
+        type: DisplayString
+      - labels:
+        - position
+        labelname: position
+        oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.3
+        type: OctetString
+        display_hint: 1d.1d.1d.1d
+      enum_values:
+        0: none
+        1: onOnly
+        2: offOnly
+        3: onOff
+    - name: sFP1OutPower
+      oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.39
+      type: DisplayString
+      help: displays the average output power of detected SFP-Module 1. - 1.3.6.1.4.1.14755.2.2249.704.1.1.39
+      indexes:
+      - labelname: position
+        type: OctetString
+        implied: true
+      lookups:
+      - labels:
+        - position
+        labelname: typeName
+        oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.1
+        type: DisplayString
+      - labels:
+        - position
+        labelname: displayName
+        oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.2
+        type: DisplayString
+      - labels:
+        - position
+        labelname: type
+        oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.5
+        type: DisplayString
+      - labels:
+        - position
+        labelname: version
+        oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.6
+        type: DisplayString
+      - labels:
+        - position
+        labelname: position
+        oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.3
+        type: OctetString
+        display_hint: 1d.1d.1d.1d
+      regex_extracts:
+        "":
+        - value: $1
+          regex: ^(?:(-?[0-9]+)( dBm))$
+        Status:
+        - value: "1"
+          regex: ^(?:(laser off))$
+        - value: "0"
+          regex: ^(?:^.*)$
+    - name: sFP1Wavelength
+      oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.40
+      type: DisplayString
+      help: displays the wavelength of detected SFP-Module 1. - 1.3.6.1.4.1.14755.2.2249.704.1.1.40
+      indexes:
+      - labelname: position
+        type: OctetString
+        implied: true
+      lookups:
+      - labels:
+        - position
+        labelname: typeName
+        oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.1
+        type: DisplayString
+      - labels:
+        - position
+        labelname: displayName
+        oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.2
+        type: DisplayString
+      - labels:
+        - position
+        labelname: type
+        oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.5
+        type: DisplayString
+      - labels:
+        - position
+        labelname: version
+        oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.6
+        type: DisplayString
+      - labels:
+        - position
+        labelname: position
+        oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.3
+        type: OctetString
+        display_hint: 1d.1d.1d.1d
+      regex_extracts:
+        "":
+        - value: $1
+          regex: ^(?:([0-9]+)( nm))$
+    - name: sFP2OutPower
+      oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.41
+      type: DisplayString
+      help: displays the average output power of detected SFP-Module 2. - 1.3.6.1.4.1.14755.2.2249.704.1.1.41
+      indexes:
+      - labelname: position
+        type: OctetString
+        implied: true
+      lookups:
+      - labels:
+        - position
+        labelname: typeName
+        oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.1
+        type: DisplayString
+      - labels:
+        - position
+        labelname: displayName
+        oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.2
+        type: DisplayString
+      - labels:
+        - position
+        labelname: type
+        oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.5
+        type: DisplayString
+      - labels:
+        - position
+        labelname: version
+        oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.6
+        type: DisplayString
+      - labels:
+        - position
+        labelname: position
+        oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.3
+        type: OctetString
+        display_hint: 1d.1d.1d.1d
+      regex_extracts:
+        "":
+        - value: $1
+          regex: ^(?:(-?[0-9]+)( dBm))$
+        Status:
+        - value: "1"
+          regex: ^(?:(laser off))$
+        - value: "0"
+          regex: ^(?:^.*)$
+    - name: sFP2Wavelength
+      oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.42
+      type: DisplayString
+      help: displays the wavelength of detected SFP-Module 2. - 1.3.6.1.4.1.14755.2.2249.704.1.1.42
+      indexes:
+      - labelname: position
+        type: OctetString
+        implied: true
+      lookups:
+      - labels:
+        - position
+        labelname: typeName
+        oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.1
+        type: DisplayString
+      - labels:
+        - position
+        labelname: displayName
+        oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.2
+        type: DisplayString
+      - labels:
+        - position
+        labelname: type
+        oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.5
+        type: DisplayString
+      - labels:
+        - position
+        labelname: version
+        oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.6
+        type: DisplayString
+      - labels:
+        - position
+        labelname: position
+        oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.3
+        type: OctetString
+        display_hint: 1d.1d.1d.1d
+      regex_extracts:
+        "":
+        - value: $1
+          regex: ^(?:([0-9]+)( nm))$
+    - name: sNumber
+      oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.43
+      type: DisplayString
+      help: Serial Number - 1.3.6.1.4.1.14755.2.2249.704.1.1.43
+      indexes:
+      - labelname: position
+        type: OctetString
+        implied: true
+      lookups:
+      - labels:
+        - position
+        labelname: typeName
+        oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.1
+        type: DisplayString
+      - labels:
+        - position
+        labelname: displayName
+        oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.2
+        type: DisplayString
+      - labels:
+        - position
+        labelname: type
+        oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.5
+        type: DisplayString
+      - labels:
+        - position
+        labelname: version
+        oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.6
+        type: DisplayString
+      - labels:
+        - position
+        labelname: position
+        oid: 1.3.6.1.4.1.14755.2.2249.704.1.1.3
+        type: OctetString
+        display_hint: 1d.1d.1d.1d
+    max_repetitions: 50
+    retries: 3
+    timeout: 5s
+  lynx_orx_5800:
+    walk:
+    - 1.3.6.1.4.1.14755.2.2268.619.1.1.1
+    - 1.3.6.1.4.1.14755.2.2268.619.1.1.19
+    - 1.3.6.1.4.1.14755.2.2268.619.1.1.2
+    - 1.3.6.1.4.1.14755.2.2268.619.1.1.20
+    - 1.3.6.1.4.1.14755.2.2268.619.1.1.21
+    - 1.3.6.1.4.1.14755.2.2268.619.1.1.22
+    - 1.3.6.1.4.1.14755.2.2268.619.1.1.23
+    - 1.3.6.1.4.1.14755.2.2268.619.1.1.24
+    - 1.3.6.1.4.1.14755.2.2268.619.1.1.25
+    - 1.3.6.1.4.1.14755.2.2268.619.1.1.26
+    - 1.3.6.1.4.1.14755.2.2268.619.1.1.27
+    - 1.3.6.1.4.1.14755.2.2268.619.1.1.28
+    - 1.3.6.1.4.1.14755.2.2268.619.1.1.29
+    - 1.3.6.1.4.1.14755.2.2268.619.1.1.3
+    - 1.3.6.1.4.1.14755.2.2268.619.1.1.30
+    - 1.3.6.1.4.1.14755.2.2268.619.1.1.36
+    - 1.3.6.1.4.1.14755.2.2268.619.1.1.37
+    - 1.3.6.1.4.1.14755.2.2268.619.1.1.38
+    - 1.3.6.1.4.1.14755.2.2268.619.1.1.39
+    - 1.3.6.1.4.1.14755.2.2268.619.1.1.4
+    - 1.3.6.1.4.1.14755.2.2268.619.1.1.48
+    - 1.3.6.1.4.1.14755.2.2268.619.1.1.49
+    - 1.3.6.1.4.1.14755.2.2268.619.1.1.5
+    - 1.3.6.1.4.1.14755.2.2268.619.1.1.50
+    - 1.3.6.1.4.1.14755.2.2268.619.1.1.51
+    - 1.3.6.1.4.1.14755.2.2268.619.1.1.6
+    - 1.3.6.1.4.1.14755.2.2268.619.1.1.7
+    - 1.3.6.1.4.1.14755.2.2268.619.1.1.9
+    metrics:
+    - name: eventPrimaryPowermissing
+      oid: 1.3.6.1.4.1.14755.2.2268.619.1.1.19
+      type: gauge
+      help: 'Info Event: Primary Power missing - 1.3.6.1.4.1.14755.2.2268.619.1.1.19'
+      indexes:
+      - labelname: position
+        type: OctetString
+        implied: true
+      lookups:
+      - labels:
+        - position
+        labelname: typeName
+        oid: 1.3.6.1.4.1.14755.2.2268.619.1.1.1
+        type: DisplayString
+      - labels:
+        - position
+        labelname: displayName
+        oid: 1.3.6.1.4.1.14755.2.2268.619.1.1.2
+        type: DisplayString
+      - labels:
+        - position
+        labelname: type
+        oid: 1.3.6.1.4.1.14755.2.2268.619.1.1.5
+        type: DisplayString
+      - labels:
+        - position
+        labelname: version
+        oid: 1.3.6.1.4.1.14755.2.2268.619.1.1.6
+        type: DisplayString
+      - labels:
+        - position
+        labelname: position
+        oid: 1.3.6.1.4.1.14755.2.2268.619.1.1.3
+        type: OctetString
+        display_hint: 1d.1d.1d.1d
+      enum_values:
+        0: "off"
+        1: "on"
+    - name: eventRedundantPowermissing
+      oid: 1.3.6.1.4.1.14755.2.2268.619.1.1.20
+      type: gauge
+      help: 'Info Event: Redundant Power missing - 1.3.6.1.4.1.14755.2.2268.619.1.1.20'
+      indexes:
+      - labelname: position
+        type: OctetString
+        implied: true
+      lookups:
+      - labels:
+        - position
+        labelname: typeName
+        oid: 1.3.6.1.4.1.14755.2.2268.619.1.1.1
+        type: DisplayString
+      - labels:
+        - position
+        labelname: displayName
+        oid: 1.3.6.1.4.1.14755.2.2268.619.1.1.2
+        type: DisplayString
+      - labels:
+        - position
+        labelname: type
+        oid: 1.3.6.1.4.1.14755.2.2268.619.1.1.5
+        type: DisplayString
+      - labels:
+        - position
+        labelname: version
+        oid: 1.3.6.1.4.1.14755.2.2268.619.1.1.6
+        type: DisplayString
+      - labels:
+        - position
+        labelname: position
+        oid: 1.3.6.1.4.1.14755.2.2268.619.1.1.3
+        type: OctetString
+        display_hint: 1d.1d.1d.1d
+      enum_values:
+        0: "off"
+        1: "on"
+    - name: sourceInput1
+      oid: 1.3.6.1.4.1.14755.2.2268.619.1.1.21
+      type: EnumAsStateSet
+      help: Select Source for Input 1 from electrical or optical connector - 1.3.6.1.4.1.14755.2.2268.619.1.1.21
+      indexes:
+      - labelname: position
+        type: OctetString
+        implied: true
+      lookups:
+      - labels:
+        - position
+        labelname: typeName
+        oid: 1.3.6.1.4.1.14755.2.2268.619.1.1.1
+        type: DisplayString
+      - labels:
+        - position
+        labelname: displayName
+        oid: 1.3.6.1.4.1.14755.2.2268.619.1.1.2
+        type: DisplayString
+      - labels:
+        - position
+        labelname: type
+        oid: 1.3.6.1.4.1.14755.2.2268.619.1.1.5
+        type: DisplayString
+      - labels:
+        - position
+        labelname: version
+        oid: 1.3.6.1.4.1.14755.2.2268.619.1.1.6
+        type: DisplayString
+      - labels:
+        - position
+        labelname: position
+        oid: 1.3.6.1.4.1.14755.2.2268.619.1.1.3
+        type: OctetString
+        display_hint: 1d.1d.1d.1d
+      enum_values:
+        0: optical
+        1: electrical
+    - name: sourceInput4
+      oid: 1.3.6.1.4.1.14755.2.2268.619.1.1.22
+      type: EnumAsStateSet
+      help: Select Source for Input 4 from electrical or optical connector - 1.3.6.1.4.1.14755.2.2268.619.1.1.22
+      indexes:
+      - labelname: position
+        type: OctetString
+        implied: true
+      lookups:
+      - labels:
+        - position
+        labelname: typeName
+        oid: 1.3.6.1.4.1.14755.2.2268.619.1.1.1
+        type: DisplayString
+      - labels:
+        - position
+        labelname: displayName
+        oid: 1.3.6.1.4.1.14755.2.2268.619.1.1.2
+        type: DisplayString
+      - labels:
+        - position
+        labelname: type
+        oid: 1.3.6.1.4.1.14755.2.2268.619.1.1.5
+        type: DisplayString
+      - labels:
+        - position
+        labelname: version
+        oid: 1.3.6.1.4.1.14755.2.2268.619.1.1.6
+        type: DisplayString
+      - labels:
+        - position
+        labelname: position
+        oid: 1.3.6.1.4.1.14755.2.2268.619.1.1.3
+        type: OctetString
+        display_hint: 1d.1d.1d.1d
+      enum_values:
+        0: optical
+        1: electrical
+    - name: in1
+      oid: 1.3.6.1.4.1.14755.2.2268.619.1.1.23
+      type: EnumAsStateSet
+      help: Input status channel 1 - 1.3.6.1.4.1.14755.2.2268.619.1.1.23
+      indexes:
+      - labelname: position
+        type: OctetString
+        implied: true
+      lookups:
+      - labels:
+        - position
+        labelname: typeName
+        oid: 1.3.6.1.4.1.14755.2.2268.619.1.1.1
+        type: DisplayString
+      - labels:
+        - position
+        labelname: displayName
+        oid: 1.3.6.1.4.1.14755.2.2268.619.1.1.2
+        type: DisplayString
+      - labels:
+        - position
+        labelname: type
+        oid: 1.3.6.1.4.1.14755.2.2268.619.1.1.5
+        type: DisplayString
+      - labels:
+        - position
+        labelname: version
+        oid: 1.3.6.1.4.1.14755.2.2268.619.1.1.6
+        type: DisplayString
+      - labels:
+        - position
+        labelname: position
+        oid: 1.3.6.1.4.1.14755.2.2268.619.1.1.3
+        type: OctetString
+        display_hint: 1d.1d.1d.1d
+      enum_values:
+        0: missing
+        1: sDSDI
+        2: hDSDI
+        3: n3GSDI
+        4: hD3G
+        5: present
+    - name: in2
+      oid: 1.3.6.1.4.1.14755.2.2268.619.1.1.24
+      type: EnumAsStateSet
+      help: Input status channel 2 - 1.3.6.1.4.1.14755.2.2268.619.1.1.24
+      indexes:
+      - labelname: position
+        type: OctetString
+        implied: true
+      lookups:
+      - labels:
+        - position
+        labelname: typeName
+        oid: 1.3.6.1.4.1.14755.2.2268.619.1.1.1
+        type: DisplayString
+      - labels:
+        - position
+        labelname: displayName
+        oid: 1.3.6.1.4.1.14755.2.2268.619.1.1.2
+        type: DisplayString
+      - labels:
+        - position
+        labelname: type
+        oid: 1.3.6.1.4.1.14755.2.2268.619.1.1.5
+        type: DisplayString
+      - labels:
+        - position
+        labelname: version
+        oid: 1.3.6.1.4.1.14755.2.2268.619.1.1.6
+        type: DisplayString
+      - labels:
+        - position
+        labelname: position
+        oid: 1.3.6.1.4.1.14755.2.2268.619.1.1.3
+        type: OctetString
+        display_hint: 1d.1d.1d.1d
+      enum_values:
+        0: missing
+        1: sDSDI
+        2: hDSDI
+        3: n3GSDI
+        4: hD3G
+        5: present
+    - name: in3
+      oid: 1.3.6.1.4.1.14755.2.2268.619.1.1.25
+      type: EnumAsStateSet
+      help: Input status channel 3 - 1.3.6.1.4.1.14755.2.2268.619.1.1.25
+      indexes:
+      - labelname: position
+        type: OctetString
+        implied: true
+      lookups:
+      - labels:
+        - position
+        labelname: typeName
+        oid: 1.3.6.1.4.1.14755.2.2268.619.1.1.1
+        type: DisplayString
+      - labels:
+        - position
+        labelname: displayName
+        oid: 1.3.6.1.4.1.14755.2.2268.619.1.1.2
+        type: DisplayString
+      - labels:
+        - position
+        labelname: type
+        oid: 1.3.6.1.4.1.14755.2.2268.619.1.1.5
+        type: DisplayString
+      - labels:
+        - position
+        labelname: version
+        oid: 1.3.6.1.4.1.14755.2.2268.619.1.1.6
+        type: DisplayString
+      - labels:
+        - position
+        labelname: position
+        oid: 1.3.6.1.4.1.14755.2.2268.619.1.1.3
+        type: OctetString
+        display_hint: 1d.1d.1d.1d
+      enum_values:
+        0: missing
+        1: sDSDI
+        2: hDSDI
+        3: n3GSDI
+        4: hD3G
+        5: present
+    - name: in4
+      oid: 1.3.6.1.4.1.14755.2.2268.619.1.1.26
+      type: EnumAsStateSet
+      help: Input status channel 4 - 1.3.6.1.4.1.14755.2.2268.619.1.1.26
+      indexes:
+      - labelname: position
+        type: OctetString
+        implied: true
+      lookups:
+      - labels:
+        - position
+        labelname: typeName
+        oid: 1.3.6.1.4.1.14755.2.2268.619.1.1.1
+        type: DisplayString
+      - labels:
+        - position
+        labelname: displayName
+        oid: 1.3.6.1.4.1.14755.2.2268.619.1.1.2
+        type: DisplayString
+      - labels:
+        - position
+        labelname: type
+        oid: 1.3.6.1.4.1.14755.2.2268.619.1.1.5
+        type: DisplayString
+      - labels:
+        - position
+        labelname: version
+        oid: 1.3.6.1.4.1.14755.2.2268.619.1.1.6
+        type: DisplayString
+      - labels:
+        - position
+        labelname: position
+        oid: 1.3.6.1.4.1.14755.2.2268.619.1.1.3
+        type: OctetString
+        display_hint: 1d.1d.1d.1d
+      enum_values:
+        0: missing
+        1: sDSDI
+        2: hDSDI
+        3: n3GSDI
+        4: hD3G
+        5: present
+    - name: out1
+      oid: 1.3.6.1.4.1.14755.2.2268.619.1.1.27
+      type: EnumAsStateSet
+      help: Output status channel 1 - 1.3.6.1.4.1.14755.2.2268.619.1.1.27
+      indexes:
+      - labelname: position
+        type: OctetString
+        implied: true
+      lookups:
+      - labels:
+        - position
+        labelname: typeName
+        oid: 1.3.6.1.4.1.14755.2.2268.619.1.1.1
+        type: DisplayString
+      - labels:
+        - position
+        labelname: displayName
+        oid: 1.3.6.1.4.1.14755.2.2268.619.1.1.2
+        type: DisplayString
+      - labels:
+        - position
+        labelname: type
+        oid: 1.3.6.1.4.1.14755.2.2268.619.1.1.5
+        type: DisplayString
+      - labels:
+        - position
+        labelname: version
+        oid: 1.3.6.1.4.1.14755.2.2268.619.1.1.6
+        type: DisplayString
+      - labels:
+        - position
+        labelname: position
+        oid: 1.3.6.1.4.1.14755.2.2268.619.1.1.3
+        type: OctetString
+        display_hint: 1d.1d.1d.1d
+      enum_values:
+        0: missing
+        1: sDSDI
+        2: hDSDI
+        3: n3GSDI
+        4: hD3G
+        5: present
+    - name: out2
+      oid: 1.3.6.1.4.1.14755.2.2268.619.1.1.28
+      type: EnumAsStateSet
+      help: Output status channel 2 - 1.3.6.1.4.1.14755.2.2268.619.1.1.28
+      indexes:
+      - labelname: position
+        type: OctetString
+        implied: true
+      lookups:
+      - labels:
+        - position
+        labelname: typeName
+        oid: 1.3.6.1.4.1.14755.2.2268.619.1.1.1
+        type: DisplayString
+      - labels:
+        - position
+        labelname: displayName
+        oid: 1.3.6.1.4.1.14755.2.2268.619.1.1.2
+        type: DisplayString
+      - labels:
+        - position
+        labelname: type
+        oid: 1.3.6.1.4.1.14755.2.2268.619.1.1.5
+        type: DisplayString
+      - labels:
+        - position
+        labelname: version
+        oid: 1.3.6.1.4.1.14755.2.2268.619.1.1.6
+        type: DisplayString
+      - labels:
+        - position
+        labelname: position
+        oid: 1.3.6.1.4.1.14755.2.2268.619.1.1.3
+        type: OctetString
+        display_hint: 1d.1d.1d.1d
+      enum_values:
+        0: missing
+        1: sDSDI
+        2: hDSDI
+        3: n3GSDI
+        4: hD3G
+        5: present
+    - name: out3
+      oid: 1.3.6.1.4.1.14755.2.2268.619.1.1.29
+      type: EnumAsStateSet
+      help: Output status channel 3 - 1.3.6.1.4.1.14755.2.2268.619.1.1.29
+      indexes:
+      - labelname: position
+        type: OctetString
+        implied: true
+      lookups:
+      - labels:
+        - position
+        labelname: typeName
+        oid: 1.3.6.1.4.1.14755.2.2268.619.1.1.1
+        type: DisplayString
+      - labels:
+        - position
+        labelname: displayName
+        oid: 1.3.6.1.4.1.14755.2.2268.619.1.1.2
+        type: DisplayString
+      - labels:
+        - position
+        labelname: type
+        oid: 1.3.6.1.4.1.14755.2.2268.619.1.1.5
+        type: DisplayString
+      - labels:
+        - position
+        labelname: version
+        oid: 1.3.6.1.4.1.14755.2.2268.619.1.1.6
+        type: DisplayString
+      - labels:
+        - position
+        labelname: position
+        oid: 1.3.6.1.4.1.14755.2.2268.619.1.1.3
+        type: OctetString
+        display_hint: 1d.1d.1d.1d
+      enum_values:
+        0: missing
+        1: sDSDI
+        2: hDSDI
+        3: n3GSDI
+        4: hD3G
+        5: present
+    - name: out4
+      oid: 1.3.6.1.4.1.14755.2.2268.619.1.1.30
+      type: EnumAsStateSet
+      help: Output status channel 4 - 1.3.6.1.4.1.14755.2.2268.619.1.1.30
+      indexes:
+      - labelname: position
+        type: OctetString
+        implied: true
+      lookups:
+      - labels:
+        - position
+        labelname: typeName
+        oid: 1.3.6.1.4.1.14755.2.2268.619.1.1.1
+        type: DisplayString
+      - labels:
+        - position
+        labelname: displayName
+        oid: 1.3.6.1.4.1.14755.2.2268.619.1.1.2
+        type: DisplayString
+      - labels:
+        - position
+        labelname: type
+        oid: 1.3.6.1.4.1.14755.2.2268.619.1.1.5
+        type: DisplayString
+      - labels:
+        - position
+        labelname: version
+        oid: 1.3.6.1.4.1.14755.2.2268.619.1.1.6
+        type: DisplayString
+      - labels:
+        - position
+        labelname: position
+        oid: 1.3.6.1.4.1.14755.2.2268.619.1.1.3
+        type: OctetString
+        display_hint: 1d.1d.1d.1d
+      enum_values:
+        0: missing
+        1: sDSDI
+        2: hDSDI
+        3: n3GSDI
+        4: hD3G
+        5: present
+    - name: input1OpticalSignalQuality
+      oid: 1.3.6.1.4.1.14755.2.2268.619.1.1.36
+      type: gauge
+      help: Signal quality at optical SDI Input 1 - 1.3.6.1.4.1.14755.2.2268.619.1.1.36
+      indexes:
+      - labelname: position
+        type: OctetString
+        implied: true
+      lookups:
+      - labels:
+        - position
+        labelname: typeName
+        oid: 1.3.6.1.4.1.14755.2.2268.619.1.1.1
+        type: DisplayString
+      - labels:
+        - position
+        labelname: displayName
+        oid: 1.3.6.1.4.1.14755.2.2268.619.1.1.2
+        type: DisplayString
+      - labels:
+        - position
+        labelname: type
+        oid: 1.3.6.1.4.1.14755.2.2268.619.1.1.5
+        type: DisplayString
+      - labels:
+        - position
+        labelname: version
+        oid: 1.3.6.1.4.1.14755.2.2268.619.1.1.6
+        type: DisplayString
+      - labels:
+        - position
+        labelname: position
+        oid: 1.3.6.1.4.1.14755.2.2268.619.1.1.3
+        type: OctetString
+        display_hint: 1d.1d.1d.1d
+      scale: 0.1
+      display_hint: d-1
+    - name: input2OpticalSignalQuality
+      oid: 1.3.6.1.4.1.14755.2.2268.619.1.1.37
+      type: gauge
+      help: Signal quality at optical SDI Input 2 - 1.3.6.1.4.1.14755.2.2268.619.1.1.37
+      indexes:
+      - labelname: position
+        type: OctetString
+        implied: true
+      lookups:
+      - labels:
+        - position
+        labelname: typeName
+        oid: 1.3.6.1.4.1.14755.2.2268.619.1.1.1
+        type: DisplayString
+      - labels:
+        - position
+        labelname: displayName
+        oid: 1.3.6.1.4.1.14755.2.2268.619.1.1.2
+        type: DisplayString
+      - labels:
+        - position
+        labelname: type
+        oid: 1.3.6.1.4.1.14755.2.2268.619.1.1.5
+        type: DisplayString
+      - labels:
+        - position
+        labelname: version
+        oid: 1.3.6.1.4.1.14755.2.2268.619.1.1.6
+        type: DisplayString
+      - labels:
+        - position
+        labelname: position
+        oid: 1.3.6.1.4.1.14755.2.2268.619.1.1.3
+        type: OctetString
+        display_hint: 1d.1d.1d.1d
+      scale: 0.1
+      display_hint: d-1
+    - name: input3OpticalSignalQuality
+      oid: 1.3.6.1.4.1.14755.2.2268.619.1.1.38
+      type: gauge
+      help: Signal quality at optical SDI Input 3 - 1.3.6.1.4.1.14755.2.2268.619.1.1.38
+      indexes:
+      - labelname: position
+        type: OctetString
+        implied: true
+      lookups:
+      - labels:
+        - position
+        labelname: typeName
+        oid: 1.3.6.1.4.1.14755.2.2268.619.1.1.1
+        type: DisplayString
+      - labels:
+        - position
+        labelname: displayName
+        oid: 1.3.6.1.4.1.14755.2.2268.619.1.1.2
+        type: DisplayString
+      - labels:
+        - position
+        labelname: type
+        oid: 1.3.6.1.4.1.14755.2.2268.619.1.1.5
+        type: DisplayString
+      - labels:
+        - position
+        labelname: version
+        oid: 1.3.6.1.4.1.14755.2.2268.619.1.1.6
+        type: DisplayString
+      - labels:
+        - position
+        labelname: position
+        oid: 1.3.6.1.4.1.14755.2.2268.619.1.1.3
+        type: OctetString
+        display_hint: 1d.1d.1d.1d
+      scale: 0.1
+      display_hint: d-1
+    - name: input4OpticalSignalQuality
+      oid: 1.3.6.1.4.1.14755.2.2268.619.1.1.39
+      type: gauge
+      help: Signal quality at optical SDI Input 4 - 1.3.6.1.4.1.14755.2.2268.619.1.1.39
+      indexes:
+      - labelname: position
+        type: OctetString
+        implied: true
+      lookups:
+      - labels:
+        - position
+        labelname: typeName
+        oid: 1.3.6.1.4.1.14755.2.2268.619.1.1.1
+        type: DisplayString
+      - labels:
+        - position
+        labelname: displayName
+        oid: 1.3.6.1.4.1.14755.2.2268.619.1.1.2
+        type: DisplayString
+      - labels:
+        - position
+        labelname: type
+        oid: 1.3.6.1.4.1.14755.2.2268.619.1.1.5
+        type: DisplayString
+      - labels:
+        - position
+        labelname: version
+        oid: 1.3.6.1.4.1.14755.2.2268.619.1.1.6
+        type: DisplayString
+      - labels:
+        - position
+        labelname: position
+        oid: 1.3.6.1.4.1.14755.2.2268.619.1.1.3
+        type: OctetString
+        display_hint: 1d.1d.1d.1d
+      scale: 0.1
+      display_hint: d-1
+    - name: uptime
+      oid: 1.3.6.1.4.1.14755.2.2268.619.1.1.4
+      type: counter
+      help: Connection time of the device to this UI (in seconds) - 1.3.6.1.4.1.14755.2.2268.619.1.1.4
+      indexes:
+      - labelname: position
+        type: OctetString
+        implied: true
+      lookups:
+      - labels:
+        - position
+        labelname: typeName
+        oid: 1.3.6.1.4.1.14755.2.2268.619.1.1.1
+        type: DisplayString
+      - labels:
+        - position
+        labelname: displayName
+        oid: 1.3.6.1.4.1.14755.2.2268.619.1.1.2
+        type: DisplayString
+      - labels:
+        - position
+        labelname: type
+        oid: 1.3.6.1.4.1.14755.2.2268.619.1.1.5
+        type: DisplayString
+      - labels:
+        - position
+        labelname: version
+        oid: 1.3.6.1.4.1.14755.2.2268.619.1.1.6
+        type: DisplayString
+      - labels:
+        - position
+        labelname: position
+        oid: 1.3.6.1.4.1.14755.2.2268.619.1.1.3
+        type: OctetString
+        display_hint: 1d.1d.1d.1d
+      scale: 0.01
+    - name: eventVideoInput1NoInput
+      oid: 1.3.6.1.4.1.14755.2.2268.619.1.1.48
+      type: gauge
+      help: 'Warning Event: Video Input 1 No Input - 1.3.6.1.4.1.14755.2.2268.619.1.1.48'
+      indexes:
+      - labelname: position
+        type: OctetString
+        implied: true
+      lookups:
+      - labels:
+        - position
+        labelname: typeName
+        oid: 1.3.6.1.4.1.14755.2.2268.619.1.1.1
+        type: DisplayString
+      - labels:
+        - position
+        labelname: displayName
+        oid: 1.3.6.1.4.1.14755.2.2268.619.1.1.2
+        type: DisplayString
+      - labels:
+        - position
+        labelname: type
+        oid: 1.3.6.1.4.1.14755.2.2268.619.1.1.5
+        type: DisplayString
+      - labels:
+        - position
+        labelname: version
+        oid: 1.3.6.1.4.1.14755.2.2268.619.1.1.6
+        type: DisplayString
+      - labels:
+        - position
+        labelname: position
+        oid: 1.3.6.1.4.1.14755.2.2268.619.1.1.3
+        type: OctetString
+        display_hint: 1d.1d.1d.1d
+      enum_values:
+        0: "off"
+        1: "on"
+    - name: eventVideoInput2NoInput
+      oid: 1.3.6.1.4.1.14755.2.2268.619.1.1.49
+      type: gauge
+      help: 'Warning Event: Video Input 2 No Input - 1.3.6.1.4.1.14755.2.2268.619.1.1.49'
+      indexes:
+      - labelname: position
+        type: OctetString
+        implied: true
+      lookups:
+      - labels:
+        - position
+        labelname: typeName
+        oid: 1.3.6.1.4.1.14755.2.2268.619.1.1.1
+        type: DisplayString
+      - labels:
+        - position
+        labelname: displayName
+        oid: 1.3.6.1.4.1.14755.2.2268.619.1.1.2
+        type: DisplayString
+      - labels:
+        - position
+        labelname: type
+        oid: 1.3.6.1.4.1.14755.2.2268.619.1.1.5
+        type: DisplayString
+      - labels:
+        - position
+        labelname: version
+        oid: 1.3.6.1.4.1.14755.2.2268.619.1.1.6
+        type: DisplayString
+      - labels:
+        - position
+        labelname: position
+        oid: 1.3.6.1.4.1.14755.2.2268.619.1.1.3
+        type: OctetString
+        display_hint: 1d.1d.1d.1d
+      enum_values:
+        0: "off"
+        1: "on"
+    - name: eventVideoInput3NoInput
+      oid: 1.3.6.1.4.1.14755.2.2268.619.1.1.50
+      type: gauge
+      help: 'Warning Event: Video Input 3 No Input - 1.3.6.1.4.1.14755.2.2268.619.1.1.50'
+      indexes:
+      - labelname: position
+        type: OctetString
+        implied: true
+      lookups:
+      - labels:
+        - position
+        labelname: typeName
+        oid: 1.3.6.1.4.1.14755.2.2268.619.1.1.1
+        type: DisplayString
+      - labels:
+        - position
+        labelname: displayName
+        oid: 1.3.6.1.4.1.14755.2.2268.619.1.1.2
+        type: DisplayString
+      - labels:
+        - position
+        labelname: type
+        oid: 1.3.6.1.4.1.14755.2.2268.619.1.1.5
+        type: DisplayString
+      - labels:
+        - position
+        labelname: version
+        oid: 1.3.6.1.4.1.14755.2.2268.619.1.1.6
+        type: DisplayString
+      - labels:
+        - position
+        labelname: position
+        oid: 1.3.6.1.4.1.14755.2.2268.619.1.1.3
+        type: OctetString
+        display_hint: 1d.1d.1d.1d
+      enum_values:
+        0: "off"
+        1: "on"
+    - name: eventVideoInput4NoInput
+      oid: 1.3.6.1.4.1.14755.2.2268.619.1.1.51
+      type: gauge
+      help: 'Warning Event: Video Input 4 No Input - 1.3.6.1.4.1.14755.2.2268.619.1.1.51'
+      indexes:
+      - labelname: position
+        type: OctetString
+        implied: true
+      lookups:
+      - labels:
+        - position
+        labelname: typeName
+        oid: 1.3.6.1.4.1.14755.2.2268.619.1.1.1
+        type: DisplayString
+      - labels:
+        - position
+        labelname: displayName
+        oid: 1.3.6.1.4.1.14755.2.2268.619.1.1.2
+        type: DisplayString
+      - labels:
+        - position
+        labelname: type
+        oid: 1.3.6.1.4.1.14755.2.2268.619.1.1.5
+        type: DisplayString
+      - labels:
+        - position
+        labelname: version
+        oid: 1.3.6.1.4.1.14755.2.2268.619.1.1.6
+        type: DisplayString
+      - labels:
+        - position
+        labelname: position
+        oid: 1.3.6.1.4.1.14755.2.2268.619.1.1.3
+        type: OctetString
+        display_hint: 1d.1d.1d.1d
+      enum_values:
+        0: "off"
+        1: "on"
+    - name: statusColor
+      oid: 1.3.6.1.4.1.14755.2.2268.619.1.1.7
+      type: EnumAsStateSet
+      help: The current color of the Devices Master LED (red/green/yellow) - 1.3.6.1.4.1.14755.2.2268.619.1.1.7
+      indexes:
+      - labelname: position
+        type: OctetString
+        implied: true
+      lookups:
+      - labels:
+        - position
+        labelname: typeName
+        oid: 1.3.6.1.4.1.14755.2.2268.619.1.1.1
+        type: DisplayString
+      - labels:
+        - position
+        labelname: displayName
+        oid: 1.3.6.1.4.1.14755.2.2268.619.1.1.2
+        type: DisplayString
+      - labels:
+        - position
+        labelname: type
+        oid: 1.3.6.1.4.1.14755.2.2268.619.1.1.5
+        type: DisplayString
+      - labels:
+        - position
+        labelname: version
+        oid: 1.3.6.1.4.1.14755.2.2268.619.1.1.6
+        type: DisplayString
+      - labels:
+        - position
+        labelname: position
+        oid: 1.3.6.1.4.1.14755.2.2268.619.1.1.3
+        type: OctetString
+        display_hint: 1d.1d.1d.1d
+      enum_values:
+        0: unknown
+        1: black
+        2: green
+        3: yellow
+        4: red
+    - name: statusText
+      oid: 1.3.6.1.4.1.14755.2.2268.619.1.1.9
+      type: DisplayString
+      help: The current status text (OK or error-details) - 1.3.6.1.4.1.14755.2.2268.619.1.1.9
+      indexes:
+      - labelname: position
+        type: OctetString
+        implied: true
+      lookups:
+      - labels:
+        - position
+        labelname: typeName
+        oid: 1.3.6.1.4.1.14755.2.2268.619.1.1.1
+        type: DisplayString
+      - labels:
+        - position
+        labelname: displayName
+        oid: 1.3.6.1.4.1.14755.2.2268.619.1.1.2
+        type: DisplayString
+      - labels:
+        - position
+        labelname: type
+        oid: 1.3.6.1.4.1.14755.2.2268.619.1.1.5
+        type: DisplayString
+      - labels:
+        - position
+        labelname: version
+        oid: 1.3.6.1.4.1.14755.2.2268.619.1.1.6
+        type: DisplayString
+      - labels:
+        - position
+        labelname: position
+        oid: 1.3.6.1.4.1.14755.2.2268.619.1.1.3
+        type: OctetString
+        display_hint: 1d.1d.1d.1d
+      regex_extracts:
+        "":
+        - value: "0"
+          regex: ^(?:OK)$
+        - value: "1"
+          regex: ^(?:^.*)$
+    max_repetitions: 55
+    retries: 3
+    timeout: 5s
+  lynx_otx_5840:
+    walk:
+    - 1.3.6.1.4.1.14755.2.2267.619.1.1.1
+    - 1.3.6.1.4.1.14755.2.2267.619.1.1.19
+    - 1.3.6.1.4.1.14755.2.2267.619.1.1.2
+    - 1.3.6.1.4.1.14755.2.2267.619.1.1.20
+    - 1.3.6.1.4.1.14755.2.2267.619.1.1.21
+    - 1.3.6.1.4.1.14755.2.2267.619.1.1.22
+    - 1.3.6.1.4.1.14755.2.2267.619.1.1.23
+    - 1.3.6.1.4.1.14755.2.2267.619.1.1.24
+    - 1.3.6.1.4.1.14755.2.2267.619.1.1.25
+    - 1.3.6.1.4.1.14755.2.2267.619.1.1.26
+    - 1.3.6.1.4.1.14755.2.2267.619.1.1.27
+    - 1.3.6.1.4.1.14755.2.2267.619.1.1.28
+    - 1.3.6.1.4.1.14755.2.2267.619.1.1.29
+    - 1.3.6.1.4.1.14755.2.2267.619.1.1.3
+    - 1.3.6.1.4.1.14755.2.2267.619.1.1.30
+    - 1.3.6.1.4.1.14755.2.2267.619.1.1.4
+    - 1.3.6.1.4.1.14755.2.2267.619.1.1.5
+    - 1.3.6.1.4.1.14755.2.2267.619.1.1.57
+    - 1.3.6.1.4.1.14755.2.2267.619.1.1.58
+    - 1.3.6.1.4.1.14755.2.2267.619.1.1.59
+    - 1.3.6.1.4.1.14755.2.2267.619.1.1.6
+    - 1.3.6.1.4.1.14755.2.2267.619.1.1.60
+    - 1.3.6.1.4.1.14755.2.2267.619.1.1.61
+    - 1.3.6.1.4.1.14755.2.2267.619.1.1.62
+    - 1.3.6.1.4.1.14755.2.2267.619.1.1.7
+    - 1.3.6.1.4.1.14755.2.2267.619.1.1.9
+    metrics:
+    - name: eventPrimaryPowermissing
+      oid: 1.3.6.1.4.1.14755.2.2267.619.1.1.19
+      type: gauge
+      help: 'Info Event: Primary Power missing - 1.3.6.1.4.1.14755.2.2267.619.1.1.19'
+      indexes:
+      - labelname: position
+        type: OctetString
+        implied: true
+      lookups:
+      - labels:
+        - position
+        labelname: typeName
+        oid: 1.3.6.1.4.1.14755.2.2267.619.1.1.1
+        type: DisplayString
+      - labels:
+        - position
+        labelname: displayName
+        oid: 1.3.6.1.4.1.14755.2.2267.619.1.1.2
+        type: DisplayString
+      - labels:
+        - position
+        labelname: type
+        oid: 1.3.6.1.4.1.14755.2.2267.619.1.1.5
+        type: DisplayString
+      - labels:
+        - position
+        labelname: version
+        oid: 1.3.6.1.4.1.14755.2.2267.619.1.1.6
+        type: DisplayString
+      - labels:
+        - position
+        labelname: position
+        oid: 1.3.6.1.4.1.14755.2.2267.619.1.1.3
+        type: OctetString
+        display_hint: 1d.1d.1d.1d
+      enum_values:
+        0: "off"
+        1: "on"
+    - name: eventRedundantPowermissing
+      oid: 1.3.6.1.4.1.14755.2.2267.619.1.1.20
+      type: gauge
+      help: 'Info Event: Redundant Power missing - 1.3.6.1.4.1.14755.2.2267.619.1.1.20'
+      indexes:
+      - labelname: position
+        type: OctetString
+        implied: true
+      lookups:
+      - labels:
+        - position
+        labelname: typeName
+        oid: 1.3.6.1.4.1.14755.2.2267.619.1.1.1
+        type: DisplayString
+      - labels:
+        - position
+        labelname: displayName
+        oid: 1.3.6.1.4.1.14755.2.2267.619.1.1.2
+        type: DisplayString
+      - labels:
+        - position
+        labelname: type
+        oid: 1.3.6.1.4.1.14755.2.2267.619.1.1.5
+        type: DisplayString
+      - labels:
+        - position
+        labelname: version
+        oid: 1.3.6.1.4.1.14755.2.2267.619.1.1.6
+        type: DisplayString
+      - labels:
+        - position
+        labelname: position
+        oid: 1.3.6.1.4.1.14755.2.2267.619.1.1.3
+        type: OctetString
+        display_hint: 1d.1d.1d.1d
+      enum_values:
+        0: "off"
+        1: "on"
+    - name: in1
+      oid: 1.3.6.1.4.1.14755.2.2267.619.1.1.21
+      type: EnumAsStateSet
+      help: Input status channel 1 - 1.3.6.1.4.1.14755.2.2267.619.1.1.21
+      indexes:
+      - labelname: position
+        type: OctetString
+        implied: true
+      lookups:
+      - labels:
+        - position
+        labelname: typeName
+        oid: 1.3.6.1.4.1.14755.2.2267.619.1.1.1
+        type: DisplayString
+      - labels:
+        - position
+        labelname: displayName
+        oid: 1.3.6.1.4.1.14755.2.2267.619.1.1.2
+        type: DisplayString
+      - labels:
+        - position
+        labelname: type
+        oid: 1.3.6.1.4.1.14755.2.2267.619.1.1.5
+        type: DisplayString
+      - labels:
+        - position
+        labelname: version
+        oid: 1.3.6.1.4.1.14755.2.2267.619.1.1.6
+        type: DisplayString
+      - labels:
+        - position
+        labelname: position
+        oid: 1.3.6.1.4.1.14755.2.2267.619.1.1.3
+        type: OctetString
+        display_hint: 1d.1d.1d.1d
+      enum_values:
+        0: missing
+        1: sDSDI
+        2: hDSDI
+        3: n3GSDI
+        4: hD3G
+        5: present
+    - name: in2
+      oid: 1.3.6.1.4.1.14755.2.2267.619.1.1.22
+      type: EnumAsStateSet
+      help: Input status channel 2 - 1.3.6.1.4.1.14755.2.2267.619.1.1.22
+      indexes:
+      - labelname: position
+        type: OctetString
+        implied: true
+      lookups:
+      - labels:
+        - position
+        labelname: typeName
+        oid: 1.3.6.1.4.1.14755.2.2267.619.1.1.1
+        type: DisplayString
+      - labels:
+        - position
+        labelname: displayName
+        oid: 1.3.6.1.4.1.14755.2.2267.619.1.1.2
+        type: DisplayString
+      - labels:
+        - position
+        labelname: type
+        oid: 1.3.6.1.4.1.14755.2.2267.619.1.1.5
+        type: DisplayString
+      - labels:
+        - position
+        labelname: version
+        oid: 1.3.6.1.4.1.14755.2.2267.619.1.1.6
+        type: DisplayString
+      - labels:
+        - position
+        labelname: position
+        oid: 1.3.6.1.4.1.14755.2.2267.619.1.1.3
+        type: OctetString
+        display_hint: 1d.1d.1d.1d
+      enum_values:
+        0: missing
+        1: sDSDI
+        2: hDSDI
+        3: n3GSDI
+        4: hD3G
+        5: present
+    - name: in3
+      oid: 1.3.6.1.4.1.14755.2.2267.619.1.1.23
+      type: EnumAsStateSet
+      help: Input status channel 3 - 1.3.6.1.4.1.14755.2.2267.619.1.1.23
+      indexes:
+      - labelname: position
+        type: OctetString
+        implied: true
+      lookups:
+      - labels:
+        - position
+        labelname: typeName
+        oid: 1.3.6.1.4.1.14755.2.2267.619.1.1.1
+        type: DisplayString
+      - labels:
+        - position
+        labelname: displayName
+        oid: 1.3.6.1.4.1.14755.2.2267.619.1.1.2
+        type: DisplayString
+      - labels:
+        - position
+        labelname: type
+        oid: 1.3.6.1.4.1.14755.2.2267.619.1.1.5
+        type: DisplayString
+      - labels:
+        - position
+        labelname: version
+        oid: 1.3.6.1.4.1.14755.2.2267.619.1.1.6
+        type: DisplayString
+      - labels:
+        - position
+        labelname: position
+        oid: 1.3.6.1.4.1.14755.2.2267.619.1.1.3
+        type: OctetString
+        display_hint: 1d.1d.1d.1d
+      enum_values:
+        0: missing
+        1: sDSDI
+        2: hDSDI
+        3: n3GSDI
+        4: hD3G
+        5: present
+    - name: in4
+      oid: 1.3.6.1.4.1.14755.2.2267.619.1.1.24
+      type: EnumAsStateSet
+      help: Input status channel 4 - 1.3.6.1.4.1.14755.2.2267.619.1.1.24
+      indexes:
+      - labelname: position
+        type: OctetString
+        implied: true
+      lookups:
+      - labels:
+        - position
+        labelname: typeName
+        oid: 1.3.6.1.4.1.14755.2.2267.619.1.1.1
+        type: DisplayString
+      - labels:
+        - position
+        labelname: displayName
+        oid: 1.3.6.1.4.1.14755.2.2267.619.1.1.2
+        type: DisplayString
+      - labels:
+        - position
+        labelname: type
+        oid: 1.3.6.1.4.1.14755.2.2267.619.1.1.5
+        type: DisplayString
+      - labels:
+        - position
+        labelname: version
+        oid: 1.3.6.1.4.1.14755.2.2267.619.1.1.6
+        type: DisplayString
+      - labels:
+        - position
+        labelname: position
+        oid: 1.3.6.1.4.1.14755.2.2267.619.1.1.3
+        type: OctetString
+        display_hint: 1d.1d.1d.1d
+      enum_values:
+        0: missing
+        1: sDSDI
+        2: hDSDI
+        3: n3GSDI
+        4: hD3G
+        5: present
+    - name: out1
+      oid: 1.3.6.1.4.1.14755.2.2267.619.1.1.25
+      type: EnumAsStateSet
+      help: Output status channel 1 - 1.3.6.1.4.1.14755.2.2267.619.1.1.25
+      indexes:
+      - labelname: position
+        type: OctetString
+        implied: true
+      lookups:
+      - labels:
+        - position
+        labelname: typeName
+        oid: 1.3.6.1.4.1.14755.2.2267.619.1.1.1
+        type: DisplayString
+      - labels:
+        - position
+        labelname: displayName
+        oid: 1.3.6.1.4.1.14755.2.2267.619.1.1.2
+        type: DisplayString
+      - labels:
+        - position
+        labelname: type
+        oid: 1.3.6.1.4.1.14755.2.2267.619.1.1.5
+        type: DisplayString
+      - labels:
+        - position
+        labelname: version
+        oid: 1.3.6.1.4.1.14755.2.2267.619.1.1.6
+        type: DisplayString
+      - labels:
+        - position
+        labelname: position
+        oid: 1.3.6.1.4.1.14755.2.2267.619.1.1.3
+        type: OctetString
+        display_hint: 1d.1d.1d.1d
+      enum_values:
+        0: missing
+        1: sDSDI
+        2: hDSDI
+        3: n3GSDI
+        4: hD3G
+        5: present
+    - name: out2
+      oid: 1.3.6.1.4.1.14755.2.2267.619.1.1.26
+      type: EnumAsStateSet
+      help: Output status channel 2 - 1.3.6.1.4.1.14755.2.2267.619.1.1.26
+      indexes:
+      - labelname: position
+        type: OctetString
+        implied: true
+      lookups:
+      - labels:
+        - position
+        labelname: typeName
+        oid: 1.3.6.1.4.1.14755.2.2267.619.1.1.1
+        type: DisplayString
+      - labels:
+        - position
+        labelname: displayName
+        oid: 1.3.6.1.4.1.14755.2.2267.619.1.1.2
+        type: DisplayString
+      - labels:
+        - position
+        labelname: type
+        oid: 1.3.6.1.4.1.14755.2.2267.619.1.1.5
+        type: DisplayString
+      - labels:
+        - position
+        labelname: version
+        oid: 1.3.6.1.4.1.14755.2.2267.619.1.1.6
+        type: DisplayString
+      - labels:
+        - position
+        labelname: position
+        oid: 1.3.6.1.4.1.14755.2.2267.619.1.1.3
+        type: OctetString
+        display_hint: 1d.1d.1d.1d
+      enum_values:
+        0: missing
+        1: sDSDI
+        2: hDSDI
+        3: n3GSDI
+        4: hD3G
+        5: present
+    - name: out3
+      oid: 1.3.6.1.4.1.14755.2.2267.619.1.1.27
+      type: EnumAsStateSet
+      help: Output status channel 3 - 1.3.6.1.4.1.14755.2.2267.619.1.1.27
+      indexes:
+      - labelname: position
+        type: OctetString
+        implied: true
+      lookups:
+      - labels:
+        - position
+        labelname: typeName
+        oid: 1.3.6.1.4.1.14755.2.2267.619.1.1.1
+        type: DisplayString
+      - labels:
+        - position
+        labelname: displayName
+        oid: 1.3.6.1.4.1.14755.2.2267.619.1.1.2
+        type: DisplayString
+      - labels:
+        - position
+        labelname: type
+        oid: 1.3.6.1.4.1.14755.2.2267.619.1.1.5
+        type: DisplayString
+      - labels:
+        - position
+        labelname: version
+        oid: 1.3.6.1.4.1.14755.2.2267.619.1.1.6
+        type: DisplayString
+      - labels:
+        - position
+        labelname: position
+        oid: 1.3.6.1.4.1.14755.2.2267.619.1.1.3
+        type: OctetString
+        display_hint: 1d.1d.1d.1d
+      enum_values:
+        0: missing
+        1: sDSDI
+        2: hDSDI
+        3: n3GSDI
+        4: hD3G
+        5: present
+    - name: out4
+      oid: 1.3.6.1.4.1.14755.2.2267.619.1.1.28
+      type: EnumAsStateSet
+      help: Output status channel 4 - 1.3.6.1.4.1.14755.2.2267.619.1.1.28
+      indexes:
+      - labelname: position
+        type: OctetString
+        implied: true
+      lookups:
+      - labels:
+        - position
+        labelname: typeName
+        oid: 1.3.6.1.4.1.14755.2.2267.619.1.1.1
+        type: DisplayString
+      - labels:
+        - position
+        labelname: displayName
+        oid: 1.3.6.1.4.1.14755.2.2267.619.1.1.2
+        type: DisplayString
+      - labels:
+        - position
+        labelname: type
+        oid: 1.3.6.1.4.1.14755.2.2267.619.1.1.5
+        type: DisplayString
+      - labels:
+        - position
+        labelname: version
+        oid: 1.3.6.1.4.1.14755.2.2267.619.1.1.6
+        type: DisplayString
+      - labels:
+        - position
+        labelname: position
+        oid: 1.3.6.1.4.1.14755.2.2267.619.1.1.3
+        type: OctetString
+        display_hint: 1d.1d.1d.1d
+      enum_values:
+        0: missing
+        1: sDSDI
+        2: hDSDI
+        3: n3GSDI
+        4: hD3G
+        5: present
+    - name: out5
+      oid: 1.3.6.1.4.1.14755.2.2267.619.1.1.29
+      type: EnumAsStateSet
+      help: Output status channel 5 - 1.3.6.1.4.1.14755.2.2267.619.1.1.29
+      indexes:
+      - labelname: position
+        type: OctetString
+        implied: true
+      lookups:
+      - labels:
+        - position
+        labelname: typeName
+        oid: 1.3.6.1.4.1.14755.2.2267.619.1.1.1
+        type: DisplayString
+      - labels:
+        - position
+        labelname: displayName
+        oid: 1.3.6.1.4.1.14755.2.2267.619.1.1.2
+        type: DisplayString
+      - labels:
+        - position
+        labelname: type
+        oid: 1.3.6.1.4.1.14755.2.2267.619.1.1.5
+        type: DisplayString
+      - labels:
+        - position
+        labelname: version
+        oid: 1.3.6.1.4.1.14755.2.2267.619.1.1.6
+        type: DisplayString
+      - labels:
+        - position
+        labelname: position
+        oid: 1.3.6.1.4.1.14755.2.2267.619.1.1.3
+        type: OctetString
+        display_hint: 1d.1d.1d.1d
+      enum_values:
+        0: missing
+        1: sDSDI
+        2: hDSDI
+        3: n3GSDI
+        4: hD3G
+        5: present
+    - name: out6
+      oid: 1.3.6.1.4.1.14755.2.2267.619.1.1.30
+      type: EnumAsStateSet
+      help: Output status channel 6 - 1.3.6.1.4.1.14755.2.2267.619.1.1.30
+      indexes:
+      - labelname: position
+        type: OctetString
+        implied: true
+      lookups:
+      - labels:
+        - position
+        labelname: typeName
+        oid: 1.3.6.1.4.1.14755.2.2267.619.1.1.1
+        type: DisplayString
+      - labels:
+        - position
+        labelname: displayName
+        oid: 1.3.6.1.4.1.14755.2.2267.619.1.1.2
+        type: DisplayString
+      - labels:
+        - position
+        labelname: type
+        oid: 1.3.6.1.4.1.14755.2.2267.619.1.1.5
+        type: DisplayString
+      - labels:
+        - position
+        labelname: version
+        oid: 1.3.6.1.4.1.14755.2.2267.619.1.1.6
+        type: DisplayString
+      - labels:
+        - position
+        labelname: position
+        oid: 1.3.6.1.4.1.14755.2.2267.619.1.1.3
+        type: OctetString
+        display_hint: 1d.1d.1d.1d
+      enum_values:
+        0: missing
+        1: sDSDI
+        2: hDSDI
+        3: n3GSDI
+        4: hD3G
+        5: present
+    - name: uptime
+      oid: 1.3.6.1.4.1.14755.2.2267.619.1.1.4
+      type: counter
+      help: Connection time of the device to this UI (in seconds) - 1.3.6.1.4.1.14755.2.2267.619.1.1.4
+      indexes:
+      - labelname: position
+        type: OctetString
+        implied: true
+      lookups:
+      - labels:
+        - position
+        labelname: typeName
+        oid: 1.3.6.1.4.1.14755.2.2267.619.1.1.1
+        type: DisplayString
+      - labels:
+        - position
+        labelname: displayName
+        oid: 1.3.6.1.4.1.14755.2.2267.619.1.1.2
+        type: DisplayString
+      - labels:
+        - position
+        labelname: type
+        oid: 1.3.6.1.4.1.14755.2.2267.619.1.1.5
+        type: DisplayString
+      - labels:
+        - position
+        labelname: version
+        oid: 1.3.6.1.4.1.14755.2.2267.619.1.1.6
+        type: DisplayString
+      - labels:
+        - position
+        labelname: position
+        oid: 1.3.6.1.4.1.14755.2.2267.619.1.1.3
+        type: OctetString
+        display_hint: 1d.1d.1d.1d
+      scale: 0.01
+    - name: sFP1OutPower
+      oid: 1.3.6.1.4.1.14755.2.2267.619.1.1.57
+      type: DisplayString
+      help: displays the average output power of detected SFP-Module 1. - 1.3.6.1.4.1.14755.2.2267.619.1.1.57
+      indexes:
+      - labelname: position
+        type: OctetString
+        implied: true
+      lookups:
+      - labels:
+        - position
+        labelname: typeName
+        oid: 1.3.6.1.4.1.14755.2.2267.619.1.1.1
+        type: DisplayString
+      - labels:
+        - position
+        labelname: displayName
+        oid: 1.3.6.1.4.1.14755.2.2267.619.1.1.2
+        type: DisplayString
+      - labels:
+        - position
+        labelname: type
+        oid: 1.3.6.1.4.1.14755.2.2267.619.1.1.5
+        type: DisplayString
+      - labels:
+        - position
+        labelname: version
+        oid: 1.3.6.1.4.1.14755.2.2267.619.1.1.6
+        type: DisplayString
+      - labels:
+        - position
+        labelname: position
+        oid: 1.3.6.1.4.1.14755.2.2267.619.1.1.3
+        type: OctetString
+        display_hint: 1d.1d.1d.1d
+      regex_extracts:
+        "":
+        - value: $1
+          regex: ^(?:(-?[0-9]+)( dBm))$
+        Status:
+        - value: "1"
+          regex: ^(?:(laser off))$
+        - value: "0"
+          regex: ^(?:^.*)$
+    - name: sFP1Wavelength1
+      oid: 1.3.6.1.4.1.14755.2.2267.619.1.1.58
+      type: DisplayString
+      help: displays the wavelength of detected SFP-Module 1. - 1.3.6.1.4.1.14755.2.2267.619.1.1.58
+      indexes:
+      - labelname: position
+        type: OctetString
+        implied: true
+      lookups:
+      - labels:
+        - position
+        labelname: typeName
+        oid: 1.3.6.1.4.1.14755.2.2267.619.1.1.1
+        type: DisplayString
+      - labels:
+        - position
+        labelname: displayName
+        oid: 1.3.6.1.4.1.14755.2.2267.619.1.1.2
+        type: DisplayString
+      - labels:
+        - position
+        labelname: type
+        oid: 1.3.6.1.4.1.14755.2.2267.619.1.1.5
+        type: DisplayString
+      - labels:
+        - position
+        labelname: version
+        oid: 1.3.6.1.4.1.14755.2.2267.619.1.1.6
+        type: DisplayString
+      - labels:
+        - position
+        labelname: position
+        oid: 1.3.6.1.4.1.14755.2.2267.619.1.1.3
+        type: OctetString
+        display_hint: 1d.1d.1d.1d
+      regex_extracts:
+        "":
+        - value: $1
+          regex: ^(?:([0-9]+)( nm))$
+    - name: sFP1Wavelength2
+      oid: 1.3.6.1.4.1.14755.2.2267.619.1.1.59
+      type: DisplayString
+      help: displays the wavelength of detected SFP-Module 1. - 1.3.6.1.4.1.14755.2.2267.619.1.1.59
+      indexes:
+      - labelname: position
+        type: OctetString
+        implied: true
+      lookups:
+      - labels:
+        - position
+        labelname: typeName
+        oid: 1.3.6.1.4.1.14755.2.2267.619.1.1.1
+        type: DisplayString
+      - labels:
+        - position
+        labelname: displayName
+        oid: 1.3.6.1.4.1.14755.2.2267.619.1.1.2
+        type: DisplayString
+      - labels:
+        - position
+        labelname: type
+        oid: 1.3.6.1.4.1.14755.2.2267.619.1.1.5
+        type: DisplayString
+      - labels:
+        - position
+        labelname: version
+        oid: 1.3.6.1.4.1.14755.2.2267.619.1.1.6
+        type: DisplayString
+      - labels:
+        - position
+        labelname: position
+        oid: 1.3.6.1.4.1.14755.2.2267.619.1.1.3
+        type: OctetString
+        display_hint: 1d.1d.1d.1d
+      regex_extracts:
+        "":
+        - value: $1
+          regex: ^(?:([0-9]+)( nm))$
+    - name: sFP2OutPower
+      oid: 1.3.6.1.4.1.14755.2.2267.619.1.1.60
+      type: DisplayString
+      help: displays the average output power of detected SFP-Module 2. - 1.3.6.1.4.1.14755.2.2267.619.1.1.60
+      indexes:
+      - labelname: position
+        type: OctetString
+        implied: true
+      lookups:
+      - labels:
+        - position
+        labelname: typeName
+        oid: 1.3.6.1.4.1.14755.2.2267.619.1.1.1
+        type: DisplayString
+      - labels:
+        - position
+        labelname: displayName
+        oid: 1.3.6.1.4.1.14755.2.2267.619.1.1.2
+        type: DisplayString
+      - labels:
+        - position
+        labelname: type
+        oid: 1.3.6.1.4.1.14755.2.2267.619.1.1.5
+        type: DisplayString
+      - labels:
+        - position
+        labelname: version
+        oid: 1.3.6.1.4.1.14755.2.2267.619.1.1.6
+        type: DisplayString
+      - labels:
+        - position
+        labelname: position
+        oid: 1.3.6.1.4.1.14755.2.2267.619.1.1.3
+        type: OctetString
+        display_hint: 1d.1d.1d.1d
+      regex_extracts:
+        "":
+        - value: $1
+          regex: ^(?:(-?[0-9]+)( dBm))$
+        Status:
+        - value: "1"
+          regex: ^(?:(laser off))$
+        - value: "0"
+          regex: ^(?:^.*)$
+    - name: sFP2Wavelength1
+      oid: 1.3.6.1.4.1.14755.2.2267.619.1.1.61
+      type: DisplayString
+      help: displays the wavelength of detected SFP-Module 2. - 1.3.6.1.4.1.14755.2.2267.619.1.1.61
+      indexes:
+      - labelname: position
+        type: OctetString
+        implied: true
+      lookups:
+      - labels:
+        - position
+        labelname: typeName
+        oid: 1.3.6.1.4.1.14755.2.2267.619.1.1.1
+        type: DisplayString
+      - labels:
+        - position
+        labelname: displayName
+        oid: 1.3.6.1.4.1.14755.2.2267.619.1.1.2
+        type: DisplayString
+      - labels:
+        - position
+        labelname: type
+        oid: 1.3.6.1.4.1.14755.2.2267.619.1.1.5
+        type: DisplayString
+      - labels:
+        - position
+        labelname: version
+        oid: 1.3.6.1.4.1.14755.2.2267.619.1.1.6
+        type: DisplayString
+      - labels:
+        - position
+        labelname: position
+        oid: 1.3.6.1.4.1.14755.2.2267.619.1.1.3
+        type: OctetString
+        display_hint: 1d.1d.1d.1d
+      regex_extracts:
+        "":
+        - value: $1
+          regex: ^(?:([0-9]+)( nm))$
+    - name: sFP2Wavelength2
+      oid: 1.3.6.1.4.1.14755.2.2267.619.1.1.62
+      type: DisplayString
+      help: displays the wavelength of detected SFP-Module 2. - 1.3.6.1.4.1.14755.2.2267.619.1.1.62
+      indexes:
+      - labelname: position
+        type: OctetString
+        implied: true
+      lookups:
+      - labels:
+        - position
+        labelname: typeName
+        oid: 1.3.6.1.4.1.14755.2.2267.619.1.1.1
+        type: DisplayString
+      - labels:
+        - position
+        labelname: displayName
+        oid: 1.3.6.1.4.1.14755.2.2267.619.1.1.2
+        type: DisplayString
+      - labels:
+        - position
+        labelname: type
+        oid: 1.3.6.1.4.1.14755.2.2267.619.1.1.5
+        type: DisplayString
+      - labels:
+        - position
+        labelname: version
+        oid: 1.3.6.1.4.1.14755.2.2267.619.1.1.6
+        type: DisplayString
+      - labels:
+        - position
+        labelname: position
+        oid: 1.3.6.1.4.1.14755.2.2267.619.1.1.3
+        type: OctetString
+        display_hint: 1d.1d.1d.1d
+      regex_extracts:
+        "":
+        - value: $1
+          regex: ^(?:([0-9]+)( nm))$
+    - name: statusColor
+      oid: 1.3.6.1.4.1.14755.2.2267.619.1.1.7
+      type: EnumAsStateSet
+      help: The current color of the Devices Master LED (red/green/yellow) - 1.3.6.1.4.1.14755.2.2267.619.1.1.7
+      indexes:
+      - labelname: position
+        type: OctetString
+        implied: true
+      lookups:
+      - labels:
+        - position
+        labelname: typeName
+        oid: 1.3.6.1.4.1.14755.2.2267.619.1.1.1
+        type: DisplayString
+      - labels:
+        - position
+        labelname: displayName
+        oid: 1.3.6.1.4.1.14755.2.2267.619.1.1.2
+        type: DisplayString
+      - labels:
+        - position
+        labelname: type
+        oid: 1.3.6.1.4.1.14755.2.2267.619.1.1.5
+        type: DisplayString
+      - labels:
+        - position
+        labelname: version
+        oid: 1.3.6.1.4.1.14755.2.2267.619.1.1.6
+        type: DisplayString
+      - labels:
+        - position
+        labelname: position
+        oid: 1.3.6.1.4.1.14755.2.2267.619.1.1.3
+        type: OctetString
+        display_hint: 1d.1d.1d.1d
+      enum_values:
+        0: unknown
+        1: black
+        2: green
+        3: yellow
+        4: red
+    - name: statusText
+      oid: 1.3.6.1.4.1.14755.2.2267.619.1.1.9
+      type: DisplayString
+      help: The current status text (OK or error-details) - 1.3.6.1.4.1.14755.2.2267.619.1.1.9
+      indexes:
+      - labelname: position
+        type: OctetString
+        implied: true
+      lookups:
+      - labels:
+        - position
+        labelname: typeName
+        oid: 1.3.6.1.4.1.14755.2.2267.619.1.1.1
+        type: DisplayString
+      - labels:
+        - position
+        labelname: displayName
+        oid: 1.3.6.1.4.1.14755.2.2267.619.1.1.2
+        type: DisplayString
+      - labels:
+        - position
+        labelname: type
+        oid: 1.3.6.1.4.1.14755.2.2267.619.1.1.5
+        type: DisplayString
+      - labels:
+        - position
+        labelname: version
+        oid: 1.3.6.1.4.1.14755.2.2267.619.1.1.6
+        type: DisplayString
+      - labels:
+        - position
+        labelname: position
+        oid: 1.3.6.1.4.1.14755.2.2267.619.1.1.3
+        type: OctetString
+        display_hint: 1d.1d.1d.1d
+      regex_extracts:
+        "":
+        - value: "0"
+          regex: ^(?:OK)$
+        - value: "1"
+          regex: ^(?:^.*)$
+    max_repetitions: 55
+    retries: 3
+    timeout: 5s
+  lynx_pvd_5800_o:
+    walk:
+    - 1.3.6.1.4.1.14755.2.2033.762.1.1.1
+    - 1.3.6.1.4.1.14755.2.2033.762.1.1.10
+    - 1.3.6.1.4.1.14755.2.2033.762.1.1.107
+    - 1.3.6.1.4.1.14755.2.2033.762.1.1.108
+    - 1.3.6.1.4.1.14755.2.2033.762.1.1.14
+    - 1.3.6.1.4.1.14755.2.2033.762.1.1.15
+    - 1.3.6.1.4.1.14755.2.2033.762.1.1.2
+    - 1.3.6.1.4.1.14755.2.2033.762.1.1.21
+    - 1.3.6.1.4.1.14755.2.2033.762.1.1.22
+    - 1.3.6.1.4.1.14755.2.2033.762.1.1.23
+    - 1.3.6.1.4.1.14755.2.2033.762.1.1.29
+    - 1.3.6.1.4.1.14755.2.2033.762.1.1.3
+    - 1.3.6.1.4.1.14755.2.2033.762.1.1.4
+    - 1.3.6.1.4.1.14755.2.2033.762.1.1.45
+    - 1.3.6.1.4.1.14755.2.2033.762.1.1.48
+    - 1.3.6.1.4.1.14755.2.2033.762.1.1.5
+    - 1.3.6.1.4.1.14755.2.2033.762.1.1.6
+    - 1.3.6.1.4.1.14755.2.2033.762.1.1.66
+    - 1.3.6.1.4.1.14755.2.2033.762.1.1.68
+    - 1.3.6.1.4.1.14755.2.2033.762.1.1.69
+    - 1.3.6.1.4.1.14755.2.2033.762.1.1.70
+    - 1.3.6.1.4.1.14755.2.2033.762.1.1.72
+    - 1.3.6.1.4.1.14755.2.2033.762.1.1.73
+    - 1.3.6.1.4.1.14755.2.2033.762.1.1.74
+    - 1.3.6.1.4.1.14755.2.2033.762.1.1.75
+    metrics:
+    - name: backpanelStatus
+      oid: 1.3.6.1.4.1.14755.2.2033.762.1.1.10
+      type: EnumAsStateSet
+      help: Presence indication of the device backpanel - 1.3.6.1.4.1.14755.2.2033.762.1.1.10
+      indexes:
+      - labelname: position
+        type: OctetString
+        implied: true
+      lookups:
+      - labels:
+        - position
+        labelname: typeName
+        oid: 1.3.6.1.4.1.14755.2.2033.762.1.1.1
+        type: DisplayString
+      - labels:
+        - position
+        labelname: displayName
+        oid: 1.3.6.1.4.1.14755.2.2033.762.1.1.2
+        type: DisplayString
+      - labels:
+        - position
+        labelname: type
+        oid: 1.3.6.1.4.1.14755.2.2033.762.1.1.5
+        type: DisplayString
+      - labels:
+        - position
+        labelname: version
+        oid: 1.3.6.1.4.1.14755.2.2033.762.1.1.6
+        type: DisplayString
+      - labels:
+        - position
+        labelname: position
+        oid: 1.3.6.1.4.1.14755.2.2033.762.1.1.3
+        type: OctetString
+        display_hint: 1d.1d.1d.1d
+      enum_values:
+        0: nA
+        1: missing
+        2: present
+    - name: sFPOutPower
+      oid: 1.3.6.1.4.1.14755.2.2033.762.1.1.107
+      type: DisplayString
+      help: displays the average output power of detected SFP-Module . - 1.3.6.1.4.1.14755.2.2033.762.1.1.107
+      indexes:
+      - labelname: position
+        type: OctetString
+        implied: true
+      lookups:
+      - labels:
+        - position
+        labelname: typeName
+        oid: 1.3.6.1.4.1.14755.2.2033.762.1.1.1
+        type: DisplayString
+      - labels:
+        - position
+        labelname: displayName
+        oid: 1.3.6.1.4.1.14755.2.2033.762.1.1.2
+        type: DisplayString
+      - labels:
+        - position
+        labelname: type
+        oid: 1.3.6.1.4.1.14755.2.2033.762.1.1.5
+        type: DisplayString
+      - labels:
+        - position
+        labelname: version
+        oid: 1.3.6.1.4.1.14755.2.2033.762.1.1.6
+        type: DisplayString
+      - labels:
+        - position
+        labelname: position
+        oid: 1.3.6.1.4.1.14755.2.2033.762.1.1.3
+        type: OctetString
+        display_hint: 1d.1d.1d.1d
+      regex_extracts:
+        "":
+        - value: $1
+          regex: ^(?:(-?[0-9]+)( dBm))$
+        Status:
+        - value: "1"
+          regex: ^(?:(laser off))$
+        - value: "0"
+          regex: ^(?:^.*)$
+    - name: sFPWavelength
+      oid: 1.3.6.1.4.1.14755.2.2033.762.1.1.108
+      type: DisplayString
+      help: displays the wavelength of detected SFP-Module . - 1.3.6.1.4.1.14755.2.2033.762.1.1.108
+      indexes:
+      - labelname: position
+        type: OctetString
+        implied: true
+      lookups:
+      - labels:
+        - position
+        labelname: typeName
+        oid: 1.3.6.1.4.1.14755.2.2033.762.1.1.1
+        type: DisplayString
+      - labels:
+        - position
+        labelname: displayName
+        oid: 1.3.6.1.4.1.14755.2.2033.762.1.1.2
+        type: DisplayString
+      - labels:
+        - position
+        labelname: type
+        oid: 1.3.6.1.4.1.14755.2.2033.762.1.1.5
+        type: DisplayString
+      - labels:
+        - position
+        labelname: version
+        oid: 1.3.6.1.4.1.14755.2.2033.762.1.1.6
+        type: DisplayString
+      - labels:
+        - position
+        labelname: position
+        oid: 1.3.6.1.4.1.14755.2.2033.762.1.1.3
+        type: OctetString
+        display_hint: 1d.1d.1d.1d
+      regex_extracts:
+        "":
+        - value: $1
+          regex: ^(?:([0-9]+)( nm))$
+    - name: outStandard
+      oid: 1.3.6.1.4.1.14755.2.2033.762.1.1.14
+      type: EnumAsStateSet
+      help: Video standard of SDI output - 1.3.6.1.4.1.14755.2.2033.762.1.1.14
+      indexes:
+      - labelname: position
+        type: OctetString
+        implied: true
+      lookups:
+      - labels:
+        - position
+        labelname: typeName
+        oid: 1.3.6.1.4.1.14755.2.2033.762.1.1.1
+        type: DisplayString
+      - labels:
+        - position
+        labelname: displayName
+        oid: 1.3.6.1.4.1.14755.2.2033.762.1.1.2
+        type: DisplayString
+      - labels:
+        - position
+        labelname: type
+        oid: 1.3.6.1.4.1.14755.2.2033.762.1.1.5
+        type: DisplayString
+      - labels:
+        - position
+        labelname: version
+        oid: 1.3.6.1.4.1.14755.2.2033.762.1.1.6
+        type: DisplayString
+      - labels:
+        - position
+        labelname: position
+        oid: 1.3.6.1.4.1.14755.2.2033.762.1.1.3
+        type: OctetString
+        display_hint: 1d.1d.1d.1d
+      enum_values:
+        0: missing
+        1: invalid
+        2: n525
+        3: n625
+        4: n720p60
+        5: n720p5994
+        6: n720p50
+        7: n720p30
+        8: n720p2997
+        9: n720p25
+        10: n720p24
+        11: n720p2398
+        12: n1080i60
+        13: n1080i5994
+        14: n1080i50
+        15: n1080p60
+        16: n1080p5994
+        17: n1080p50
+        18: n1080p30
+        19: n1080p2997
+        20: n1080p25
+        21: n1080p24
+        22: n1080p2398
+        23: n1080psF30
+        24: n1080psF2997
+        25: n1080psF25
+        26: n1080psF24
+        27: n1080psF2398
+    - name: inStandard
+      oid: 1.3.6.1.4.1.14755.2.2033.762.1.1.15
+      type: EnumAsStateSet
+      help: SDI input status indication - 1.3.6.1.4.1.14755.2.2033.762.1.1.15
+      indexes:
+      - labelname: position
+        type: OctetString
+        implied: true
+      lookups:
+      - labels:
+        - position
+        labelname: typeName
+        oid: 1.3.6.1.4.1.14755.2.2033.762.1.1.1
+        type: DisplayString
+      - labels:
+        - position
+        labelname: displayName
+        oid: 1.3.6.1.4.1.14755.2.2033.762.1.1.2
+        type: DisplayString
+      - labels:
+        - position
+        labelname: type
+        oid: 1.3.6.1.4.1.14755.2.2033.762.1.1.5
+        type: DisplayString
+      - labels:
+        - position
+        labelname: version
+        oid: 1.3.6.1.4.1.14755.2.2033.762.1.1.6
+        type: DisplayString
+      - labels:
+        - position
+        labelname: position
+        oid: 1.3.6.1.4.1.14755.2.2033.762.1.1.3
+        type: OctetString
+        display_hint: 1d.1d.1d.1d
+      enum_values:
+        0: missing
+        1: invalid
+        2: n525
+        3: n625
+        4: n720p60
+        5: n720p5994
+        6: n720p50
+        7: n720p30
+        8: n720p2997
+        9: n720p25
+        10: n720p24
+        11: n720p2398
+        12: n1080i60
+        13: n1080i5994
+        14: n1080i50
+        15: n1080p60
+        16: n1080p5994
+        17: n1080p50
+        18: n1080p30
+        19: n1080p2997
+        20: n1080p25
+        21: n1080p24
+        22: n1080p2398
+        23: n1080psF30
+        24: n1080psF2997
+        25: n1080psF25
+        26: n1080psF24
+        27: n1080psF2398
+    - name: referenceLock
+      oid: 1.3.6.1.4.1.14755.2.2033.762.1.1.21
+      type: EnumAsStateSet
+      help: Lock all outputs to one of *RefIn *SDI1In *SDI2In - 1.3.6.1.4.1.14755.2.2033.762.1.1.21
+      indexes:
+      - labelname: position
+        type: OctetString
+        implied: true
+      lookups:
+      - labels:
+        - position
+        labelname: typeName
+        oid: 1.3.6.1.4.1.14755.2.2033.762.1.1.1
+        type: DisplayString
+      - labels:
+        - position
+        labelname: displayName
+        oid: 1.3.6.1.4.1.14755.2.2033.762.1.1.2
+        type: DisplayString
+      - labels:
+        - position
+        labelname: type
+        oid: 1.3.6.1.4.1.14755.2.2033.762.1.1.5
+        type: DisplayString
+      - labels:
+        - position
+        labelname: version
+        oid: 1.3.6.1.4.1.14755.2.2033.762.1.1.6
+        type: DisplayString
+      - labels:
+        - position
+        labelname: position
+        oid: 1.3.6.1.4.1.14755.2.2033.762.1.1.3
+        type: OctetString
+        display_hint: 1d.1d.1d.1d
+      enum_values:
+        0: lockToRefIn
+        1: lockToSDI1
+    - name: referenceStatus
+      oid: 1.3.6.1.4.1.14755.2.2033.762.1.1.22
+      type: EnumAsStateSet
+      help: Video Standard of Reference Input - 1.3.6.1.4.1.14755.2.2033.762.1.1.22
+      indexes:
+      - labelname: position
+        type: OctetString
+        implied: true
+      lookups:
+      - labels:
+        - position
+        labelname: typeName
+        oid: 1.3.6.1.4.1.14755.2.2033.762.1.1.1
+        type: DisplayString
+      - labels:
+        - position
+        labelname: displayName
+        oid: 1.3.6.1.4.1.14755.2.2033.762.1.1.2
+        type: DisplayString
+      - labels:
+        - position
+        labelname: type
+        oid: 1.3.6.1.4.1.14755.2.2033.762.1.1.5
+        type: DisplayString
+      - labels:
+        - position
+        labelname: version
+        oid: 1.3.6.1.4.1.14755.2.2033.762.1.1.6
+        type: DisplayString
+      - labels:
+        - position
+        labelname: position
+        oid: 1.3.6.1.4.1.14755.2.2033.762.1.1.3
+        type: OctetString
+        display_hint: 1d.1d.1d.1d
+      enum_values:
+        0: missing
+        1: invalid
+        2: n525
+        3: n625
+        4: n720p60
+        5: n720p5994
+        6: n720p50
+        7: n720p30
+        8: n720p2997
+        9: n720p25
+        10: n720p24
+        11: n720p2398
+        12: n1080i60
+        13: n1080i5994
+        14: n1080i50
+        15: n1080p60
+        16: n1080p5994
+        17: n1080p50
+        18: n1080p30
+        19: n1080p2997
+        20: n1080p25
+        21: n1080p24
+        22: n1080p2398
+        23: n1080psF30
+        24: n1080psF2997
+        25: n1080psF25
+        26: n1080psF24
+        27: n1080psF2398
+    - name: referenceSource
+      oid: 1.3.6.1.4.1.14755.2.2033.762.1.1.23
+      type: EnumAsStateSet
+      help: 'Reference Source: extern (local boards backpanel) or intern (central
+        rack distribution) - 1.3.6.1.4.1.14755.2.2033.762.1.1.23'
+      indexes:
+      - labelname: position
+        type: OctetString
+        implied: true
+      lookups:
+      - labels:
+        - position
+        labelname: typeName
+        oid: 1.3.6.1.4.1.14755.2.2033.762.1.1.1
+        type: DisplayString
+      - labels:
+        - position
+        labelname: displayName
+        oid: 1.3.6.1.4.1.14755.2.2033.762.1.1.2
+        type: DisplayString
+      - labels:
+        - position
+        labelname: type
+        oid: 1.3.6.1.4.1.14755.2.2033.762.1.1.5
+        type: DisplayString
+      - labels:
+        - position
+        labelname: version
+        oid: 1.3.6.1.4.1.14755.2.2033.762.1.1.6
+        type: DisplayString
+      - labels:
+        - position
+        labelname: position
+        oid: 1.3.6.1.4.1.14755.2.2033.762.1.1.3
+        type: OctetString
+        display_hint: 1d.1d.1d.1d
+      enum_values:
+        0: externBoard
+        1: internRack
+    - name: syncMode1
+      oid: 1.3.6.1.4.1.14755.2.2033.762.1.1.29
+      type: EnumAsStateSet
+      help: Select Synchronization Mode for SDI Channel 1 - 1.3.6.1.4.1.14755.2.2033.762.1.1.29
+      indexes:
+      - labelname: position
+        type: OctetString
+        implied: true
+      lookups:
+      - labels:
+        - position
+        labelname: typeName
+        oid: 1.3.6.1.4.1.14755.2.2033.762.1.1.1
+        type: DisplayString
+      - labels:
+        - position
+        labelname: displayName
+        oid: 1.3.6.1.4.1.14755.2.2033.762.1.1.2
+        type: DisplayString
+      - labels:
+        - position
+        labelname: type
+        oid: 1.3.6.1.4.1.14755.2.2033.762.1.1.5
+        type: DisplayString
+      - labels:
+        - position
+        labelname: version
+        oid: 1.3.6.1.4.1.14755.2.2033.762.1.1.6
+        type: DisplayString
+      - labels:
+        - position
+        labelname: position
+        oid: 1.3.6.1.4.1.14755.2.2033.762.1.1.3
+        type: OctetString
+        display_hint: 1d.1d.1d.1d
+      enum_values:
+        0: frameSync
+        1: lineSyncH
+        2: lineSyncV
+    - name: uptime
+      oid: 1.3.6.1.4.1.14755.2.2033.762.1.1.4
+      type: counter
+      help: Connection time of the device to this UI (in seconds) - 1.3.6.1.4.1.14755.2.2033.762.1.1.4
+      indexes:
+      - labelname: position
+        type: OctetString
+        implied: true
+      lookups:
+      - labels:
+        - position
+        labelname: typeName
+        oid: 1.3.6.1.4.1.14755.2.2033.762.1.1.1
+        type: DisplayString
+      - labels:
+        - position
+        labelname: displayName
+        oid: 1.3.6.1.4.1.14755.2.2033.762.1.1.2
+        type: DisplayString
+      - labels:
+        - position
+        labelname: type
+        oid: 1.3.6.1.4.1.14755.2.2033.762.1.1.5
+        type: DisplayString
+      - labels:
+        - position
+        labelname: version
+        oid: 1.3.6.1.4.1.14755.2.2033.762.1.1.6
+        type: DisplayString
+      - labels:
+        - position
+        labelname: position
+        oid: 1.3.6.1.4.1.14755.2.2033.762.1.1.3
+        type: OctetString
+        display_hint: 1d.1d.1d.1d
+      scale: 0.01
+    - name: input1OpticalSignalQuality
+      oid: 1.3.6.1.4.1.14755.2.2033.762.1.1.45
+      type: gauge
+      help: Signal quality at optical SDI Input 1 - 1.3.6.1.4.1.14755.2.2033.762.1.1.45
+      indexes:
+      - labelname: position
+        type: OctetString
+        implied: true
+      lookups:
+      - labels:
+        - position
+        labelname: typeName
+        oid: 1.3.6.1.4.1.14755.2.2033.762.1.1.1
+        type: DisplayString
+      - labels:
+        - position
+        labelname: displayName
+        oid: 1.3.6.1.4.1.14755.2.2033.762.1.1.2
+        type: DisplayString
+      - labels:
+        - position
+        labelname: type
+        oid: 1.3.6.1.4.1.14755.2.2033.762.1.1.5
+        type: DisplayString
+      - labels:
+        - position
+        labelname: version
+        oid: 1.3.6.1.4.1.14755.2.2033.762.1.1.6
+        type: DisplayString
+      - labels:
+        - position
+        labelname: position
+        oid: 1.3.6.1.4.1.14755.2.2033.762.1.1.3
+        type: OctetString
+        display_hint: 1d.1d.1d.1d
+      scale: 0.1
+      display_hint: d-1
+    - name: sDIIn1SourceType
+      oid: 1.3.6.1.4.1.14755.2.2033.762.1.1.48
+      type: EnumAsStateSet
+      help: Select Source for SDI input 1 from electrical or optical connector - 1.3.6.1.4.1.14755.2.2033.762.1.1.48
+      indexes:
+      - labelname: position
+        type: OctetString
+        implied: true
+      lookups:
+      - labels:
+        - position
+        labelname: typeName
+        oid: 1.3.6.1.4.1.14755.2.2033.762.1.1.1
+        type: DisplayString
+      - labels:
+        - position
+        labelname: displayName
+        oid: 1.3.6.1.4.1.14755.2.2033.762.1.1.2
+        type: DisplayString
+      - labels:
+        - position
+        labelname: type
+        oid: 1.3.6.1.4.1.14755.2.2033.762.1.1.5
+        type: DisplayString
+      - labels:
+        - position
+        labelname: version
+        oid: 1.3.6.1.4.1.14755.2.2033.762.1.1.6
+        type: DisplayString
+      - labels:
+        - position
+        labelname: position
+        oid: 1.3.6.1.4.1.14755.2.2033.762.1.1.3
+        type: OctetString
+        display_hint: 1d.1d.1d.1d
+      enum_values:
+        0: electrical
+        1: optical
+    - name: statusColor
+      oid: 1.3.6.1.4.1.14755.2.2033.762.1.1.66
+      type: EnumAsStateSet
+      help: The current color of the Devices Master LED (red/green/yellow) - 1.3.6.1.4.1.14755.2.2033.762.1.1.66
+      indexes:
+      - labelname: position
+        type: OctetString
+        implied: true
+      lookups:
+      - labels:
+        - position
+        labelname: typeName
+        oid: 1.3.6.1.4.1.14755.2.2033.762.1.1.1
+        type: DisplayString
+      - labels:
+        - position
+        labelname: displayName
+        oid: 1.3.6.1.4.1.14755.2.2033.762.1.1.2
+        type: DisplayString
+      - labels:
+        - position
+        labelname: type
+        oid: 1.3.6.1.4.1.14755.2.2033.762.1.1.5
+        type: DisplayString
+      - labels:
+        - position
+        labelname: version
+        oid: 1.3.6.1.4.1.14755.2.2033.762.1.1.6
+        type: DisplayString
+      - labels:
+        - position
+        labelname: position
+        oid: 1.3.6.1.4.1.14755.2.2033.762.1.1.3
+        type: OctetString
+        display_hint: 1d.1d.1d.1d
+      enum_values:
+        0: unknown
+        1: black
+        2: green
+        3: yellow
+        4: red
+    - name: statusText
+      oid: 1.3.6.1.4.1.14755.2.2033.762.1.1.68
+      type: DisplayString
+      help: The current status text (OK or error-details) - 1.3.6.1.4.1.14755.2.2033.762.1.1.68
+      indexes:
+      - labelname: position
+        type: OctetString
+        implied: true
+      lookups:
+      - labels:
+        - position
+        labelname: typeName
+        oid: 1.3.6.1.4.1.14755.2.2033.762.1.1.1
+        type: DisplayString
+      - labels:
+        - position
+        labelname: displayName
+        oid: 1.3.6.1.4.1.14755.2.2033.762.1.1.2
+        type: DisplayString
+      - labels:
+        - position
+        labelname: type
+        oid: 1.3.6.1.4.1.14755.2.2033.762.1.1.5
+        type: DisplayString
+      - labels:
+        - position
+        labelname: version
+        oid: 1.3.6.1.4.1.14755.2.2033.762.1.1.6
+        type: DisplayString
+      - labels:
+        - position
+        labelname: position
+        oid: 1.3.6.1.4.1.14755.2.2033.762.1.1.3
+        type: OctetString
+        display_hint: 1d.1d.1d.1d
+      regex_extracts:
+        "":
+        - value: "0"
+          regex: ^(?:OK)$
+        - value: "1"
+          regex: ^(?:^.*)$
+    - name: eventPrimaryPowermissing
+      oid: 1.3.6.1.4.1.14755.2.2033.762.1.1.69
+      type: EnumAsStateSet
+      help: 'Info Event: Primary Power missing - 1.3.6.1.4.1.14755.2.2033.762.1.1.69'
+      indexes:
+      - labelname: position
+        type: OctetString
+        implied: true
+      lookups:
+      - labels:
+        - position
+        labelname: typeName
+        oid: 1.3.6.1.4.1.14755.2.2033.762.1.1.1
+        type: DisplayString
+      - labels:
+        - position
+        labelname: displayName
+        oid: 1.3.6.1.4.1.14755.2.2033.762.1.1.2
+        type: DisplayString
+      - labels:
+        - position
+        labelname: type
+        oid: 1.3.6.1.4.1.14755.2.2033.762.1.1.5
+        type: DisplayString
+      - labels:
+        - position
+        labelname: version
+        oid: 1.3.6.1.4.1.14755.2.2033.762.1.1.6
+        type: DisplayString
+      - labels:
+        - position
+        labelname: position
+        oid: 1.3.6.1.4.1.14755.2.2033.762.1.1.3
+        type: OctetString
+        display_hint: 1d.1d.1d.1d
+      enum_values:
+        0: "off"
+        1: "on"
+    - name: eventRedundantPowermissing
+      oid: 1.3.6.1.4.1.14755.2.2033.762.1.1.70
+      type: EnumAsStateSet
+      help: 'Info Event: Redundant Power missing - 1.3.6.1.4.1.14755.2.2033.762.1.1.70'
+      indexes:
+      - labelname: position
+        type: OctetString
+        implied: true
+      lookups:
+      - labels:
+        - position
+        labelname: typeName
+        oid: 1.3.6.1.4.1.14755.2.2033.762.1.1.1
+        type: DisplayString
+      - labels:
+        - position
+        labelname: displayName
+        oid: 1.3.6.1.4.1.14755.2.2033.762.1.1.2
+        type: DisplayString
+      - labels:
+        - position
+        labelname: type
+        oid: 1.3.6.1.4.1.14755.2.2033.762.1.1.5
+        type: DisplayString
+      - labels:
+        - position
+        labelname: version
+        oid: 1.3.6.1.4.1.14755.2.2033.762.1.1.6
+        type: DisplayString
+      - labels:
+        - position
+        labelname: position
+        oid: 1.3.6.1.4.1.14755.2.2033.762.1.1.3
+        type: OctetString
+        display_hint: 1d.1d.1d.1d
+      enum_values:
+        0: "off"
+        1: "on"
+    - name: eventReferenceNoInput
+      oid: 1.3.6.1.4.1.14755.2.2033.762.1.1.72
+      type: EnumAsStateSet
+      help: 'Info Event: Reference No Input - 1.3.6.1.4.1.14755.2.2033.762.1.1.72'
+      indexes:
+      - labelname: position
+        type: OctetString
+        implied: true
+      lookups:
+      - labels:
+        - position
+        labelname: typeName
+        oid: 1.3.6.1.4.1.14755.2.2033.762.1.1.1
+        type: DisplayString
+      - labels:
+        - position
+        labelname: displayName
+        oid: 1.3.6.1.4.1.14755.2.2033.762.1.1.2
+        type: DisplayString
+      - labels:
+        - position
+        labelname: type
+        oid: 1.3.6.1.4.1.14755.2.2033.762.1.1.5
+        type: DisplayString
+      - labels:
+        - position
+        labelname: version
+        oid: 1.3.6.1.4.1.14755.2.2033.762.1.1.6
+        type: DisplayString
+      - labels:
+        - position
+        labelname: position
+        oid: 1.3.6.1.4.1.14755.2.2033.762.1.1.3
+        type: OctetString
+        display_hint: 1d.1d.1d.1d
+      enum_values:
+        0: "off"
+        1: "on"
+    - name: eventSDIInput1NoInput
+      oid: 1.3.6.1.4.1.14755.2.2033.762.1.1.73
+      type: EnumAsStateSet
+      help: 'Error Event: SDI Input 1 No Input - 1.3.6.1.4.1.14755.2.2033.762.1.1.73'
+      indexes:
+      - labelname: position
+        type: OctetString
+        implied: true
+      lookups:
+      - labels:
+        - position
+        labelname: typeName
+        oid: 1.3.6.1.4.1.14755.2.2033.762.1.1.1
+        type: DisplayString
+      - labels:
+        - position
+        labelname: displayName
+        oid: 1.3.6.1.4.1.14755.2.2033.762.1.1.2
+        type: DisplayString
+      - labels:
+        - position
+        labelname: type
+        oid: 1.3.6.1.4.1.14755.2.2033.762.1.1.5
+        type: DisplayString
+      - labels:
+        - position
+        labelname: version
+        oid: 1.3.6.1.4.1.14755.2.2033.762.1.1.6
+        type: DisplayString
+      - labels:
+        - position
+        labelname: position
+        oid: 1.3.6.1.4.1.14755.2.2033.762.1.1.3
+        type: OctetString
+        display_hint: 1d.1d.1d.1d
+      enum_values:
+        0: "off"
+        1: "on"
+    - name: eventCouldnotlocktoReference
+      oid: 1.3.6.1.4.1.14755.2.2033.762.1.1.74
+      type: EnumAsStateSet
+      help: 'Info Event: Could not lock to Reference - 1.3.6.1.4.1.14755.2.2033.762.1.1.74'
+      indexes:
+      - labelname: position
+        type: OctetString
+        implied: true
+      lookups:
+      - labels:
+        - position
+        labelname: typeName
+        oid: 1.3.6.1.4.1.14755.2.2033.762.1.1.1
+        type: DisplayString
+      - labels:
+        - position
+        labelname: displayName
+        oid: 1.3.6.1.4.1.14755.2.2033.762.1.1.2
+        type: DisplayString
+      - labels:
+        - position
+        labelname: type
+        oid: 1.3.6.1.4.1.14755.2.2033.762.1.1.5
+        type: DisplayString
+      - labels:
+        - position
+        labelname: version
+        oid: 1.3.6.1.4.1.14755.2.2033.762.1.1.6
+        type: DisplayString
+      - labels:
+        - position
+        labelname: position
+        oid: 1.3.6.1.4.1.14755.2.2033.762.1.1.3
+        type: OctetString
+        display_hint: 1d.1d.1d.1d
+      enum_values:
+        0: "off"
+        1: "on"
+    - name: eventCouldnotlocktoSDIInput1
+      oid: 1.3.6.1.4.1.14755.2.2033.762.1.1.75
+      type: EnumAsStateSet
+      help: 'Warning Event: Could not lock to SDI Input 1 - 1.3.6.1.4.1.14755.2.2033.762.1.1.75'
+      indexes:
+      - labelname: position
+        type: OctetString
+        implied: true
+      lookups:
+      - labels:
+        - position
+        labelname: typeName
+        oid: 1.3.6.1.4.1.14755.2.2033.762.1.1.1
+        type: DisplayString
+      - labels:
+        - position
+        labelname: displayName
+        oid: 1.3.6.1.4.1.14755.2.2033.762.1.1.2
+        type: DisplayString
+      - labels:
+        - position
+        labelname: type
+        oid: 1.3.6.1.4.1.14755.2.2033.762.1.1.5
+        type: DisplayString
+      - labels:
+        - position
+        labelname: version
+        oid: 1.3.6.1.4.1.14755.2.2033.762.1.1.6
+        type: DisplayString
+      - labels:
+        - position
+        labelname: position
+        oid: 1.3.6.1.4.1.14755.2.2033.762.1.1.3
+        type: OctetString
+        display_hint: 1d.1d.1d.1d
+      enum_values:
+        0: "off"
+        1: "on"
+    max_repetitions: 100
+    retries: 3
+    timeout: 5s
+  lynx_rct5023_g:
+    walk:
+    - 1.3.6.1.4.1.14755.2.49672.734.1.1.1
+    - 1.3.6.1.4.1.14755.2.49672.734.1.1.2
+    - 1.3.6.1.4.1.14755.2.49672.734.1.1.20
+    - 1.3.6.1.4.1.14755.2.49672.734.1.1.21
+    - 1.3.6.1.4.1.14755.2.49672.734.1.1.24
+    - 1.3.6.1.4.1.14755.2.49672.734.1.1.25
+    - 1.3.6.1.4.1.14755.2.49672.734.1.1.3
+    - 1.3.6.1.4.1.14755.2.49672.734.1.1.36
+    - 1.3.6.1.4.1.14755.2.49672.734.1.1.37
+    - 1.3.6.1.4.1.14755.2.49672.734.1.1.4
+    - 1.3.6.1.4.1.14755.2.49672.734.1.1.41
+    - 1.3.6.1.4.1.14755.2.49672.734.1.1.42
+    - 1.3.6.1.4.1.14755.2.49672.734.1.1.43
+    - 1.3.6.1.4.1.14755.2.49672.734.1.1.5
+    - 1.3.6.1.4.1.14755.2.49672.734.1.1.6
+    - 1.3.6.1.4.1.14755.2.49672.734.1.1.7
+    - 1.3.6.1.4.1.14755.2.49672.734.1.1.9
+    metrics:
+    - name: pSU1Voltage
+      oid: 1.3.6.1.4.1.14755.2.49672.734.1.1.20
+      type: gauge
+      help: Voltage of power supply unit - 1.3.6.1.4.1.14755.2.49672.734.1.1.20
+      indexes:
+      - labelname: position
+        type: OctetString
+        implied: true
+      lookups:
+      - labels:
+        - position
+        labelname: typeName
+        oid: 1.3.6.1.4.1.14755.2.49672.734.1.1.1
+        type: DisplayString
+      - labels:
+        - position
+        labelname: displayName
+        oid: 1.3.6.1.4.1.14755.2.49672.734.1.1.2
+        type: DisplayString
+      - labels:
+        - position
+        labelname: type
+        oid: 1.3.6.1.4.1.14755.2.49672.734.1.1.5
+        type: DisplayString
+      - labels:
+        - position
+        labelname: version
+        oid: 1.3.6.1.4.1.14755.2.49672.734.1.1.6
+        type: DisplayString
+      - labels:
+        - position
+        labelname: position
+        oid: 1.3.6.1.4.1.14755.2.49672.734.1.1.3
+        type: OctetString
+        display_hint: 1d.1d.1d.1d
+      scale: 0.1
+      display_hint: d-1
+    - name: pSU1Temperature
+      oid: 1.3.6.1.4.1.14755.2.49672.734.1.1.21
+      type: gauge
+      help: Temperature of power supply unit - 1.3.6.1.4.1.14755.2.49672.734.1.1.21
+      indexes:
+      - labelname: position
+        type: OctetString
+        implied: true
+      lookups:
+      - labels:
+        - position
+        labelname: typeName
+        oid: 1.3.6.1.4.1.14755.2.49672.734.1.1.1
+        type: DisplayString
+      - labels:
+        - position
+        labelname: displayName
+        oid: 1.3.6.1.4.1.14755.2.49672.734.1.1.2
+        type: DisplayString
+      - labels:
+        - position
+        labelname: type
+        oid: 1.3.6.1.4.1.14755.2.49672.734.1.1.5
+        type: DisplayString
+      - labels:
+        - position
+        labelname: version
+        oid: 1.3.6.1.4.1.14755.2.49672.734.1.1.6
+        type: DisplayString
+      - labels:
+        - position
+        labelname: position
+        oid: 1.3.6.1.4.1.14755.2.49672.734.1.1.3
+        type: OctetString
+        display_hint: 1d.1d.1d.1d
+    - name: pSU2Voltage
+      oid: 1.3.6.1.4.1.14755.2.49672.734.1.1.24
+      type: gauge
+      help: Voltage of power supply unit - 1.3.6.1.4.1.14755.2.49672.734.1.1.24
+      indexes:
+      - labelname: position
+        type: OctetString
+        implied: true
+      lookups:
+      - labels:
+        - position
+        labelname: typeName
+        oid: 1.3.6.1.4.1.14755.2.49672.734.1.1.1
+        type: DisplayString
+      - labels:
+        - position
+        labelname: displayName
+        oid: 1.3.6.1.4.1.14755.2.49672.734.1.1.2
+        type: DisplayString
+      - labels:
+        - position
+        labelname: type
+        oid: 1.3.6.1.4.1.14755.2.49672.734.1.1.5
+        type: DisplayString
+      - labels:
+        - position
+        labelname: version
+        oid: 1.3.6.1.4.1.14755.2.49672.734.1.1.6
+        type: DisplayString
+      - labels:
+        - position
+        labelname: position
+        oid: 1.3.6.1.4.1.14755.2.49672.734.1.1.3
+        type: OctetString
+        display_hint: 1d.1d.1d.1d
+      scale: 0.1
+      display_hint: d-1
+    - name: pSU2Temperature
+      oid: 1.3.6.1.4.1.14755.2.49672.734.1.1.25
+      type: gauge
+      help: Temperature of power supply unit - 1.3.6.1.4.1.14755.2.49672.734.1.1.25
+      indexes:
+      - labelname: position
+        type: OctetString
+        implied: true
+      lookups:
+      - labels:
+        - position
+        labelname: typeName
+        oid: 1.3.6.1.4.1.14755.2.49672.734.1.1.1
+        type: DisplayString
+      - labels:
+        - position
+        labelname: displayName
+        oid: 1.3.6.1.4.1.14755.2.49672.734.1.1.2
+        type: DisplayString
+      - labels:
+        - position
+        labelname: type
+        oid: 1.3.6.1.4.1.14755.2.49672.734.1.1.5
+        type: DisplayString
+      - labels:
+        - position
+        labelname: version
+        oid: 1.3.6.1.4.1.14755.2.49672.734.1.1.6
+        type: DisplayString
+      - labels:
+        - position
+        labelname: position
+        oid: 1.3.6.1.4.1.14755.2.49672.734.1.1.3
+        type: OctetString
+        display_hint: 1d.1d.1d.1d
+    - name: slotStatusPSU1
+      oid: 1.3.6.1.4.1.14755.2.49672.734.1.1.36
+      type: DisplayString
+      help: 'Status PSU 1: if present: set to name-and-version as in <name> VVV.VV.VV
+        - 1.3.6.1.4.1.14755.2.49672.734.1.1.36'
+      indexes:
+      - labelname: position
+        type: OctetString
+        implied: true
+      lookups:
+      - labels:
+        - position
+        labelname: typeName
+        oid: 1.3.6.1.4.1.14755.2.49672.734.1.1.1
+        type: DisplayString
+      - labels:
+        - position
+        labelname: displayName
+        oid: 1.3.6.1.4.1.14755.2.49672.734.1.1.2
+        type: DisplayString
+      - labels:
+        - position
+        labelname: type
+        oid: 1.3.6.1.4.1.14755.2.49672.734.1.1.5
+        type: DisplayString
+      - labels:
+        - position
+        labelname: version
+        oid: 1.3.6.1.4.1.14755.2.49672.734.1.1.6
+        type: DisplayString
+      - labels:
+        - position
+        labelname: position
+        oid: 1.3.6.1.4.1.14755.2.49672.734.1.1.3
+        type: OctetString
+        display_hint: 1d.1d.1d.1d
+      regex_extracts:
+        "":
+        - value: "1"
+          regex: ^(?:_empty_)$
+        - value: "0"
+          regex: ^(?:^.*)$
+    - name: slotStatusPSU2
+      oid: 1.3.6.1.4.1.14755.2.49672.734.1.1.37
+      type: DisplayString
+      help: 'Status PSU 2: if present: set to name-and-version as in <name> VVV.VV.VV
+        - 1.3.6.1.4.1.14755.2.49672.734.1.1.37'
+      indexes:
+      - labelname: position
+        type: OctetString
+        implied: true
+      lookups:
+      - labels:
+        - position
+        labelname: typeName
+        oid: 1.3.6.1.4.1.14755.2.49672.734.1.1.1
+        type: DisplayString
+      - labels:
+        - position
+        labelname: displayName
+        oid: 1.3.6.1.4.1.14755.2.49672.734.1.1.2
+        type: DisplayString
+      - labels:
+        - position
+        labelname: type
+        oid: 1.3.6.1.4.1.14755.2.49672.734.1.1.5
+        type: DisplayString
+      - labels:
+        - position
+        labelname: version
+        oid: 1.3.6.1.4.1.14755.2.49672.734.1.1.6
+        type: DisplayString
+      - labels:
+        - position
+        labelname: position
+        oid: 1.3.6.1.4.1.14755.2.49672.734.1.1.3
+        type: OctetString
+        display_hint: 1d.1d.1d.1d
+      regex_extracts:
+        "":
+        - value: "1"
+          regex: ^(?:_empty_)$
+        - value: "0"
+          regex: ^(?:^.*)$
+    - name: uptime
+      oid: 1.3.6.1.4.1.14755.2.49672.734.1.1.4
+      type: counter
+      help: Connection time of the device to this UI (in seconds) - 1.3.6.1.4.1.14755.2.49672.734.1.1.4
+      indexes:
+      - labelname: position
+        type: OctetString
+        implied: true
+      lookups:
+      - labels:
+        - position
+        labelname: typeName
+        oid: 1.3.6.1.4.1.14755.2.49672.734.1.1.1
+        type: DisplayString
+      - labels:
+        - position
+        labelname: displayName
+        oid: 1.3.6.1.4.1.14755.2.49672.734.1.1.2
+        type: DisplayString
+      - labels:
+        - position
+        labelname: type
+        oid: 1.3.6.1.4.1.14755.2.49672.734.1.1.5
+        type: DisplayString
+      - labels:
+        - position
+        labelname: version
+        oid: 1.3.6.1.4.1.14755.2.49672.734.1.1.6
+        type: DisplayString
+      - labels:
+        - position
+        labelname: position
+        oid: 1.3.6.1.4.1.14755.2.49672.734.1.1.3
+        type: OctetString
+        display_hint: 1d.1d.1d.1d
+      scale: 0.01
+    - name: fan1Status
+      oid: 1.3.6.1.4.1.14755.2.49672.734.1.1.41
+      type: EnumAsStateSet
+      help: Current status of fan 1 - 1.3.6.1.4.1.14755.2.49672.734.1.1.41
+      indexes:
+      - labelname: position
+        type: OctetString
+        implied: true
+      lookups:
+      - labels:
+        - position
+        labelname: typeName
+        oid: 1.3.6.1.4.1.14755.2.49672.734.1.1.1
+        type: DisplayString
+      - labels:
+        - position
+        labelname: displayName
+        oid: 1.3.6.1.4.1.14755.2.49672.734.1.1.2
+        type: DisplayString
+      - labels:
+        - position
+        labelname: type
+        oid: 1.3.6.1.4.1.14755.2.49672.734.1.1.5
+        type: DisplayString
+      - labels:
+        - position
+        labelname: version
+        oid: 1.3.6.1.4.1.14755.2.49672.734.1.1.6
+        type: DisplayString
+      - labels:
+        - position
+        labelname: position
+        oid: 1.3.6.1.4.1.14755.2.49672.734.1.1.3
+        type: OctetString
+        display_hint: 1d.1d.1d.1d
+      enum_values:
+        0: ok
+        1: fail
+        2: missing
+    - name: fan2Status
+      oid: 1.3.6.1.4.1.14755.2.49672.734.1.1.42
+      type: EnumAsStateSet
+      help: Current status of fan 2 - 1.3.6.1.4.1.14755.2.49672.734.1.1.42
+      indexes:
+      - labelname: position
+        type: OctetString
+        implied: true
+      lookups:
+      - labels:
+        - position
+        labelname: typeName
+        oid: 1.3.6.1.4.1.14755.2.49672.734.1.1.1
+        type: DisplayString
+      - labels:
+        - position
+        labelname: displayName
+        oid: 1.3.6.1.4.1.14755.2.49672.734.1.1.2
+        type: DisplayString
+      - labels:
+        - position
+        labelname: type
+        oid: 1.3.6.1.4.1.14755.2.49672.734.1.1.5
+        type: DisplayString
+      - labels:
+        - position
+        labelname: version
+        oid: 1.3.6.1.4.1.14755.2.49672.734.1.1.6
+        type: DisplayString
+      - labels:
+        - position
+        labelname: position
+        oid: 1.3.6.1.4.1.14755.2.49672.734.1.1.3
+        type: OctetString
+        display_hint: 1d.1d.1d.1d
+      enum_values:
+        0: ok
+        1: fail
+        2: missing
+    - name: fan3Status
+      oid: 1.3.6.1.4.1.14755.2.49672.734.1.1.43
+      type: EnumAsStateSet
+      help: Current status of fan 3 - 1.3.6.1.4.1.14755.2.49672.734.1.1.43
+      indexes:
+      - labelname: position
+        type: OctetString
+        implied: true
+      lookups:
+      - labels:
+        - position
+        labelname: typeName
+        oid: 1.3.6.1.4.1.14755.2.49672.734.1.1.1
+        type: DisplayString
+      - labels:
+        - position
+        labelname: displayName
+        oid: 1.3.6.1.4.1.14755.2.49672.734.1.1.2
+        type: DisplayString
+      - labels:
+        - position
+        labelname: type
+        oid: 1.3.6.1.4.1.14755.2.49672.734.1.1.5
+        type: DisplayString
+      - labels:
+        - position
+        labelname: version
+        oid: 1.3.6.1.4.1.14755.2.49672.734.1.1.6
+        type: DisplayString
+      - labels:
+        - position
+        labelname: position
+        oid: 1.3.6.1.4.1.14755.2.49672.734.1.1.3
+        type: OctetString
+        display_hint: 1d.1d.1d.1d
+      enum_values:
+        0: ok
+        1: fail
+        2: missing
+    - name: statusColor
+      oid: 1.3.6.1.4.1.14755.2.49672.734.1.1.7
+      type: EnumAsStateSet
+      help: The current color of the Devices Master LED (red/green/yellow) - 1.3.6.1.4.1.14755.2.49672.734.1.1.7
+      indexes:
+      - labelname: position
+        type: OctetString
+        implied: true
+      lookups:
+      - labels:
+        - position
+        labelname: typeName
+        oid: 1.3.6.1.4.1.14755.2.49672.734.1.1.1
+        type: DisplayString
+      - labels:
+        - position
+        labelname: displayName
+        oid: 1.3.6.1.4.1.14755.2.49672.734.1.1.2
+        type: DisplayString
+      - labels:
+        - position
+        labelname: type
+        oid: 1.3.6.1.4.1.14755.2.49672.734.1.1.5
+        type: DisplayString
+      - labels:
+        - position
+        labelname: version
+        oid: 1.3.6.1.4.1.14755.2.49672.734.1.1.6
+        type: DisplayString
+      - labels:
+        - position
+        labelname: position
+        oid: 1.3.6.1.4.1.14755.2.49672.734.1.1.3
+        type: OctetString
+        display_hint: 1d.1d.1d.1d
+      enum_values:
+        0: unknown
+        1: black
+        2: green
+        3: yellow
+        4: red
+    - name: statusText
+      oid: 1.3.6.1.4.1.14755.2.49672.734.1.1.9
+      type: DisplayString
+      help: The current status text (OK or error-details) - 1.3.6.1.4.1.14755.2.49672.734.1.1.9
+      indexes:
+      - labelname: position
+        type: OctetString
+        implied: true
+      lookups:
+      - labels:
+        - position
+        labelname: typeName
+        oid: 1.3.6.1.4.1.14755.2.49672.734.1.1.1
+        type: DisplayString
+      - labels:
+        - position
+        labelname: displayName
+        oid: 1.3.6.1.4.1.14755.2.49672.734.1.1.2
+        type: DisplayString
+      - labels:
+        - position
+        labelname: type
+        oid: 1.3.6.1.4.1.14755.2.49672.734.1.1.5
+        type: DisplayString
+      - labels:
+        - position
+        labelname: version
+        oid: 1.3.6.1.4.1.14755.2.49672.734.1.1.6
+        type: DisplayString
+      - labels:
+        - position
+        labelname: position
+        oid: 1.3.6.1.4.1.14755.2.49672.734.1.1.3
+        type: OctetString
+        display_hint: 1d.1d.1d.1d
+      regex_extracts:
+        "":
+        - value: "0"
+          regex: ^(?:OK)$
+        - value: "1"
+          regex: ^(?:^.*)$
+    max_repetitions: 50
+    retries: 3
+    timeout: 5s
+  lynx_rct5023_gs:
+    walk:
+    - 1.3.6.1.4.1.14755.2.49673.734.1.1.1
+    - 1.3.6.1.4.1.14755.2.49673.734.1.1.2
+    - 1.3.6.1.4.1.14755.2.49673.734.1.1.20
+    - 1.3.6.1.4.1.14755.2.49673.734.1.1.21
+    - 1.3.6.1.4.1.14755.2.49673.734.1.1.24
+    - 1.3.6.1.4.1.14755.2.49673.734.1.1.25
+    - 1.3.6.1.4.1.14755.2.49673.734.1.1.3
+    - 1.3.6.1.4.1.14755.2.49673.734.1.1.36
+    - 1.3.6.1.4.1.14755.2.49673.734.1.1.37
+    - 1.3.6.1.4.1.14755.2.49673.734.1.1.4
+    - 1.3.6.1.4.1.14755.2.49673.734.1.1.41
+    - 1.3.6.1.4.1.14755.2.49673.734.1.1.42
+    - 1.3.6.1.4.1.14755.2.49673.734.1.1.43
+    - 1.3.6.1.4.1.14755.2.49673.734.1.1.5
+    - 1.3.6.1.4.1.14755.2.49673.734.1.1.6
+    - 1.3.6.1.4.1.14755.2.49673.734.1.1.7
+    - 1.3.6.1.4.1.14755.2.49673.734.1.1.9
+    metrics:
+    - name: pSU1Voltage
+      oid: 1.3.6.1.4.1.14755.2.49673.734.1.1.20
+      type: gauge
+      help: Voltage of power supply unit - 1.3.6.1.4.1.14755.2.49673.734.1.1.20
+      indexes:
+      - labelname: position
+        type: OctetString
+        implied: true
+      lookups:
+      - labels:
+        - position
+        labelname: typeName
+        oid: 1.3.6.1.4.1.14755.2.49673.734.1.1.1
+        type: DisplayString
+      - labels:
+        - position
+        labelname: displayName
+        oid: 1.3.6.1.4.1.14755.2.49673.734.1.1.2
+        type: DisplayString
+      - labels:
+        - position
+        labelname: type
+        oid: 1.3.6.1.4.1.14755.2.49673.734.1.1.5
+        type: DisplayString
+      - labels:
+        - position
+        labelname: version
+        oid: 1.3.6.1.4.1.14755.2.49673.734.1.1.6
+        type: DisplayString
+      - labels:
+        - position
+        labelname: position
+        oid: 1.3.6.1.4.1.14755.2.49673.734.1.1.3
+        type: OctetString
+        display_hint: 1d.1d.1d.1d
+      display_hint: d-1
+    - name: pSU1Temperature
+      oid: 1.3.6.1.4.1.14755.2.49673.734.1.1.21
+      type: gauge
+      help: Temperature of power supply unit - 1.3.6.1.4.1.14755.2.49673.734.1.1.21
+      indexes:
+      - labelname: position
+        type: OctetString
+        implied: true
+      lookups:
+      - labels:
+        - position
+        labelname: typeName
+        oid: 1.3.6.1.4.1.14755.2.49673.734.1.1.1
+        type: DisplayString
+      - labels:
+        - position
+        labelname: displayName
+        oid: 1.3.6.1.4.1.14755.2.49673.734.1.1.2
+        type: DisplayString
+      - labels:
+        - position
+        labelname: type
+        oid: 1.3.6.1.4.1.14755.2.49673.734.1.1.5
+        type: DisplayString
+      - labels:
+        - position
+        labelname: version
+        oid: 1.3.6.1.4.1.14755.2.49673.734.1.1.6
+        type: DisplayString
+      - labels:
+        - position
+        labelname: position
+        oid: 1.3.6.1.4.1.14755.2.49673.734.1.1.3
+        type: OctetString
+        display_hint: 1d.1d.1d.1d
+    - name: pSU2Voltage
+      oid: 1.3.6.1.4.1.14755.2.49673.734.1.1.24
+      type: gauge
+      help: Voltage of power supply unit - 1.3.6.1.4.1.14755.2.49673.734.1.1.24
+      indexes:
+      - labelname: position
+        type: OctetString
+        implied: true
+      lookups:
+      - labels:
+        - position
+        labelname: typeName
+        oid: 1.3.6.1.4.1.14755.2.49673.734.1.1.1
+        type: DisplayString
+      - labels:
+        - position
+        labelname: displayName
+        oid: 1.3.6.1.4.1.14755.2.49673.734.1.1.2
+        type: DisplayString
+      - labels:
+        - position
+        labelname: type
+        oid: 1.3.6.1.4.1.14755.2.49673.734.1.1.5
+        type: DisplayString
+      - labels:
+        - position
+        labelname: version
+        oid: 1.3.6.1.4.1.14755.2.49673.734.1.1.6
+        type: DisplayString
+      - labels:
+        - position
+        labelname: position
+        oid: 1.3.6.1.4.1.14755.2.49673.734.1.1.3
+        type: OctetString
+        display_hint: 1d.1d.1d.1d
+      display_hint: d-1
+    - name: pSU2Temperature
+      oid: 1.3.6.1.4.1.14755.2.49673.734.1.1.25
+      type: gauge
+      help: Temperature of power supply unit - 1.3.6.1.4.1.14755.2.49673.734.1.1.25
+      indexes:
+      - labelname: position
+        type: OctetString
+        implied: true
+      lookups:
+      - labels:
+        - position
+        labelname: typeName
+        oid: 1.3.6.1.4.1.14755.2.49673.734.1.1.1
+        type: DisplayString
+      - labels:
+        - position
+        labelname: displayName
+        oid: 1.3.6.1.4.1.14755.2.49673.734.1.1.2
+        type: DisplayString
+      - labels:
+        - position
+        labelname: type
+        oid: 1.3.6.1.4.1.14755.2.49673.734.1.1.5
+        type: DisplayString
+      - labels:
+        - position
+        labelname: version
+        oid: 1.3.6.1.4.1.14755.2.49673.734.1.1.6
+        type: DisplayString
+      - labels:
+        - position
+        labelname: position
+        oid: 1.3.6.1.4.1.14755.2.49673.734.1.1.3
+        type: OctetString
+        display_hint: 1d.1d.1d.1d
+    - name: slotStatusPSU1
+      oid: 1.3.6.1.4.1.14755.2.49673.734.1.1.36
+      type: DisplayString
+      help: 'Status PSU 1: if present: set to name-and-version as in <name> VVV.VV.VV
+        - 1.3.6.1.4.1.14755.2.49673.734.1.1.36'
+      indexes:
+      - labelname: position
+        type: OctetString
+        implied: true
+      lookups:
+      - labels:
+        - position
+        labelname: typeName
+        oid: 1.3.6.1.4.1.14755.2.49673.734.1.1.1
+        type: DisplayString
+      - labels:
+        - position
+        labelname: displayName
+        oid: 1.3.6.1.4.1.14755.2.49673.734.1.1.2
+        type: DisplayString
+      - labels:
+        - position
+        labelname: type
+        oid: 1.3.6.1.4.1.14755.2.49673.734.1.1.5
+        type: DisplayString
+      - labels:
+        - position
+        labelname: version
+        oid: 1.3.6.1.4.1.14755.2.49673.734.1.1.6
+        type: DisplayString
+      - labels:
+        - position
+        labelname: position
+        oid: 1.3.6.1.4.1.14755.2.49673.734.1.1.3
+        type: OctetString
+        display_hint: 1d.1d.1d.1d
+      regex_extracts:
+        "":
+        - value: "1"
+          regex: ^(?:_empty_)$
+        - value: "0"
+          regex: ^(?:^.*)$
+    - name: slotStatusPSU2
+      oid: 1.3.6.1.4.1.14755.2.49673.734.1.1.37
+      type: DisplayString
+      help: 'Status PSU 2: if present: set to name-and-version as in <name> VVV.VV.VV
+        - 1.3.6.1.4.1.14755.2.49673.734.1.1.37'
+      indexes:
+      - labelname: position
+        type: OctetString
+        implied: true
+      lookups:
+      - labels:
+        - position
+        labelname: typeName
+        oid: 1.3.6.1.4.1.14755.2.49673.734.1.1.1
+        type: DisplayString
+      - labels:
+        - position
+        labelname: displayName
+        oid: 1.3.6.1.4.1.14755.2.49673.734.1.1.2
+        type: DisplayString
+      - labels:
+        - position
+        labelname: type
+        oid: 1.3.6.1.4.1.14755.2.49673.734.1.1.5
+        type: DisplayString
+      - labels:
+        - position
+        labelname: version
+        oid: 1.3.6.1.4.1.14755.2.49673.734.1.1.6
+        type: DisplayString
+      - labels:
+        - position
+        labelname: position
+        oid: 1.3.6.1.4.1.14755.2.49673.734.1.1.3
+        type: OctetString
+        display_hint: 1d.1d.1d.1d
+      regex_extracts:
+        "":
+        - value: "1"
+          regex: ^(?:_empty_)$
+        - value: "0"
+          regex: ^(?:^.*)$
+    - name: uptime
+      oid: 1.3.6.1.4.1.14755.2.49673.734.1.1.4
+      type: counter
+      help: Connection time of the device to this UI (in seconds) - 1.3.6.1.4.1.14755.2.49673.734.1.1.4
+      indexes:
+      - labelname: position
+        type: OctetString
+        implied: true
+      lookups:
+      - labels:
+        - position
+        labelname: typeName
+        oid: 1.3.6.1.4.1.14755.2.49673.734.1.1.1
+        type: DisplayString
+      - labels:
+        - position
+        labelname: displayName
+        oid: 1.3.6.1.4.1.14755.2.49673.734.1.1.2
+        type: DisplayString
+      - labels:
+        - position
+        labelname: type
+        oid: 1.3.6.1.4.1.14755.2.49673.734.1.1.5
+        type: DisplayString
+      - labels:
+        - position
+        labelname: version
+        oid: 1.3.6.1.4.1.14755.2.49673.734.1.1.6
+        type: DisplayString
+      - labels:
+        - position
+        labelname: position
+        oid: 1.3.6.1.4.1.14755.2.49673.734.1.1.3
+        type: OctetString
+        display_hint: 1d.1d.1d.1d
+      scale: 0.01
+    - name: fan1Status
+      oid: 1.3.6.1.4.1.14755.2.49673.734.1.1.41
+      type: EnumAsStateSet
+      help: Current status of fan 1 - 1.3.6.1.4.1.14755.2.49673.734.1.1.41
+      indexes:
+      - labelname: position
+        type: OctetString
+        implied: true
+      lookups:
+      - labels:
+        - position
+        labelname: typeName
+        oid: 1.3.6.1.4.1.14755.2.49673.734.1.1.1
+        type: DisplayString
+      - labels:
+        - position
+        labelname: displayName
+        oid: 1.3.6.1.4.1.14755.2.49673.734.1.1.2
+        type: DisplayString
+      - labels:
+        - position
+        labelname: type
+        oid: 1.3.6.1.4.1.14755.2.49673.734.1.1.5
+        type: DisplayString
+      - labels:
+        - position
+        labelname: version
+        oid: 1.3.6.1.4.1.14755.2.49673.734.1.1.6
+        type: DisplayString
+      - labels:
+        - position
+        labelname: position
+        oid: 1.3.6.1.4.1.14755.2.49673.734.1.1.3
+        type: OctetString
+        display_hint: 1d.1d.1d.1d
+      enum_values:
+        0: ok
+        1: fail
+        2: missing
+    - name: fan2Status
+      oid: 1.3.6.1.4.1.14755.2.49673.734.1.1.42
+      type: EnumAsStateSet
+      help: Current status of fan 2 - 1.3.6.1.4.1.14755.2.49673.734.1.1.42
+      indexes:
+      - labelname: position
+        type: OctetString
+        implied: true
+      lookups:
+      - labels:
+        - position
+        labelname: typeName
+        oid: 1.3.6.1.4.1.14755.2.49673.734.1.1.1
+        type: DisplayString
+      - labels:
+        - position
+        labelname: displayName
+        oid: 1.3.6.1.4.1.14755.2.49673.734.1.1.2
+        type: DisplayString
+      - labels:
+        - position
+        labelname: type
+        oid: 1.3.6.1.4.1.14755.2.49673.734.1.1.5
+        type: DisplayString
+      - labels:
+        - position
+        labelname: version
+        oid: 1.3.6.1.4.1.14755.2.49673.734.1.1.6
+        type: DisplayString
+      - labels:
+        - position
+        labelname: position
+        oid: 1.3.6.1.4.1.14755.2.49673.734.1.1.3
+        type: OctetString
+        display_hint: 1d.1d.1d.1d
+      enum_values:
+        0: ok
+        1: fail
+        2: missing
+    - name: fan3Status
+      oid: 1.3.6.1.4.1.14755.2.49673.734.1.1.43
+      type: EnumAsStateSet
+      help: Current status of fan 3 - 1.3.6.1.4.1.14755.2.49673.734.1.1.43
+      indexes:
+      - labelname: position
+        type: OctetString
+        implied: true
+      lookups:
+      - labels:
+        - position
+        labelname: typeName
+        oid: 1.3.6.1.4.1.14755.2.49673.734.1.1.1
+        type: DisplayString
+      - labels:
+        - position
+        labelname: displayName
+        oid: 1.3.6.1.4.1.14755.2.49673.734.1.1.2
+        type: DisplayString
+      - labels:
+        - position
+        labelname: type
+        oid: 1.3.6.1.4.1.14755.2.49673.734.1.1.5
+        type: DisplayString
+      - labels:
+        - position
+        labelname: version
+        oid: 1.3.6.1.4.1.14755.2.49673.734.1.1.6
+        type: DisplayString
+      - labels:
+        - position
+        labelname: position
+        oid: 1.3.6.1.4.1.14755.2.49673.734.1.1.3
+        type: OctetString
+        display_hint: 1d.1d.1d.1d
+      enum_values:
+        0: ok
+        1: fail
+        2: missing
+    - name: statusColor
+      oid: 1.3.6.1.4.1.14755.2.49673.734.1.1.7
+      type: EnumAsStateSet
+      help: The current color of the Devices Master LED (red/green/yellow) - 1.3.6.1.4.1.14755.2.49673.734.1.1.7
+      indexes:
+      - labelname: position
+        type: OctetString
+        implied: true
+      lookups:
+      - labels:
+        - position
+        labelname: typeName
+        oid: 1.3.6.1.4.1.14755.2.49673.734.1.1.1
+        type: DisplayString
+      - labels:
+        - position
+        labelname: displayName
+        oid: 1.3.6.1.4.1.14755.2.49673.734.1.1.2
+        type: DisplayString
+      - labels:
+        - position
+        labelname: type
+        oid: 1.3.6.1.4.1.14755.2.49673.734.1.1.5
+        type: DisplayString
+      - labels:
+        - position
+        labelname: version
+        oid: 1.3.6.1.4.1.14755.2.49673.734.1.1.6
+        type: DisplayString
+      - labels:
+        - position
+        labelname: position
+        oid: 1.3.6.1.4.1.14755.2.49673.734.1.1.3
+        type: OctetString
+        display_hint: 1d.1d.1d.1d
+      enum_values:
+        0: unknown
+        1: black
+        2: green
+        3: yellow
+        4: red
+    - name: statusText
+      oid: 1.3.6.1.4.1.14755.2.49673.734.1.1.9
+      type: DisplayString
+      help: The current status text (OK or error-details) - 1.3.6.1.4.1.14755.2.49673.734.1.1.9
+      indexes:
+      - labelname: position
+        type: OctetString
+        implied: true
+      lookups:
+      - labels:
+        - position
+        labelname: typeName
+        oid: 1.3.6.1.4.1.14755.2.49673.734.1.1.1
+        type: DisplayString
+      - labels:
+        - position
+        labelname: displayName
+        oid: 1.3.6.1.4.1.14755.2.49673.734.1.1.2
+        type: DisplayString
+      - labels:
+        - position
+        labelname: type
+        oid: 1.3.6.1.4.1.14755.2.49673.734.1.1.5
+        type: DisplayString
+      - labels:
+        - position
+        labelname: version
+        oid: 1.3.6.1.4.1.14755.2.49673.734.1.1.6
+        type: DisplayString
+      - labels:
+        - position
+        labelname: position
+        oid: 1.3.6.1.4.1.14755.2.49673.734.1.1.3
+        type: OctetString
+        display_hint: 1d.1d.1d.1d
+      regex_extracts:
+        "":
+        - value: "0"
+          regex: ^(?:OK)$
+        - value: "1"
+          regex: ^(?:^.*)$
+    max_repetitions: 50
+    retries: 3
+    timeout: 5s

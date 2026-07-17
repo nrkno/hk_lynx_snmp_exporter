@@ -183,6 +183,31 @@ func metricType(t string) (string, bool) {
 	}
 }
 
+// typeOverrideForNode resolves a configured type override for one node.
+// Priority is explicit OID first, then module-qualified label, then raw label,
+// then sanitized label for backwards compatibility.
+func typeOverrideForNode(overrides map[string]MetricOverrides, n *Node) (string, bool) {
+	if override, ok := overrides[n.Oid]; ok && override.Type != "" {
+		return override.Type, true
+	}
+	if n.Module != "" {
+		key := n.Module + "::" + n.Label
+		if override, ok := overrides[key]; ok && override.Type != "" {
+			return override.Type, true
+		}
+	}
+	if override, ok := overrides[n.Label]; ok && override.Type != "" {
+		return override.Type, true
+	}
+	sanitized := sanitizeLabelName(n.Label)
+	if sanitized != n.Label {
+		if override, ok := overrides[sanitized]; ok && override.Type != "" {
+			return override.Type, true
+		}
+	}
+	return "", false
+}
+
 func metricAccess(a string) bool {
 	switch a {
 	case "ACCESS_READONLY", "ACCESS_READWRITE", "ACCESS_CREATE", "ACCESS_NOACCESS":
@@ -284,21 +309,6 @@ func generateConfigModule(cfg *ModuleConfig, node *Node, nameToNode map[string]*
 	needToWalk := map[string]struct{}{}
 	tableInstances := map[string][]string{}
 
-	// Apply type overrides for the current module.
-	for name, params := range cfg.Overrides {
-		if params.Type == "" {
-			continue
-		}
-		// Find node to override.
-		n, ok := nameToNode[name]
-		if !ok {
-			logger.Warn("Could not find node to override type", "node", name)
-			continue
-		}
-		// params.Type validated at generator configuration.
-		n.Type = params.Type
-	}
-
 	// Remove redundant OIDs to be walked.
 	toWalk := []string{}
 	for _, oid := range cfg.Walk {
@@ -348,7 +358,12 @@ func generateConfigModule(cfg *ModuleConfig, node *Node, nameToNode map[string]*
 	// Find all the usable metrics.
 	for _, metricNode := range metrics {
 		walkNode(metricNode, func(n *Node) {
-			t, ok := metricType(n.Type)
+			nodeType := n.Type
+			if overrideType, ok := typeOverrideForNode(cfg.Overrides, n); ok {
+				nodeType = overrideType
+			}
+
+			t, ok := metricType(nodeType)
 			if !ok {
 				return // Unsupported type.
 			}
@@ -382,9 +397,13 @@ func generateConfigModule(cfg *ModuleConfig, node *Node, nameToNode map[string]*
 					logger.Warn("Could not find index for node", "node", n.Label, "index", i)
 					return
 				}
-				index.Type, ok = metricType(indexNode.Type)
+				indexType := indexNode.Type
+				if overrideType, ok := typeOverrideForNode(cfg.Overrides, indexNode); ok {
+					indexType = overrideType
+				}
+				index.Type, ok = metricType(indexType)
 				if !ok {
-					logger.Warn("Can't handle index type on node", "node", n.Label, "index", i, "type", indexNode.Type)
+					logger.Warn("Can't handle index type on node", "node", n.Label, "index", i, "type", indexType)
 					return
 				}
 				index.FixedSize = indexNode.FixedSize
@@ -392,7 +411,7 @@ func generateConfigModule(cfg *ModuleConfig, node *Node, nameToNode map[string]*
 					index.Implied = true
 				}
 				index.EnumValues = indexNode.EnumValues
-				if len(index.EnumValues) > 0 && index.Type != "EnumAsStateSet" && indexNode.Type != "gauge" {
+				if len(index.EnumValues) > 0 && index.Type != "EnumAsStateSet" && indexType != "gauge" {
 					index.Type = "EnumAsInfo"
 				}
 
@@ -454,11 +473,15 @@ func generateConfigModule(cfg *ModuleConfig, node *Node, nameToNode map[string]*
 					return nil, fmt.Errorf("unknown index '%s'", lookup.Lookup)
 				}
 				indexNode := getIndexNode(lookup.Lookup, nameToNode, metric.Oid)
-				typ, ok := metricType(indexNode.Type)
-				if !ok {
-					return nil, fmt.Errorf("unknown index type %s for %s", indexNode.Type, lookup.Lookup)
+				lookupType := indexNode.Type
+				if overrideType, ok := typeOverrideForNode(cfg.Overrides, indexNode); ok {
+					lookupType = overrideType
 				}
-				if len(indexNode.EnumValues) > 0 && typ != "EnumAsStateSet" && indexNode.Type != "gauge" {
+				typ, ok := metricType(lookupType)
+				if !ok {
+					return nil, fmt.Errorf("unknown index type %s for %s", lookupType, lookup.Lookup)
+				}
+				if len(indexNode.EnumValues) > 0 && typ != "EnumAsStateSet" && lookupType != "gauge" {
 					typ = "EnumAsInfo"
 				}
 				l := &config.Lookup{
@@ -486,10 +509,20 @@ func generateConfigModule(cfg *ModuleConfig, node *Node, nameToNode map[string]*
 				metric.Lookups = append(metric.Lookups, l)
 
 				// If lookup label is used as source index in another lookup,
-				// we need to add this new label as another index.
+				// we need to add this new label as another index,
+				// but only if an index with the same name doesn't already exist.
 				if slices.Contains(requiredAsIndex, l.Labelname) {
-					idx := &config.Index{Labelname: l.Labelname, Type: l.Type, EnumValues: indexNode.EnumValues}
-					metric.Indexes = append(metric.Indexes, idx)
+					alreadyIndex := false
+					for _, existingIndex := range metric.Indexes {
+						if existingIndex.Labelname == l.Labelname {
+							alreadyIndex = true
+							break
+						}
+					}
+					if !alreadyIndex {
+						idx := &config.Index{Labelname: l.Labelname, Type: l.Type, EnumValues: indexNode.EnumValues}
+						metric.Indexes = append(metric.Indexes, idx)
+					}
 				}
 
 				// Make sure we walk the lookup OID(s).

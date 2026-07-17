@@ -1,0 +1,85 @@
+-- ------------------------------------------------------------------------------
+-- CVS $Id: LYNX-SMI.mib,v 1.9 2011/10/24 07:45:55 jvo Exp $
+-- ------------------------------------------------------------------------------
+-- Copyright 2003-2011 by LYNX Technik AG
+--
+-- These coded instructions, statements, and computer programs  contain
+-- unpublished proprietary information  written  by LYNX Technik AG and
+-- are protected by Federal copyright law. They  may  not  be disclosed
+-- to  third  parties  or copied or duplicated in any form, in whole or
+-- in part, without the prior written consent of LYNX Technik AG.
+-- ------------------------------------------------------------------------------
+
+LYNX-SMI DEFINITIONS ::= BEGIN
+
+IMPORTS
+    MODULE-IDENTITY, OBJECT-IDENTITY, enterprises, Integer32 FROM SNMPv2-SMI
+    TEXTUAL-CONVENTION FROM SNMPv2-TC;
+
+mib-mod-lynx MODULE-IDENTITY
+    LAST-UPDATED "201107131005Z"
+    ORGANIZATION "LYNX Technik AG"
+    CONTACT-INFO "http://www.lynx-technik.com"
+    DESCRIPTION  "Structure of Management Information for LYNX Technik AG"
+
+    REVISION     "201107131005Z"
+    DESCRIPTION  "Added textual conventions for on/off enumerations and fixed-point numbers"
+
+    REVISION     "200411051614Z"
+    DESCRIPTION  "reorganized mib"
+
+    REVISION     "200309261540Z"
+    DESCRIPTION  "Initial version"
+    ::= { mib-modules 1 }
+
+-- Object definitions
+lynx-technik OBJECT-IDENTITY
+    STATUS current
+    DESCRIPTION "The LYNX oid subtree."
+    ::= { enterprises  14755 }
+
+mib-modules OBJECT-IDENTITY
+    STATUS current
+    DESCRIPTION "The mib-modules are registered under this node."
+    ::= { lynx-technik 1 }
+
+products OBJECT-IDENTITY
+    STATUS current
+    DESCRIPTION "LYNX products like minimodules, controllers."
+    ::= { lynx-technik 2 }
+
+traps OBJECT-IDENTITY
+    STATUS current
+    DESCRIPTION "Traps of LYNX products."
+    ::= { lynx-technik 3 }
+
+types OBJECT-IDENTITY
+    STATUS current
+    DESCRIPTION "Types used in LYNX traps."
+    ::= { lynx-technik 4 }
+
+-- Type definitions
+OnOffValue ::= TEXTUAL-CONVENTION
+    STATUS current
+    DESCRIPTION "Boolean data type with textual representation as on/off"
+    SYNTAX INTEGER { off(0), on(1) }
+
+FixedPointValue1 ::= TEXTUAL-CONVENTION
+    DISPLAY-HINT "d-1"
+    STATUS current
+    DESCRIPTION "Fixed-point number with 1 decimal place"
+    SYNTAX Integer32
+
+FixedPointValue2 ::= TEXTUAL-CONVENTION
+    DISPLAY-HINT "d-2"
+    STATUS current
+    DESCRIPTION "Fixed-point number with 2 decimal places"
+    SYNTAX Integer32
+
+FixedPointValue3 ::= TEXTUAL-CONVENTION
+    DISPLAY-HINT "d-3"
+    STATUS current
+    DESCRIPTION "Fixed-point number with 3 decimal places"
+    SYNTAX Integer32
+
+END

@@ -1,0 +1,755 @@
+---
+auths:
+  public_v1:
+    version: 1
+  public_v2:
+    version: 2
+
+modules:
+  lynx_rct5023_g:
+    walk:
+      - "RCT5023-G-c208-sw734-MIB::typeName"
+      - "RCT5023-G-c208-sw734-MIB::displayName"
+      - "RCT5023-G-c208-sw734-MIB::position"
+      - "RCT5023-G-c208-sw734-MIB::uptime"
+      - "RCT5023-G-c208-sw734-MIB::type"
+      - "RCT5023-G-c208-sw734-MIB::version"
+      - "RCT5023-G-c208-sw734-MIB::statusColor"
+      - "RCT5023-G-c208-sw734-MIB::statusText"
+      - "RCT5023-G-c208-sw734-MIB::pSU1Voltage"
+      - "RCT5023-G-c208-sw734-MIB::pSU1Temperature"
+      - "RCT5023-G-c208-sw734-MIB::pSU2Voltage"
+      - "RCT5023-G-c208-sw734-MIB::pSU2Temperature"
+      - "RCT5023-G-c208-sw734-MIB::slotStatusPSU1"
+      - "RCT5023-G-c208-sw734-MIB::slotStatusPSU2"
+      - "RCT5023-G-c208-sw734-MIB::fan1Status"
+      - "RCT5023-G-c208-sw734-MIB::fan2Status"
+      - "RCT5023-G-c208-sw734-MIB::fan3Status"
+    lookups:
+      - source_indexes: [position]
+        lookup: typeName
+      - source_indexes: [position]
+        lookup: displayName
+      - source_indexes: [position]
+        lookup: type
+      - source_indexes: [position]
+        lookup: version
+      - source_indexes: [position]
+        lookup: position
+        display_hint: "1d.1d.1d.1d"
+    overrides:
+      typeName:
+        ignore: true
+      displayName:
+        ignore: true
+      position:
+        ignore: true
+      uptime:
+        type: counter
+        scale: 0.01
+      type:
+        ignore: true
+      version:
+        ignore: true
+      statusColor:
+        type: EnumAsStateSet
+      statusText:
+        regex_extracts:
+          "":
+            - regex: "OK"
+              value: "0"
+            - regex: "^.*"
+              value: "1"
+      pSU1Voltage:
+        display_hint: "@mib"
+        scale: 0.1
+      pSU2Voltage:
+        display_hint: "@mib"
+        scale: 0.1
+      slotStatusPSU1:
+        regex_extracts:
+          "":
+            - regex: "_empty_"
+              value: "1"
+            - regex: "^.*"
+              value: "0"
+      slotStatusPSU2:
+        regex_extracts:
+          "":
+            - regex: "_empty_"
+              value: "1"
+            - regex: "^.*"
+              value: "0"
+      fan1Status:
+        type: EnumAsStateSet
+      fan2Status:
+        type: EnumAsStateSet
+      fan3Status:
+        type: EnumAsStateSet
+    max_repetitions: 50  # How many objects to request with GET/GETBULK, defaults to 25.
+    retries: 3   # How many times to retry a failed request, defaults to 3.
+    timeout: 5s  # Timeout for each individual SNMP request, defaults to 5s.
+  lynx_rct5023_gs:
+    walk:
+      - "RCT5023-GS-c209-sw734-MIB::typeName"
+      - "RCT5023-GS-c209-sw734-MIB::displayName"
+      - "RCT5023-GS-c209-sw734-MIB::position"
+      - "RCT5023-GS-c209-sw734-MIB::uptime"
+      - "RCT5023-GS-c209-sw734-MIB::type"
+      - "RCT5023-GS-c209-sw734-MIB::version"
+      - "RCT5023-GS-c209-sw734-MIB::statusColor"
+      - "RCT5023-GS-c209-sw734-MIB::statusText"
+      - "RCT5023-GS-c209-sw734-MIB::pSU1Voltage"
+      - "RCT5023-GS-c209-sw734-MIB::pSU1Temperature"
+      - "RCT5023-GS-c209-sw734-MIB::pSU2Voltage"
+      - "RCT5023-GS-c209-sw734-MIB::pSU2Temperature"
+      - "RCT5023-GS-c209-sw734-MIB::slotStatusPSU1"
+      - "RCT5023-GS-c209-sw734-MIB::slotStatusPSU2"
+      - "RCT5023-GS-c209-sw734-MIB::fan1Status"
+      - "RCT5023-GS-c209-sw734-MIB::fan2Status"
+      - "RCT5023-GS-c209-sw734-MIB::fan3Status"
+    lookups:
+      - source_indexes: [position]
+        lookup: typeName
+      - source_indexes: [position]
+        lookup: displayName
+      - source_indexes: [position]
+        lookup: type
+      - source_indexes: [position]
+        lookup: version
+      - source_indexes: [position]
+        lookup: position
+        display_hint: "1d.1d.1d.1d"
+    overrides:
+      typeName:
+        ignore: true
+      displayName:
+        ignore: true
+      position:
+        ignore: true
+      uptime:
+        type: counter
+        scale: 0.01
+      type:
+        ignore: true
+      version:
+        ignore: true
+      statusColor:
+        type: EnumAsStateSet
+      statusText:
+        regex_extracts:
+          "":
+            - regex: "OK"
+              value: "0"
+            - regex: "^.*"
+              value: "1"
+      pSU1Voltage:
+        display_hint: "@mib"
+      pSU2Voltage:
+        display_hint: "@mib"
+      slotStatusPSU1:
+        regex_extracts:
+          "":
+            - regex: "_empty_"
+              value: "1"
+            - regex: "^.*"
+              value: "0"
+      slotStatusPSU2:
+        regex_extracts:
+          "":
+            - regex: "_empty_"
+              value: "1"
+            - regex: "^.*"
+              value: "0"
+      fan1Status:
+        type: EnumAsStateSet
+      fan2Status:
+        type: EnumAsStateSet
+      fan3Status:
+        type: EnumAsStateSet
+    max_repetitions: 50  # How many objects to request with GET/GETBULK, defaults to 25.
+    retries: 3   # How many times to retry a failed request, defaults to 3.
+    timeout: 5s  # Timeout for each individual SNMP request, defaults to 5s.
+  lynx_dvd_5820:
+    walk:
+      - "DVD5820-08c7-sw704-MIB::typeName"
+      - "DVD5820-08c7-sw704-MIB::displayName"
+      - "DVD5820-08c7-sw704-MIB::position"
+      - "DVD5820-08c7-sw704-MIB::uptime"
+      - "DVD5820-08c7-sw704-MIB::type"
+      - "DVD5820-08c7-sw704-MIB::version"
+      - "DVD5820-08c7-sw704-MIB::statusColor"
+      - "DVD5820-08c7-sw704-MIB::statusText"
+      - "DVD5820-08c7-sw704-MIB::eventPrimaryPowermissing"
+      - "DVD5820-08c7-sw704-MIB::eventRedundantPowermissing"
+      - "DVD5820-08c7-sw704-MIB::eventSDIInput1NoInput"
+      - "DVD5820-08c7-sw704-MIB::eventSDIInput2NoInput"
+      - "DVD5820-08c7-sw704-MIB::in1"
+      - "DVD5820-08c7-sw704-MIB::in2"
+      - "DVD5820-08c7-sw704-MIB::out1"
+      - "DVD5820-08c7-sw704-MIB::out2"
+    lookups:
+      - source_indexes: [position]
+        lookup: typeName
+      - source_indexes: [position]
+        lookup: displayName
+      - source_indexes: [position]
+        lookup: type
+      - source_indexes: [position]
+        lookup: version
+      - source_indexes: [position]
+        lookup: position
+        display_hint: "1d.1d.1d.1d"
+    overrides:
+      typeName:
+        ignore: true
+      displayName:
+        ignore: true
+      position:
+        ignore: true
+      uptime:
+        type: counter
+        scale: 0.01
+      type:
+        ignore: true
+      version:
+        ignore: true
+      statusColor:
+        type: EnumAsStateSet
+      statusText:
+        regex_extracts:
+          "":
+            - regex: "OK"
+              value: "0"
+            - regex: "^.*"
+              value: "1"
+      in1:
+        type: EnumAsStateSet
+      in2:
+        type: EnumAsStateSet
+      out1:
+        type: EnumAsStateSet
+      out2:
+        type: EnumAsStateSet
+    max_repetitions: 50  # How many objects to request with GET/GETBULK, defaults to 25.
+    retries: 3   # How many times to retry a failed request, defaults to 3.
+    timeout: 5s  # Timeout for each individual SNMP request, defaults to 5s.
+  lynx_dvd_5830:
+    walk:
+      - "DVD5830-08d3-sw619-MIB::typeName"
+      - "DVD5830-08d3-sw619-MIB::displayName"
+      - "DVD5830-08d3-sw619-MIB::position"
+      - "DVD5830-08d3-sw619-MIB::uptime"
+      - "DVD5830-08d3-sw619-MIB::type"
+      - "DVD5830-08d3-sw619-MIB::version"
+      - "DVD5830-08d3-sw619-MIB::statusColor"
+      - "DVD5830-08d3-sw619-MIB::statusText"
+      - "DVD5830-08d3-sw619-MIB::eventPrimaryPowermissing"
+      - "DVD5830-08d3-sw619-MIB::eventRedundantPowermissing"
+      - "DVD5830-08d3-sw619-MIB::eventSDIInput1NoInput"
+      - "DVD5830-08d3-sw619-MIB::eventSDIInput2NoInput"
+      - "DVD5830-08d3-sw619-MIB::eventSDIInput3NoInput"
+      - "DVD5830-08d3-sw619-MIB::in1"
+      - "DVD5830-08d3-sw619-MIB::in2"
+      - "DVD5830-08d3-sw619-MIB::in3"
+      - "DVD5830-08d3-sw619-MIB::out1"
+      - "DVD5830-08d3-sw619-MIB::out2"
+      - "DVD5830-08d3-sw619-MIB::out3"
+    lookups:
+      - source_indexes: [position]
+        lookup: typeName
+      - source_indexes: [position]
+        lookup: displayName
+      - source_indexes: [position]
+        lookup: type
+      - source_indexes: [position]
+        lookup: version
+      - source_indexes: [position]
+        lookup: position
+        display_hint: "1d.1d.1d.1d"
+    overrides:
+      typeName:
+        ignore: true
+      displayName:
+        ignore: true
+      position:
+        ignore: true
+      uptime:
+        type: counter
+        scale: 0.01
+      type:
+        ignore: true
+      version:
+        ignore: true
+      statusColor:
+        type: EnumAsStateSet
+      statusText:
+        regex_extracts:
+          "":
+            - regex: "OK"
+              value: "0"
+            - regex: "^.*"
+              value: "1"
+      in1:
+        type: EnumAsStateSet
+      in2:
+        type: EnumAsStateSet
+      in3:
+        type: EnumAsStateSet
+      out1:
+        type: EnumAsStateSet
+      out2:
+        type: EnumAsStateSet
+      out3:
+        type: EnumAsStateSet
+    max_repetitions: 50  # How many objects to request with GET/GETBULK, defaults to 25.
+    retries: 3   # How many times to retry a failed request, defaults to 3.
+    timeout: 5s  # Timeout for each individual SNMP request, defaults to 5s.
+  lynx_dvo_5820:
+    walk:
+      - "DVO5820-08c9-sw704-MIB::paramTable"
+      - "DVO5820-08c9-sw704-MIB::typeName"
+      - "DVO5820-08c9-sw704-MIB::displayName"
+      - "DVO5820-08c9-sw704-MIB::position"
+      - "DVO5820-08c9-sw704-MIB::uptime"
+      - "DVO5820-08c9-sw704-MIB::type"
+      - "DVO5820-08c9-sw704-MIB::version"
+      - "DVO5820-08c9-sw704-MIB::statusColor"
+      - "DVO5820-08c9-sw704-MIB::statusText"
+      - "DVO5820-08c9-sw704-MIB::eventPrimaryPowermissing"
+      - "DVO5820-08c9-sw704-MIB::eventRedundantPowermissing"
+      - "DVO5820-08c9-sw704-MIB::eventSDIInput1NoInput"
+      - "DVO5820-08c9-sw704-MIB::eventSDIInput2NoInput"
+      - "DVO5820-08c9-sw704-MIB::in1"
+      - "DVO5820-08c9-sw704-MIB::in2"
+      - "DVO5820-08c9-sw704-MIB::out1"
+      - "DVO5820-08c9-sw704-MIB::out2"
+      - "DVO5820-08c9-sw704-MIB::inputSignalQuality1Opt"
+      - "DVO5820-08c9-sw704-MIB::inputSignalQuality2Opt"
+      - "DVO5820-08c9-sw704-MIB::sFP1OutPower"
+      - "DVO5820-08c9-sw704-MIB::sFP2OutPower"
+      - "DVO5820-08c9-sw704-MIB::sFP1Wavelength"
+      - "DVO5820-08c9-sw704-MIB::sFP2Wavelength"
+      - "DVO5820-08c9-sw704-MIB::sourceInput2"
+    lookups:
+      - source_indexes: [position]
+        lookup: typeName
+      - source_indexes: [position]
+        lookup: displayName
+      - source_indexes: [position]
+        lookup: type
+      - source_indexes: [position]
+        lookup: version
+      - source_indexes: [position]
+        lookup: position
+        display_hint: "1d.1d.1d.1d"
+    overrides:
+      typeName:
+        ignore: true
+      displayName:
+        ignore: true
+      position:
+        ignore: true
+      uptime:
+        type: counter
+        scale: 0.01
+      type:
+        ignore: true
+      version:
+        ignore: true
+      statusColor:
+        type: EnumAsStateSet
+      statusText:
+        regex_extracts:
+          "":
+            - regex: "OK"
+              value: "0"
+            - regex: "^.*"
+              value: "1"
+      in1:
+        type: EnumAsStateSet
+      in2:
+        type: EnumAsStateSet
+      out1:
+        type: EnumAsStateSet
+      out2:
+        type: EnumAsStateSet
+      inputSignalQuality1Opt:
+        display_hint: "@mib"
+        scale: 0.1
+      inputSignalQuality2Opt:
+        display_hint: "@mib"
+        scale: 0.1
+      sourceInput2:
+        type: EnumAsStateSet
+      sFP1OutPower:
+        regex_extracts:
+          "":
+            - regex: "(-?[0-9]+)( dBm)"
+              value: "$1"
+          Status:
+            - regex: "(laser off)"
+              value: "1"
+            - regex: "^.*"
+              value: "0"
+      sFP2OutPower:
+        regex_extracts:
+          "":
+            - regex: "(-?[0-9]+)( dBm)"
+              value: "$1"
+          Status:
+            - regex: "(laser off)"
+              value: "1"
+            - regex: "^.*"
+              value: "0"
+      sFP1Wavelength:
+        regex_extracts:
+          "":
+            - regex: "([0-9]+)( nm)"
+              value: "$1"
+      sFP2Wavelength:
+        regex_extracts:
+          "":
+            - regex: "([0-9]+)( nm)"
+              value: "$1"
+      
+    max_repetitions: 50  # How many objects to request with GET/GETBULK, defaults to 25.
+    retries: 3   # How many times to retry a failed request, defaults to 3.
+    timeout: 5s  # Timeout for each individual SNMP request, defaults to 5s
+  lynx_otx_5840:
+    walk:
+      - "OTX5840-08db-sw619-MIB::typeName"
+      - "OTX5840-08db-sw619-MIB::displayName"
+      - "OTX5840-08db-sw619-MIB::position"
+      - "OTX5840-08db-sw619-MIB::uptime"
+      - "OTX5840-08db-sw619-MIB::type"
+      - "OTX5840-08db-sw619-MIB::version"
+      - "OTX5840-08db-sw619-MIB::statusColor"
+      - "OTX5840-08db-sw619-MIB::statusText"
+      - "OTX5840-08db-sw619-MIB::eventPrimaryPowermissing"
+      - "OTX5840-08db-sw619-MIB::eventRedundantPowermissing"
+      - "OTX5840-08db-sw619-MIB::in1"
+      - "OTX5840-08db-sw619-MIB::in2"
+      - "OTX5840-08db-sw619-MIB::in3"
+      - "OTX5840-08db-sw619-MIB::in4"
+      - "OTX5840-08db-sw619-MIB::out1"
+      - "OTX5840-08db-sw619-MIB::out2"
+      - "OTX5840-08db-sw619-MIB::out3"
+      - "OTX5840-08db-sw619-MIB::out4"
+      - "OTX5840-08db-sw619-MIB::out5"
+      - "OTX5840-08db-sw619-MIB::out6"
+      - "OTX5840-08db-sw619-MIB::sFP1OutPower"
+      - "OTX5840-08db-sw619-MIB::sFP1Wavelength1"
+      - "OTX5840-08db-sw619-MIB::sFP1Wavelength2"
+      - "OTX5840-08db-sw619-MIB::sFP2OutPower"
+      - "OTX5840-08db-sw619-MIB::sFP2Wavelength1"
+      - "OTX5840-08db-sw619-MIB::sFP2Wavelength2"
+    lookups:
+      - source_indexes: [position]
+        lookup: typeName
+      - source_indexes: [position]
+        lookup: displayName
+      - source_indexes: [position]
+        lookup: type
+      - source_indexes: [position]
+        lookup: version
+      - source_indexes: [position]
+        lookup: position
+        display_hint: "1d.1d.1d.1d"
+    overrides:
+      typeName:
+        ignore: true
+      displayName:
+        ignore: true
+      position:
+        ignore: true
+      uptime:
+        type: counter
+        scale: 0.01
+      type:
+        ignore: true
+      version:
+        ignore: true
+      statusColor:
+        type: EnumAsStateSet
+      statusText:
+        regex_extracts:
+          "":
+            - regex: "OK"
+              value: "0"
+            - regex: "^.*"
+              value: "1"
+      in1:
+        type: EnumAsStateSet
+      in2:
+        type: EnumAsStateSet
+      in3:
+        type: EnumAsStateSet
+      in4:
+        type: EnumAsStateSet
+      out1:
+        type: EnumAsStateSet
+      out2:
+        type: EnumAsStateSet
+      out3:
+        type: EnumAsStateSet
+      out4:
+        type: EnumAsStateSet
+      out5:
+        type: EnumAsStateSet
+      out6:
+        type: EnumAsStateSet
+      sFP1OutPower:
+        regex_extracts:
+          "":
+            - regex: "(-?[0-9]+)( dBm)"
+              value: "$1"
+          Status:
+            - regex: "(laser off)"
+              value: "1"
+            - regex: "^.*"
+              value: "0"
+      sFP1Wavelength1:
+        regex_extracts:
+          "":
+            - regex: "([0-9]+)( nm)"
+              value: "$1"
+      sFP1Wavelength2:
+        regex_extracts:
+          "":
+            - regex: "([0-9]+)( nm)"
+              value: "$1"
+      sFP2OutPower:
+        regex_extracts:
+          "":
+            - regex: "(-?[0-9]+)( dBm)"
+              value: "$1"
+          Status:
+            - regex: "(laser off)"
+              value: "1"
+            - regex: "^.*"
+              value: "0"
+      sFP2Wavelength1:
+        regex_extracts:
+          "":
+            - regex: "([0-9]+)( nm)"
+              value: "$1"
+      sFP2Wavelength2:
+        regex_extracts:
+          "":
+            - regex: "([0-9]+)( nm)"
+              value: "$1"
+    max_repetitions: 55  # How many objects to request with GET/GETBULK, defaults to 25.
+    retries: 3   # How many times to retry a failed request, defaults to 3.
+    timeout: 5s  # Timeout for each individual SNMP request, defaults to 5s
+  lynx_orx_5800:
+    walk:
+      - "ORX5800-08dc-sw619-MIB::typeName"
+      - "ORX5800-08dc-sw619-MIB::displayName"
+      - "ORX5800-08dc-sw619-MIB::position"
+      - "ORX5800-08dc-sw619-MIB::uptime"
+      - "ORX5800-08dc-sw619-MIB::type"
+      - "ORX5800-08dc-sw619-MIB::version"
+      - "ORX5800-08dc-sw619-MIB::statusColor"
+      - "ORX5800-08dc-sw619-MIB::statusText"
+      - "ORX5800-08dc-sw619-MIB::eventPrimaryPowermissing"
+      - "ORX5800-08dc-sw619-MIB::eventRedundantPowermissing"
+      - "ORX5800-08dc-sw619-MIB::eventVideoInput1NoInput"
+      - "ORX5800-08dc-sw619-MIB::eventVideoInput2NoInput"
+      - "ORX5800-08dc-sw619-MIB::eventVideoInput3NoInput"
+      - "ORX5800-08dc-sw619-MIB::eventVideoInput4NoInput"
+      - "ORX5800-08dc-sw619-MIB::in1"
+      - "ORX5800-08dc-sw619-MIB::in2"
+      - "ORX5800-08dc-sw619-MIB::in3"
+      - "ORX5800-08dc-sw619-MIB::in4"
+      - "ORX5800-08dc-sw619-MIB::out1"
+      - "ORX5800-08dc-sw619-MIB::out2"
+      - "ORX5800-08dc-sw619-MIB::out3"
+      - "ORX5800-08dc-sw619-MIB::out4"
+      - "ORX5800-08dc-sw619-MIB::input1OpticalSignalQuality"
+      - "ORX5800-08dc-sw619-MIB::input2OpticalSignalQuality"
+      - "ORX5800-08dc-sw619-MIB::input3OpticalSignalQuality"
+      - "ORX5800-08dc-sw619-MIB::input4OpticalSignalQuality"
+      - "ORX5800-08dc-sw619-MIB::sourceInput1"
+      - "ORX5800-08dc-sw619-MIB::sourceInput4"
+    lookups:
+      - source_indexes: [position]
+        lookup: typeName
+      - source_indexes: [position]
+        lookup: displayName
+      - source_indexes: [position]
+        lookup: type
+      - source_indexes: [position]
+        lookup: version
+      - source_indexes: [position]
+        lookup: position
+        display_hint: "1d.1d.1d.1d"
+    overrides:
+      typeName:
+        ignore: true
+      displayName:
+        ignore: true
+      position:
+        ignore: true
+      uptime:
+        type: counter
+        scale: 0.01
+      type:
+        ignore: true
+      version:
+        ignore: true
+      statusColor:
+        type: EnumAsStateSet
+      statusText:
+        regex_extracts:
+          "":
+            - regex: "OK"
+              value: "0"
+            - regex: "^.*"
+              value: "1"
+      in1:
+        type: EnumAsStateSet
+      in2:
+        type: EnumAsStateSet
+      in3:
+        type: EnumAsStateSet
+      in4:
+        type: EnumAsStateSet
+      out1:
+        type: EnumAsStateSet
+      out2:
+        type: EnumAsStateSet
+      out3:
+        type: EnumAsStateSet
+      out4:
+        type: EnumAsStateSet
+      input1OpticalSignalQuality:
+        display_hint: "@mib"
+        scale: 0.1
+      input2OpticalSignalQuality:
+        display_hint: "@mib"
+        scale: 0.1
+      input3OpticalSignalQuality:
+        display_hint: "@mib"
+        scale: 0.1
+      input4OpticalSignalQuality:
+        display_hint: "@mib"
+        scale: 0.1
+      sourceInput1:
+        type: EnumAsStateSet
+      sourceInput4:
+        type: EnumAsStateSet
+    max_repetitions: 55  # How many objects to request with GET/GETBULK, defaults to 25.
+    retries: 3   # How many times to retry a failed request, defaults to 3.
+    timeout: 5s  # Timeout for each individual SNMP request, defaults to 5s
+  lynx_pvd_5800_o:
+    walk:
+      - "PVD5800-O-07f1-sw762-MIB::typeName"
+      - "PVD5800-O-07f1-sw762-MIB::displayName"
+      - "PVD5800-O-07f1-sw762-MIB::position"
+      - "PVD5800-O-07f1-sw762-MIB::uptime"
+      - "PVD5800-O-07f1-sw762-MIB::type"
+      - "PVD5800-O-07f1-sw762-MIB::version"
+      - "PVD5800-O-07f1-sw762-MIB::backpanelStatus"
+      - "PVD5800-O-07f1-sw762-MIB::outStandard"
+      - "PVD5800-O-07f1-sw762-MIB::inStandard"
+      - "PVD5800-O-07f1-sw762-MIB::referenceLock"
+      - "PVD5800-O-07f1-sw762-MIB::referenceStatus"
+      - "PVD5800-O-07f1-sw762-MIB::referenceSource"
+      - "PVD5800-O-07f1-sw762-MIB::syncMode1"
+      - "PVD5800-O-07f1-sw762-MIB::input1OpticalSignalQuality"
+      - "PVD5800-O-07f1-sw762-MIB::sDIIn1SourceType"
+      - "PVD5800-O-07f1-sw762-MIB::statusColor"
+      - "PVD5800-O-07f1-sw762-MIB::statusText"
+      - "PVD5800-O-07f1-sw762-MIB::eventPrimaryPowermissing"
+      - "PVD5800-O-07f1-sw762-MIB::eventRedundantPowermissing"
+      - "PVD5800-O-07f1-sw762-MIB::eventReferenceNoInput"
+      - "PVD5800-O-07f1-sw762-MIB::eventSDIInput1NoInput"
+      - "PVD5800-O-07f1-sw762-MIB::eventCouldnotlocktoReference"
+      - "PVD5800-O-07f1-sw762-MIB::eventCouldnotlocktoSDIInput1"
+      - "PVD5800-O-07f1-sw762-MIB::sFPOutPower"
+      - "PVD5800-O-07f1-sw762-MIB::sFPWavelength"
+    lookups:
+      - source_indexes: [position]
+        lookup: typeName
+      - source_indexes: [position]
+        lookup: displayName
+      - source_indexes: [position]
+        lookup: type
+      - source_indexes: [position]
+        lookup: version
+      - source_indexes: [position]
+        lookup: position
+        display_hint: "1d.1d.1d.1d"
+    overrides:
+      typeName:
+        ignore: true
+      displayName:
+        ignore: true
+      position:
+        ignore: true
+      uptime:
+        type: counter
+        scale: 0.01
+      type:
+        ignore: true
+      version:
+        ignore: true
+      backpanelStatus:
+        type: EnumAsStateSet
+      outStandard:
+        type: EnumAsStateSet
+      inStandard:
+        type: EnumAsStateSet
+      referenceLock:
+        type: EnumAsStateSet
+      referenceStatus:
+        type: EnumAsStateSet
+      referenceSource:
+        type: EnumAsStateSet
+      syncMode1:
+        type: EnumAsStateSet
+      input1OpticalSignalQuality:
+        display_hint: "@mib"
+        scale: 0.1
+      sDIIn1SourceType:
+        type: EnumAsStateSet
+      statusColor:
+        type: EnumAsStateSet
+      statusText:
+        regex_extracts:
+          "":
+            - regex: "OK"
+              value: "0"
+            - regex: "^.*"
+              value: "1"
+      eventPrimaryPowermissing:
+        type: EnumAsStateSet
+      eventRedundantPowermissing:
+        type: EnumAsStateSet
+      eventReferenceNoInput:
+        type: EnumAsStateSet
+      eventSDIInput1NoInput:
+        type: EnumAsStateSet
+      eventCouldnotlocktoReference:
+        type: EnumAsStateSet
+      eventCouldnotlocktoSDIInput1:
+        type: EnumAsStateSet
+      sFPOutPower:
+        regex_extracts:
+          "":
+            - regex: "(-?[0-9]+)( dBm)"
+              value: "$1"
+          Status:
+            - regex: "(laser off)"
+              value: "1"
+            - regex: "^.*"
+              value: "0"
+      sFPWavelength:
+        regex_extracts:
+          "":
+            - regex: "([0-9]+)( nm)"
+              value: "$1"
+    max_repetitions: 100  # How many objects to request with GET/GETBULK, defaults to 25.
+    retries: 3   # How many times to retry a failed request, defaults to 3.
+    timeout: 5s  # Timeout for each individual SNMP request, defaults to 5s
